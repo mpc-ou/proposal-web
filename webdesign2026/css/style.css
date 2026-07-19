@@ -24,7 +24,7 @@ body {
     background: var(--color-bg);
     color: var(--color-text);
     font-family: "Be Vietnam Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 28px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -236,62 +236,6 @@ h6 {
     border: 0;
 }
 
-/* ---------- Nen trang tri dung chung cho tat ca cac trang ---------- */
-/* Lop co dinh, dung sau lung #content: luoi ke mo + 2 quang sang cam troi nhe.
-   Chi 1 nen duy nhat dung chung, khong phai tao rieng cho tung section. */
-.app-bg {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    overflow: hidden;
-    background: var(--color-bg);
-}
-
-.app-bg__grid {
-    position: absolute;
-    inset: -1px;
-    background-image:
-        linear-gradient(var(--color-grid-line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--color-grid-line) 1px, transparent 1px);
-    background-size: 48px 48px;
-    -webkit-mask-image: radial-gradient(ellipse 75% 60% at 50% 35%, #000 40%, transparent 90%);
-    mask-image: radial-gradient(ellipse 75% 60% at 50% 35%, #000 40%, transparent 90%);
-}
-
-.app-bg__glow {
-    position: absolute;
-    width: min(60vw, 900px);
-    height: min(60vw, 900px);
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--color-glow) 0%, transparent 70%);
-    filter: blur(10px);
-    opacity: 0.6;
-    animation: app-bg-drift 28s ease-in-out infinite;
-}
-
-.app-bg__glow--a {
-    top: -18%;
-    left: -12%;
-}
-
-.app-bg__glow--b {
-    bottom: -22%;
-    right: -12%;
-    animation-duration: 34s;
-    animation-direction: reverse;
-}
-
-@keyframes app-bg-drift {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(4%, 6%) scale(1.08); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .app-bg__glow {
-        animation: none;
-    }
-}
-
 /* ---------- Thanh tien trinh cuon (fixed, top) ---------- */
 .scroll-progress {
     position: fixed;
@@ -353,10 +297,14 @@ h6 {
    kich thuoc da zoom (transform khong tu lam viec nay). */
 #zoomViewport {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 #content {
     display: block;
+    width: 1920px;
+    flex: none;
     transform-origin: top center;
 }
 
@@ -614,7 +562,6 @@ h6 {
 @media print {
     .print-trigger,
     .zoom-control,
-    .app-bg,
     .scroll-progress,
     .page-dots {
         display: none !important;
@@ -629,6 +576,14 @@ h6 {
     body {
         margin: 0;
         background: var(--color-surface);
+    }
+
+    #zoomViewport {
+        display: block;
+    }
+
+    #content {
+        width: auto;
     }
 
     /*
