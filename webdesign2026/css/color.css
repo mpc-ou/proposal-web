@@ -1,0 +1,41 @@
+/*
+  color.css
+  Chi khai bao bien mau (CSS Custom Properties). Khong chua rule/selector khac.
+  1 bang mau duy nhat (khong co light/dark mode) - tong cam do (red-orange),
+  nen toi am mau nau-do thay vi xam trung tinh.
+*/
+
+:root {
+    /* Nen */
+    --color-bg: #180f0d;           /* canvas ngoai cung, dung cho .app-bg */
+    --color-surface: #3d2620;      /* diem dau gradient cua 1 .page */
+    --color-surface-2: #221310;    /* diem cuoi gradient cua 1 .page (toi hon) */
+    --color-surface-alt: #32201b;  /* nen phu, box/card long trong page */
+    --color-overlay: rgba(0, 0, 0, 0.6);
+
+    /* Lop nen trang tri dung chung (.app-bg): luoi + quang sang */
+    --color-grid-line: rgba(255, 130, 90, 0.06);
+    --color-glow: rgba(255, 87, 51, 0.3);
+
+    /* Nhan / accent - tong cam do */
+    --color-primary: #ff5a36;
+    --color-primary-dark: #c7391d;
+    --color-primary-light: #ff9270;
+    --color-secondary: #b3452e;
+
+    /* Chu */
+    --color-text: #f4ece9;
+    --color-text-muted: #c9b4ac;
+    --color-text-subtle: #93807a;
+    --color-text-inverse: #241310;
+
+    /* Vien / bong */
+    --color-border: rgba(255, 154, 120, 0.16);
+    --color-shadow: rgba(0, 0, 0, 0.4);
+    --color-shadow-strong: rgba(0, 0, 0, 0.6);
+
+    /* Trang thai */
+    --color-success: #2e7d32;
+    --color-warning: #ed6c02;
+    --color-error: #d32f2f;
+}

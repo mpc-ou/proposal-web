@@ -1,0 +1,54 @@
+/*
+  _open-letter-page.css
+  CSS rieng cho section: open-letter-page (thu ngo)
+*/
+
+.page--letter {
+    justify-content: flex-start;
+    padding-bottom: 4.5rem;
+}
+
+.letter__title {
+    margin: 0 0 1.5rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    font-size: 56px;
+}
+
+.letter__body p {
+    margin: 0 0 1rem;
+    font-size: 20px;
+    line-height: 1.85;
+    text-align: justify;
+    text-indent: 1.5rem;
+}
+
+.letter__body p:first-child {
+    text-indent: 0;
+}
+
+.letter__body strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Thuoc tinh HTML "align" da bi loai bo tren cac the inline nhu <span> trong
+   trinh duyet hien dai nen tu no khong con tac dung - can CSS de thay the. */
+.letter__body [align="right"] {
+    display: block;
+    text-align: right;
+    text-indent: 0;
+    margin-top: 1.5rem;
+}
+
+.letter__body [align="left"] {
+    display: block;
+    text-align: left;
+    text-indent: 0;
+}
+
+.letter__body [align="center"] {
+    display: block;
+    text-align: center;
+    text-indent: 0;
+}

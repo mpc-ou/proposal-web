@@ -1,0 +1,32 @@
+{
+    "tag": "HCMC OPEN UNIVERSITY",
+    "image": "./sections/introduction-to-school/img/ou-building.jpg",
+    "imageAlt": "Trường Đại học Mở Thành phố Hồ Chí Minh",
+    "eyebrow": "Tổng quan về",
+    "heading": "TRƯỜNG ĐẠI HỌC MỞ TP.HCM",
+    "majors": [
+        "Kinh tế và Quản lý công",
+        "Luật",
+        "Ngoại ngữ",
+        "Công nghệ Sinh học",
+        "Xây dựng",
+        "Khoa Đào tạo sau Đại học",
+        "Xã hội học - Công tác xã hội - Đông Nam Á",
+        "Đào tạo Đặc biệt",
+        "Quản trị Kinh doanh",
+        "Công nghệ Thông tin",
+        "Tài chính - Ngân hàng",
+        "Kế toán - Kiểm toán",
+        "Khoa Khoa học cơ bản"
+    ],
+    "stats": [
+        { "label": "giáo sư", "value": "06" },
+        { "label": "phó giáo sư", "value": "24" },
+        { "label": "tiến sĩ", "value": "136" },
+        { "label": "thạc sĩ", "value": "301" },
+        { "label": "giảng viên", "value": "499" }
+    ],
+    "statsImage": "./sections/introduction-to-school/img/ou-totnghiep.jpg",
+    "statsImageAlt": "Lễ tốt nghiệp sinh viên Trường Đại học Mở TP.HCM",
+    "source": "Số liệu được thống kê tại sổ tay sinh viên của Trường Đại Học Mở TP.HCM. Nguồn: https://ou.edu.vn/"
+}

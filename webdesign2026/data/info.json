@@ -1,0 +1,26 @@
+{
+    "site": {
+        "title": "Web Design 2026 - Hồ sơ mời tài trợ",
+        "organization": "CLB Lập Trình Trên Thiết Bị Di Động - Khoa CNTT - Trường Đại học Mở TP.HCM"
+    },
+    "footer": {
+    },
+    "titlePage": {
+        "orgLines": [
+            "TRƯỜNG ĐẠI HỌC MỞ TP.HCM",
+            "KHOA CÔNG NGHỆ THÔNG TIN",
+            "CLB LẬP TRÌNH TRÊN THIẾT BỊ DI ĐỘNG"
+        ],
+        "logos": [
+            { "src": "./sections/title-page/img/ou.png", "alt": "Trường Đại học Mở TP.HCM" },
+            { "src": "./sections/title-page/img/cntt.png", "alt": "Khoa Công nghệ thông tin" },
+            { "src": "./sections/title-page/img/mpclub.png", "alt": "CLB Lập trình trên thiết bị di động" }
+        ],
+        "eyebrow": "HỒ SƠ MỜI TÀI TRỢ",
+        "headline": "WEB DESIGN 2026"
+    },
+    "letter": {
+        "title": "Thư Ngỏ"
+    }
+}
+    

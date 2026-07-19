@@ -1,0 +1,133 @@
+/*
+  _introduction-to-school.css
+  CSS rieng cho section: introduction-to-school (gioi thieu truong)
+  Gom 2 "trang" con: overview (anh trai/chu phai) va stats (chu trai/anh phai)
+*/
+
+.page--overview,
+.page--stats {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 64px;
+    align-items: center;
+}
+
+.overview__media,
+.overview__content,
+.stats__content,
+.stats__media {
+    min-width: 0;
+}
+
+.overview__media,
+.stats__media {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-surface-alt);
+    aspect-ratio: 4 / 3;
+}
+
+.overview__media img,
+.stats__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overview__tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.overview__eyebrow {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.overview__heading,
+.stats__heading {
+    margin: 0.25rem 0 1rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 64px;
+    line-height: 1.15;
+}
+
+.overview__text,
+.stats__summary {
+    color: var(--color-text);
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.overview__text strong,
+.stats__summary strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.stats__summary {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stats__majors {
+    list-style: none;
+    margin: 0.25rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stats__majors li {
+    margin: 0;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface-alt);
+    color: var(--color-text-muted);
+    font-size: 16px;
+    line-height: 1.4;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.stats__majors li:hover {
+    border-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+.stats__list-title {
+    margin: 1rem 0 0.5rem;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.stats__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 20px;
+}
+
+.stats__list li::before {
+    content: "\2022";
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+    font-weight: 700;
+}
+
+.stats__source {
+    margin-top: 1.25rem;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--color-text-subtle);
+}
