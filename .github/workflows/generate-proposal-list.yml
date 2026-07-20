@@ -1,0 +1,54 @@
+name: Generate Proposal List
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "*/data/info.json"
+      - "*/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate proposal-list.json
+        run: |
+          echo '{"generated": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'", "proposals": [' > proposal-list.json
+
+          first=true
+          for dir in */; do
+            info_file="${dir}data/info.json"
+            if [ -f "$info_file" ]; then
+              id=$(basename "$dir")
+              title=$(jq -r '.site.title // empty' "$info_file")
+              org=$(jq -r '.site.organization // empty' "$info_file")
+              modified=$(git log -1 --format="%aI" -- "$dir" 2>/dev/null || date -u +%Y-%m-%d)
+
+              [ "$first" = true ] || echo ',' >> proposal-list.json
+              first=false
+
+              jq -n \
+                --arg id "$id" \
+                --arg name "$title" \
+                --arg org "$org" \
+                --arg path "$dir" \
+                --arg modified "$modified" \
+                '{id: $id, name: $name, organization: $org, path: $path, lastModified: $modified}' >> proposal-list.json
+            fi
+          done
+
+          echo ']}' >> proposal-list.json
+
+      - name: Commit proposal-list.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add proposal-list.json
+          git diff --staged --quiet || git commit -m "chore: auto-generate proposal-list.json"
+          git push

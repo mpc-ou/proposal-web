@@ -10,7 +10,8 @@ const SECTIONS = [
         module: "../sections/open-letter-page/open-letter-page.js"
     },
     {
-        html: "./sections/introduction-to-school/introduction-to-school.html", module: "../sections/introduction-to-school/introduction-to-school.js"
+        html: "./sections/introduction-to-school/introduction-to-school.html", 
+        module: "../sections/introduction-to-school/introduction-to-school.js"
     },
 ];
 
