@@ -14,8 +14,8 @@ const SECTIONS = [
         module: "../sections/introduction-to-school/introduction-to-school.js"
     },
     {
-        html: "./sections/trien-lam/trien-lam.html", 
-        module: "../sections/trien-lam/trien-lam.js"
+        html: "./sections/exhibitions/exhibitions.html", 
+        module: "../sections/exhibitions/exhibitions.js"
     }
 ];
 

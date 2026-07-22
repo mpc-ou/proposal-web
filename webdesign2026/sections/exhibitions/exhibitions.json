@@ -1,0 +1,36 @@
+[
+  {
+    "year": "2022",
+    "name": "Web Design 2022",
+    "teams": [
+      {
+        "teamName": "Alpha Team",
+        "projectName": "Alpha Projects",
+        "imgs": [
+          "https://img.magnific.com/free-vector/website-development-banner_33099-1687.jpg"
+        ]
+      },
+      {
+        "teamName": "Beta Team",
+        "projectName": "Beta Projects",
+        "imgs": [
+          "https://img.magnific.com/free-vector/website-development-banner_33099-1687.jpg"
+        ]
+      },
+      {
+        "teamName": "Gamma Team",
+        "projectName": "Gamma Projects",
+        "imgs": [
+          "https://img.magnific.com/free-vector/website-development-banner_33099-1687.jpg"
+        ]
+      },
+      {
+        "teamName": "Delta Team",
+        "projectName": "Delta Projects",
+        "imgs": [
+          "https://img.magnific.com/free-vector/website-development-banner_33099-1687.jpg"
+        ]
+      }
+    ]
+  }
+]
