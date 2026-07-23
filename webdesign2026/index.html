@@ -54,15 +54,32 @@
         </button>
     </div>
 
+    <!-- Nút "Lên đầu trang" - chi hien sau khi cuon xuong 1 doan -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Lên đầu trang">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
     <!-- Zoom in/out cho khung 1920x1080 co dinh -->
     <div class="zoom-control" id="zoomControl">
         <button type="button" class="zoom-control__btn" id="zoomOutBtn" aria-label="Thu nhỏ">
             <i class="bi bi-dash-lg"></i>
         </button>
-        <span class="zoom-control__level" id="zoomLevel">100%</span>
+        <span class="zoom-control__level" id="zoomLevel">70%</span>
         <button type="button" class="zoom-control__btn" id="zoomInBtn" aria-label="Phóng to">
             <i class="bi bi-plus-lg"></i>
         </button>
+        <span class="zoom-control__divider"></span>
+        <span class="zoom-control__page" id="pageIndicator">1 / 1</span>
+    </div>
+
+    <div class="toc" id="toc">
+        <button type="button" class="toc__toggle" id="tocToggle" aria-expanded="false" aria-controls="tocPanel" aria-label="Mục lục">
+            <i class="bi bi-list-ul"></i>
+        </button>
+        <div class="toc__panel" id="tocPanel">
+            <p class="toc__panel-title">Mục lục</p>
+            <ul class="toc__list"></ul>
+        </div>
     </div>
 
     <!-- JS thư viện -->

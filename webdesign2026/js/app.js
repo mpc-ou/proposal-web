@@ -1,3 +1,5 @@
+import { initLightbox } from "./lightbox.js";
+
 const CONFIG = {
     animate: {
         selector: "[data-animate]",
@@ -15,11 +17,23 @@ const CONFIG = {
     scrollProgress: {
         barId: "scrollProgress",
     },
-    pageDots: {
-        navClass: "page-dots",
-        dotClass: "page-dots__dot",
-        activeClass: "is-active",
+    backToTop: {
+        btnId: "backToTop",
+        showAfter: 600,
+    },
+    scrollRestore: {
+        storageKey: "webdesign2026:scrollY",
+    },
+    pageIndicator: {
+        elId: "pageIndicator",
         threshold: 0.5,
+    },
+    toc: {
+        pageSelector: ".page[data-toc]",
+        rootId: "toc",
+        toggleId: "tocToggle",
+        panelId: "tocPanel",
+        listSelector: ".toc__list",
     },
     zoom: {
         contentId: "content",
@@ -30,7 +44,9 @@ const CONFIG = {
         max: 1.5,
         step: 0.1,
         default: 0.7,
-        storageKey: "webdesign2026:zoom",
+        // Doi ten key: gia tri cu la % TUYET DOI cua khung 1920px, khong
+        // con dung duoc voi cach tinh "% tuong doi so voi fit-width" moi.
+        storageKey: "webdesign2026:zoomLevelRel",
     },
 };
 
@@ -124,12 +140,22 @@ function setupZoomControl() {
     content.parentNode.insertBefore(viewport, content);
     viewport.appendChild(content);
 
+    /*
+      "level" la ty le TUONG DOI so voi "vua khop chieu rong man hinh"
+      (unit), KHONG phai % tuyet doi cua khung thiet ke 1920px. Nho vay
+      100% luon co nghia la trang rong dung bang man hinh - dung tren
+      dien thoai man hinh hep cung khong bao gio bi tran ngang, khong con
+      phai zoom am xuong duoi muc min moi vua het chieu rong nhu truoc.
+    */
+    const getUnit = () => window.innerWidth / content.offsetWidth;
+
     const stored = loadStoredZoom();
     let level = stored !== null && stored >= min && stored <= max ? stored : defaultLevel;
 
     const apply = () => {
-        content.style.transform = `scale(${level})`;
-        viewport.style.height = `${content.scrollHeight * level}px`;
+        const scale = level * getUnit();
+        content.style.transform = `scale(${scale})`;
+        viewport.style.height = `${content.scrollHeight * scale}px`;
         if (levelEl) levelEl.textContent = `${Math.round(level * 100)}%`;
         outBtn.disabled = level <= min;
         inBtn.disabled = level >= max;
@@ -146,9 +172,7 @@ function setupZoomControl() {
         apply();
     });
 
-    window.addEventListener("resize", () => {
-        viewport.style.height = `${content.scrollHeight * level}px`;
-    });
+    window.addEventListener("resize", apply);
 
     apply();
 }
@@ -169,27 +193,35 @@ function setupScrollProgress() {
     update();
 }
 
-function setupPageDots() {
-    const { navClass, dotClass, activeClass, threshold } = CONFIG.pageDots;
-    const pages = document.querySelectorAll(".page");
-    if (!pages.length) return;
+function setupBackToTop() {
+    const { btnId, showAfter } = CONFIG.backToTop;
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
 
-    const nav = document.createElement("nav");
-    nav.className = navClass;
-    nav.setAttribute("aria-label", "Điều hướng trang");
+    const update = () => {
+        btn.classList.toggle("is-visible", window.scrollY > showAfter);
+    };
 
-    const dots = [];
-    pages.forEach((page, index) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = dotClass;
-        dot.setAttribute("aria-label", `Đến trang ${index + 1}`);
-        dot.addEventListener("click", () => page.scrollIntoView({ behavior: "smooth" }));
-        nav.appendChild(dot);
-        dots.push(dot);
+    btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    document.body.appendChild(nav);
+    window.addEventListener("scroll", update, { passive: true });
+    update();
+}
+
+
+function setupPageIndicator() {
+    const { elId, threshold } = CONFIG.pageIndicator;
+    const indicatorEl = document.getElementById(elId);
+    const pages = document.querySelectorAll(".page");
+    if (!indicatorEl || !pages.length) return;
+
+    const total = pages.length;
+    const setActive = (index) => {
+        indicatorEl.textContent = `${index + 1} / ${total}`;
+    };
+    setActive(0);
 
     if (!("IntersectionObserver" in window)) return;
 
@@ -198,14 +230,67 @@ function setupPageDots() {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) return;
                 const index = Array.prototype.indexOf.call(pages, entry.target);
-                dots.forEach((dot) => dot.classList.remove(activeClass));
-                if (dots[index]) dots[index].classList.add(activeClass);
+                if (index >= 0) setActive(index);
             });
         },
         { threshold }
     );
 
     pages.forEach((page) => observer.observe(page));
+}
+
+function setupTableOfContents() {
+    const { pageSelector, rootId, toggleId, panelId, listSelector } = CONFIG.toc;
+    const root = document.getElementById(rootId);
+    const toggle = document.getElementById(toggleId);
+    const panel = document.getElementById(panelId);
+    const list = panel ? panel.querySelector(listSelector) : null;
+    const entries = document.querySelectorAll(pageSelector);
+
+    if (!root || !toggle || !panel || !list || !entries.length) {
+        if (root) root.hidden = true;
+        return;
+    }
+
+    const allPages = Array.from(document.querySelectorAll(".page"));
+    list.innerHTML = "";
+
+    const close = () => {
+        root.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+    };
+    const open = () => {
+        root.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+    };
+
+    entries.forEach((page) => {
+        const label = page.dataset.toc;
+        const pageIndex = allPages.indexOf(page);
+        const item = document.createElement("li");
+        const link = document.createElement("button");
+        link.type = "button";
+        link.className = "toc__link";
+        link.innerHTML = `<span class="toc__link-number">${pageIndex + 1}</span><span>${label}</span>`;
+        link.addEventListener("click", () => {
+            page.scrollIntoView({ behavior: "smooth" });
+            close();
+        });
+        item.appendChild(link);
+        list.appendChild(item);
+    });
+
+    toggle.addEventListener("click", () => {
+        root.classList.contains("is-open") ? close() : open();
+    });
+
+    document.addEventListener("click", (event) => {
+        if (root.classList.contains("is-open") && !root.contains(event.target)) close();
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") close();
+    });
 }
 
 /*
@@ -240,16 +325,82 @@ function setupPrintButton() {
     });
 }
 
+function readStoredScrollY() {
+    try {
+        const raw = sessionStorage.getItem(CONFIG.scrollRestore.storageKey);
+        const parsed = raw === null ? null : Number(raw);
+        return Number.isFinite(parsed) ? parsed : null;
+    } catch (error) {
+        return null;
+    }
+}
+
+function saveScrollY(y) {
+    try {
+        sessionStorage.setItem(CONFIG.scrollRestore.storageKey, String(y));
+    } catch (error) {
+        // localStorage/sessionStorage co the bi chan (che do an danh...), bo qua im lang
+    }
+}
+
+function setupScrollRestore() {
+    let restoring = true;
+
+    const restoreOnce = () => {
+        const y = readStoredScrollY();
+        if (y === null) {
+            restoring = false;
+            return;
+        }
+        window.scrollTo(0, y);
+    };
+
+    document.addEventListener("sections:loaded", () => {
+        restoreOnce();
+
+        const images = Array.from(document.querySelectorAll("#content img"));
+        let pending = images.filter((img) => !img.complete).length;
+        if (!pending) {
+            restoring = false;
+            return;
+        }
+
+        images.forEach((img) => {
+            if (img.complete) return;
+            const onDone = () => {
+                pending -= 1;
+                if (restoring) restoreOnce();
+                if (pending <= 0) restoring = false;
+            };
+            img.addEventListener("load", onDone, { once: true });
+            img.addEventListener("error", onDone, { once: true });
+        });
+    });
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (restoring) return;
+            saveScrollY(window.scrollY);
+        },
+        { passive: true }
+    );
+}
+
 function onSectionsLoaded() {
     setupPageInnerWrap();
     setupPageNumbers();
     setupScrollAnimations();
     setupScrollProgress();
-    setupPageDots();
+    setupPageIndicator();
+    setupTableOfContents();
 }
 
 document.addEventListener("sections:loaded", onSectionsLoaded);
 document.addEventListener("DOMContentLoaded", () => {
     setupPrintButton();
     setupZoomControl();
+    setupScrollRestore();
+    setupBackToTop();
+    initLightbox();
 });

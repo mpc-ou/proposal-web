@@ -2,6 +2,16 @@
 
 Cảm ơn bạn đã đóng góp cho proposal **Web Design 2026**. Tài liệu này quy định cách tổ chức thay đổi và commit message.
 
+## Mục lục
+
+- [Cấu trúc dự án](#cấu-trúc-dự-án)
+- [Thêm 1 section (trang) mới](#thêm-1-section-trang-mới)
+- [Dùng lightbox xem ảnh phóng to](#dùng-lightbox-xem-ảnh-phóng-to)
+- [Đánh số trang & mục lục điều hướng](#đánh-số-trang--mục-lục-điều-hướng)
+- [Chạy thử local](#chạy-thử-local)
+- [Conventional Commits 1.0.0](#conventional-commits-100)
+- [Pull Request](#pull-request)
+
 ## Cấu trúc dự án
 
 ```
@@ -11,7 +21,8 @@ webdesign2026/
 │   └── style.css                        # Reset + typography + utility class + component dùng CHUNG
 ├── js/
 │   ├── init.js                          # Nạp các section (theo thứ tự khai báo trong mảng SECTIONS)
-│   ├── app.js                           # Config chung, đánh số trang, animation, zoom, nút In PDF
+│   ├── app.js                           # Config chung, đánh số trang, animation, zoom, nút In PDF, lưu vị trí cuộn
+│   ├── lightbox.js                      # Overlay xem ảnh phóng to, dùng CHUNG (xem "Dùng lightbox" bên dưới)
 │   └── markdown-utils.js                # Helper fetch + render markdown, dùng chung
 ├── data/
 │   └── info.json                        # Dữ liệu CHUNG (site, titlePage, letter, footer)
@@ -72,6 +83,8 @@ Mỗi section là 1 to A4 nằm ngang (`.page`, tỉ lệ 297:210, kích thướ
    }
    ```
 
+   **Bắt buộc `async` + `await` đầy đủ mọi `fetch`/promise bên trong:** `js/init.js` gọi tuần tự `await mod.default(wrapper, data)` cho từng section, và chỉ bắn sự kiện `sections:loaded` sau khi TẤT CẢ section đã init xong. Đánh số trang, animation cuộn, đánh số ô trang cạnh zoom, mục lục (xem [Đánh số trang & mục lục điều hướng](#đánh-số-trang--mục-lục-điều-hướng)) đều chạy dựa vào sự kiện này. Nếu hàm init của bạn quên `await` một `fetch`/promise nào đó, HTML section sẽ chưa kịp đổ dữ liệu lúc `sections:loaded` bắn ra — animation không bắt được phần tử, số trang/mục lục sai hoặc thiếu.
+
 5. **Thêm data riêng (nếu cần)** cùng thư mục: `*.json` cho dữ liệu có cấu trúc, `*.md` cho đoạn văn dài — dùng lại `fetchMarkdown`/`renderMarkdown` từ `js/markdown-utils.js` (import bằng đường dẫn tương đối `../../js/markdown-utils.js`).
 
 6. **Đăng ký CSS** trong `index.html`:
@@ -89,6 +102,46 @@ Mỗi section là 1 to A4 nằm ngang (`.page`, tỉ lệ 297:210, kích thướ
    Lưu ý: `html` là đường dẫn cho `fetch()` (tính từ `index.html`), còn `module` là đường dẫn cho `import()` (tính từ vị trí file `js/init.js`, nên luôn có tiền tố `../`).
 
 8. Chạy thử qua local server, kiểm tra: section load đúng thứ tự (xem console), số trang tự động đúng, animation chạy khi cuộn tới, và bấm "In PDF" (hoặc Ctrl+P) ra đủ trang không vỡ layout.
+
+**Lưu ý khi in (PDF bị co nhỏ dồn về góc trên-trái):** class gốc đặt trên `.page` (vd `.page--sponsor-benefits`) sẽ được `app.js` gộp vào `.page__inner` lúc chạy — do đó **không khai báo lại `width`/`height` cho class đó**. `style.css` đã tự set kích thước đúng cho `.page__inner` (100% lúc xem thường, cố định 1920x1358px lúc `@media print`); vì CSS riêng của section luôn nạp SAU `style.css` trong `index.html`, một rule `width/height:100%` trùng độ đặc hiệu ở đây sẽ THẮNG rule in ở `style.css`, làm nội dung tự co theo khổ giấy rồi bị scale in đè thêm 1 lần nữa.
+
+**Ghi chú:** 1 section không nhất thiết phải cố định 1 `.page` — có thể render nhiều `.page` liên tiếp từ 1 file data, sinh động bằng JS (xem ví dụ `sections/exhibitions/exhibitions.js`: mỗi lần tổ chức cuộc thi là 1 nhóm, mỗi nhóm được chia thành nhiều trang, mỗi trang 2 dự án). Vẫn tuân thủ quy tắc chung: JS build chuỗi HTML rồi gán 1 lần vào khối chứa (`innerHTML`), không tự đánh `page-number` (JS trong `app.js` tự thêm sau khi toàn bộ section đã load xong).
+
+## Dùng lightbox xem ảnh phóng to
+
+`js/lightbox.js` là overlay xem ảnh dùng CHUNG cho mọi section, không cần import hay khởi tạo gì thêm (đã được gọi 1 lần trong `app.js`). Muốn ảnh trong section của bạn bấm vào phóng to được:
+
+1. Gắn thuộc tính `data-lightbox` lên thẻ `<img>`, giá trị là 1 mảng JSON các đường dẫn ảnh (dùng khi muốn cho chuyển ảnh trước/sau ngay trong overlay). Nếu chỉ có 1 ảnh, để mảng 1 phần tử.
+
+   ```html
+   <img
+       src="./sections/ten-section/img/anh-01.png"
+       alt="Mô tả ảnh"
+       data-lightbox='["./sections/ten-section/img/anh-01.png", "./sections/ten-section/img/anh-02.png"]'
+       data-lightbox-index="0"
+   >
+   ```
+
+2. `data-lightbox-index` (tuỳ chọn, mặc định `0`) là vị trí ảnh sẽ hiện đầu tiên khi mở overlay — dùng khi ảnh đang hiện trên trang không phải phần tử đầu của mảng.
+
+3. Khi build HTML bằng JS (như `exhibitions.js`), nhớ `JSON.stringify()` mảng ảnh rồi gán vào thuộc tính `data-lightbox` (bọc bằng dấu nháy đơn `'...'` vì `JSON.stringify` dùng dấu nháy kép).
+
+Overlay tự lo: đóng bằng nút X/phím `Esc`/bấm ra ngoài, zoom bằng lăn chuột hoặc nút +-/double-click, kéo ảnh khi đã zoom, chuyển ảnh trước/sau bằng nút hoặc phím mũi tên (chỉ hiện khi mảng có > 1 ảnh). Không cần style hay xử lý gì thêm phía section.
+
+## Đánh số trang & mục lục điều hướng
+
+`js/app.js` tự lo 2 việc này sau khi tất cả section đã load xong (`sections:loaded`), không cần đụng vào code chung:
+
+- **Đánh số trang** (`.page-number` ở góc mỗi `.page`, và ô "x / y" cạnh nút zoom góc dưới-trái) tự tính theo đúng thứ tự các `.page` có trong DOM — trang nào không cần đánh số (như trang bìa) thì thêm `data-no-page-number`.
+- **Mục lục** (tab thu gọn ở cạnh phải, bấm vào mở panel) chỉ liệt kê các `.page` có gắn thuộc tính `data-toc="Nhãn hiển thị"`. Cố tình KHÔNG tự quét `h1`-`h4` để lấy tiêu đề, vì nhiều trang có thể trùng heading hoặc không có heading rõ ràng — bạn tự quyết trang nào đáng vào mục lục và nhãn hiển thị gì.
+
+Muốn 1 trang xuất hiện trong mục lục, gắn thẳng lên `.page`:
+
+```html
+<div class="page page--sponsor-benefits" data-toc="Quyền lợi tài trợ">
+```
+
+Với section render nhiều `.page` bằng JS (như `exhibitions.js`), chỉ gắn `data-toc` cho **trang đầu tiên** của mỗi nhóm để tránh mục lục bị lặp nhiều mục giống nhau — xem cách `exhibitions.js` chỉ gắn khi `isFirstPage` là `true`.
 
 ## Chạy thử local
 

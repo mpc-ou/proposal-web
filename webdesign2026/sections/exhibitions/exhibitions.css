@@ -1,80 +1,168 @@
 .exhibitions-page {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.exhibitions__heading {
+    flex: none;
+    align-self: flex-start;
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 1.15;
+}
+
+.exhibitions__description {
+    flex: none;
+    align-self: flex-start;
+    max-width: 1100px;
+    margin: -0.6rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 1.35rem;
+    line-height: 1.5;
+}
+
+.exhibitions__entries {
     width: 100%;
-    height: 100%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.25rem;
+}
+
+.exhibitions__entry {
+    width: 100%;
+    display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 3rem;
 }
 
-.exhibitions__side {
-    width: 50%;
+.exhibitions__entry--reverse {
+    flex-direction: row-reverse;
 }
 
-.exhibitions__team-info-a,
-.exhibitions__team-info-b {
-    font-weight: bold;
-    font-size: 64px;
-    padding: 4rem 2rem;
+.exhibitions__entries--single .exhibitions__entry {
+    justify-content: center;
 }
 
-.exhibitions__team-name-a,
-.exhibitions__team-name-b {
-    color: var(--color-primary);
+.exhibitions__media {
+    flex: 0.85;
+    min-width: 0;
+    display: flex;
 }
 
-.exhibitions__team-info-a {
+.exhibitions__info {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.exhibitions__entry--reverse .exhibitions__info {
     text-align: right;
 }
 
 .exhibitions__window-box {
-    background-color: #646464;
-    padding: 2rem;
-    padding-top: 5rem;
-    border-radius: 1rem;
+    width: 100%;
+    background-color: #262220;
+    padding: 0.6rem;
+    padding-top: 2rem;
+    border-radius: 0.75rem;
     position: relative;
-    box-shadow: 4px 4px 20px #00000068;
-    transition: all 0.2s;
+    box-shadow: 0 14px 34px -16px var(--color-shadow-strong);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .exhibitions__window-box:hover {
-    scale: 1.1;
-    transform: translateY(-1rem);
+    transform: translateY(-0.4rem);
+    box-shadow: 0 20px 44px -14px var(--color-shadow-strong);
 }
 
 .exhibitions__window-box > img {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-    
+    display: block;
+    border-radius: 0.4rem;
+    cursor: zoom-in;
 }
 
-.exhibitions__window-box > .exhibitions__dot{
+.exhibitions__window-box > .exhibitions__dot {
     position: absolute;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    background-color: aliceblue;
-    top: 1rem;
-    left: 2rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    top: 0.75rem;
+    left: 0.9rem;
     z-index: 1;
 }
 
 .exhibitions__window-box > .exhibitions__dot:nth-child(1) {
-    background-color: red;
-    left: 2rem;
+    background-color: #ff5f57;
+    left: 0.9rem;
 }
 
 .exhibitions__window-box > .exhibitions__dot:nth-child(2) {
-    background-color: yellow;
-    left: 5rem;
+    background-color: #febc2e;
+    left: 1.85rem;
 }
 
 .exhibitions__window-box > .exhibitions__dot:nth-child(3) {
-    background-color: green;
-    left: 8rem;
+    background-color: #28c840;
+    left: 2.8rem;
 }
 
-.exhibitions__team-img-a,
-.exhibitions__team-img-b {
-    padding: 2rem;
+.exhibitions__team-name {
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--color-primary);
+}
+
+.exhibitions__project-name {
+    margin-top: 0.4rem;
+    font-size: 1.85rem;
+    color: var(--color-text);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.exhibitions__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-top: 0.85rem;
+}
+
+.exhibitions__entry--reverse .exhibitions__links {
+    justify-content: flex-end;
+}
+
+.exhibitions__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 1.3rem;
+    color: var(--color-text-muted);
+}
+
+.exhibitions__link:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+@media print {
+    .exhibitions__window-box:hover {
+        transform: none;
+        box-shadow: 0 14px 34px -16px var(--color-shadow-strong);
+    }
 }
