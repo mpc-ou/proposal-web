@@ -1,0 +1,93 @@
+{
+    "tag": "MOBILE PROGRAMMING CLUB",
+    "abbr": "MPClub",
+    "founded": "24/12/2015",
+    "image": "./sections/introduction-to-mpclub/img/mpclub-common.jpg",
+    "imageAlt": "CLB Lập trình trên thiết bị di động",
+    "eyebrow": "Giới thiệu",
+    "heading": "CLB Lập trình trên thiết bị di động",
+    "activitiesHeading": "Hoạt động trọng tâm",
+    "social": {
+        "email": {
+            "label": "it.mpclub@ou.edu.vn",
+            "url": "mailto:it.mpclub@ou.edu.vn"
+        },
+        "facebook": {
+            "label": "CLB Lập trình trên thiết bị di động",
+            "url": "https://www.facebook.com/CLBLapTrinhTrenThietBiDiDong"
+        },
+        "website": {
+            "label": "mpclub.dev",
+            "url": "https://mpclub.dev"
+        },
+        "github": {
+            "label": "mpc-ou",
+            "url": "https://github.com/mpc-ou"
+        }
+    },
+    "stats": {
+        "members": {
+            "label": "Thành viên",
+            "value": "66+"
+        },
+        "projects": {
+            "label": "Dự án",
+            "value": "5+"
+        },
+        "events": {
+            "label": "Sự kiện",
+            "value": "30+"
+        },
+        "activity": {
+            "label": "Năm hoạt động",
+            "value": "10+"
+        }
+    },
+    "activities": [
+        {
+            "title": "Hội thảo & Cố vấn học tập",
+            "description": "Tổ chức các buổi hội thảo chia sẻ tri thức và các hoạt động gia sư học tập theo mô hình \"Sinh viên là cố vấn học tập\", giúp sinh viên ôn tập và theo kịp các môn Lập trình cơ bản.",
+            "images": [
+                "./sections/introduction-to-mpclub/img/activity-hoithao000.jpg",
+                "./sections/introduction-to-mpclub/img/activity-hoithao001.jpg",
+                "./sections/introduction-to-mpclub/img/activity-hoithao002.jpg",
+                "./sections/introduction-to-mpclub/img/activity-hoithao003.jpg",
+                "./sections/introduction-to-mpclub/img/activity-hoithao004.jpg"
+            ]
+        },
+        {
+            "title": "Đào tạo di động & Web",
+            "description": "Tổ chức training cho thành viên về lập trình trên các thiết bị di động, bao gồm lập trình web, web app, lập trình android.",
+            "images": [
+                "./sections/introduction-to-mpclub/img/activity-daotao000.jpg",
+                "./sections/introduction-to-mpclub/img/activity-daotao001.jpg",
+                "./sections/introduction-to-mpclub/img/activity-daotao002.jpg",
+                "./sections/introduction-to-mpclub/img/activity-daotao003.jpg",
+                "./sections/introduction-to-mpclub/img/activity-daotao004.jpg"
+            ]
+        },
+        {
+            "title": "Cuộc thi & Ngoại khóa",
+            "description": "Tổ chức các Cuộc thi học thuật ứng dụng kiến thức chuyên môn, kết hợp các hoạt động ngoại khóa, tạo động lực cho sinh viên học lập trình như Web Design, ROBOCODE,…",
+            "images": [
+                "./sections/introduction-to-mpclub/img/activity-cuocthi000.jpg",
+                "./sections/introduction-to-mpclub/img/activity-cuocthi001.jpg",
+                "./sections/introduction-to-mpclub/img/activity-cuocthi002.jpg",
+                "./sections/introduction-to-mpclub/img/activity-cuocthi003.jpg",
+                "./sections/introduction-to-mpclub/img/activity-cuocthi004.jpg",
+                "./sections/introduction-to-mpclub/img/activity-cuocthi005.jpg",
+                "./sections/introduction-to-mpclub/img/activity-cuocthi006.jpg"
+
+            ]
+        },
+        {
+            "title": "Dự án cộng đồng",
+            "description": "Xây dựng các dự án phục vụ sinh viên (như MPC Extension) và đồng hành thực hiện dự án cho các chương trình, tổ chức trong và ngoài trường.",
+            "images": [
+                "./sections/introduction-to-mpclub/img/activity-duan000.jpg",
+                "./sections/introduction-to-mpclub/img/activity-duan001.jpg",
+                "./sections/introduction-to-mpclub/img/activity-duan002.jpg"
+            ]
+        }
+    ]
+}
