@@ -13,6 +13,10 @@ const SECTIONS = [
         html: "./sections/introduction-to-school/introduction-to-school.html", 
         module: "../sections/introduction-to-school/introduction-to-school.js"
     },
+    {
+        html: "./sections/exhibitions/exhibitions.html", 
+        module: "../sections/exhibitions/exhibitions.js"
+    }
 ];
 
 async function loadSharedData() {
