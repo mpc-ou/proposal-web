@@ -22,7 +22,7 @@
     max-width: 1100px;
     margin: -0.6rem 0 0;
     color: var(--color-text-muted);
-    font-size: 1.35rem;
+    font-size: 28px;
     line-height: 1.5;
 }
 
@@ -85,7 +85,7 @@
     box-shadow: 0 20px 44px -14px var(--color-shadow-strong);
 }
 
-.exhibitions__window-box > img {
+.exhibitions__window-box>img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -94,7 +94,7 @@
     cursor: zoom-in;
 }
 
-.exhibitions__window-box > .exhibitions__dot {
+.exhibitions__window-box>.exhibitions__dot {
     position: absolute;
     width: 0.7rem;
     height: 0.7rem;
@@ -104,17 +104,17 @@
     z-index: 1;
 }
 
-.exhibitions__window-box > .exhibitions__dot:nth-child(1) {
+.exhibitions__window-box>.exhibitions__dot:nth-child(1) {
     background-color: #ff5f57;
     left: 0.9rem;
 }
 
-.exhibitions__window-box > .exhibitions__dot:nth-child(2) {
+.exhibitions__window-box>.exhibitions__dot:nth-child(2) {
     background-color: #febc2e;
     left: 1.85rem;
 }
 
-.exhibitions__window-box > .exhibitions__dot:nth-child(3) {
+.exhibitions__window-box>.exhibitions__dot:nth-child(3) {
     background-color: #28c840;
     left: 2.8rem;
 }

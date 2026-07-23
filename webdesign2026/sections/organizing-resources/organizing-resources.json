@@ -1,0 +1,16 @@
+{
+    "tocHeading": "Nguồn lực tổ chức",
+    "titlePrefix": "NGUỒN LỰC",
+    "titleHighlight": "TỔ CHỨC",
+    "mdUrl": "./sections/organizing-resources/organizing-resources.md",
+    "images": [
+        {
+            "img": "./sections/organizing-resources/img/nguonluc001.jpg",
+            "caption": "Đội ngũ BTC & CLB Lập Trình Trên Thiết Bị Di Động"
+        },
+        {
+            "img": "./sections/organizing-resources/img/nguonluc002.jpg",
+            "caption": "Hoạt động học thuật & đào tạo chuyên môn"
+        }
+    ]
+}
