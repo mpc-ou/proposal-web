@@ -20,6 +20,10 @@ const SECTIONS = [
     {
         html: "./sections/exhibitions/exhibitions.html", 
         module: "../sections/exhibitions/exhibitions.js"
+    },
+    {
+        html: "./sections/timeline/timeline.html", 
+        module: "../sections/timeline/timeline.js"
     }
 ];
 
