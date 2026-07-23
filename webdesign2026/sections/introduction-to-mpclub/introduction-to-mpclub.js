@@ -83,13 +83,16 @@ function renderActivities(root, activities) {
                 <div class="mpclub-activities__card${stateClass}" data-animate="fadeInUp" style="animation-delay:${index * 0.12}s">
                     ${
                         hasImage
-                            ? `<img class="mpclub-activities__bg" src="${images[0]}" alt="" data-lightbox='${gallery}' data-lightbox-index="0">
-                               <div class="mpclub-activities__overlay"></div>`
+                            ? `<div class="mpclub-activities__media">
+                                   <img class="mpclub-activities__img" src="${images[0]}" alt="${activity.title}" data-lightbox='${gallery}' data-lightbox-index="0">
+                               </div>`
                             : ""
                     }
                     <div class="mpclub-activities__content">
-                        <span class="mpclub-activities__index">${String(index + 1).padStart(2, "0")}</span>
-                        <h3 class="mpclub-activities__card-title">${activity.title}</h3>
+                        <div class="mpclub-activities__header-row">
+                            <span class="mpclub-activities__index">${String(index + 1).padStart(2, "0")}</span>
+                            <h3 class="mpclub-activities__card-title">${activity.title}</h3>
+                        </div>
                         <p class="mpclub-activities__card-text">${activity.description}</p>
                     </div>
                 </div>

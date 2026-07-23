@@ -1,0 +1,360 @@
+/* 
+  sponsor.css
+  Style cho section Các gói, Nguồn lực tổ chức & Quyền lợi nhà tài trợ
+*/
+
+.page--sponsor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* ==========================================================================
+   SLIDE 1: CÁC GÓI TÀI TRỢ
+   ========================================================================== */
+.page--sponsor-packages {
+    justify-content: center;
+}
+
+.sponsor-packages__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.sponsor-packages__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sponsor-packages__title {
+    margin: 0 0 1.5rem;
+    font-size: 72px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+}
+
+.sponsor-packages__title-highlight {
+    color: var(--color-primary);
+    font-size: 88px;
+}
+
+.sponsor-packages__illustration {
+    margin-top: 1.5rem;
+}
+
+.sponsor-folder-icon {
+    width: 250px;
+    height: 250px;
+    filter: drop-shadow(0 16px 32px rgba(255, 90, 54, 0.3));
+}
+
+.sponsor-packages__right {
+    flex: 1.35;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.sponsor-cash-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.sponsor-cash-header {
+    background: var(--color-primary);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 32px;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 2.2rem;
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+    width: fit-content;
+}
+
+.sponsor-cash-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background: var(--color-surface-alt);
+    padding: 1.5rem;
+    border-radius: 14px 0 14px 14px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 24px 48px -20px var(--color-shadow-strong);
+}
+
+.sponsor-pkg-card {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 10px;
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-left: 10px solid var(--color-primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sponsor-pkg-card:hover {
+    transform: translateX(-6px);
+    box-shadow: 0 14px 28px var(--color-shadow-strong);
+}
+
+.sponsor-pkg-card__tier {
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.sponsor-pkg-card__amount {
+    font-weight: 800;
+    font-size: 48px;
+    color: #ffffff;
+    font-family: "JetBrains Mono", "Consolas", monospace;
+}
+
+/* Tier Specific Colors */
+.sponsor-tier--gold {
+    border-left-color: #f59e0b;
+}
+
+.sponsor-tier--gold .sponsor-pkg-card__tier {
+    color: #f59e0b;
+}
+
+.sponsor-tier--silver {
+    border-left-color: #e2e8f0;
+}
+
+.sponsor-tier--silver .sponsor-pkg-card__tier {
+    color: #e2e8f0;
+}
+
+.sponsor-tier--bronze {
+    border-left-color: #d97706;
+}
+
+.sponsor-tier--bronze .sponsor-pkg-card__tier {
+    color: #d97706;
+}
+
+/* In-Kind Box */
+.sponsor-inkind-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.sponsor-inkind-bg {
+    background: #475569;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    padding: 0.6rem 2rem;
+    text-transform: uppercase;
+    border-radius: 10px 10px 0 0;
+    width: fit-content;
+}
+
+.sponsor-inkind-card {
+    background: var(--color-primary);
+    color: #ffffff;
+    border-radius: 14px 0 14px 14px;
+    padding: 1.5rem 2rem;
+    width: 100%;
+    box-shadow: 0 20px 40px var(--color-shadow-strong);
+}
+
+.sponsor-inkind-card p {
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   SLIDES 2-6: BẢNG QUYỀN LỢI NHÀ TÀI TRỢ
+   ========================================================================== */
+.page--sponsor-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.sponsor-benefit__title {
+    margin: 1.5rem 0 2rem;
+    font-size: 56px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
+    color: var(--color-text);
+    flex: none;
+}
+
+.sponsor-benefit__title-highlight {
+    color: var(--color-primary);
+}
+
+.sponsor-table-wrapper {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 40px -20px var(--color-shadow-strong);
+    background: var(--color-surface-alt);
+    margin-bottom: 1.5rem;
+    flex: none;
+}
+
+.sponsor-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Header Columns */
+.sponsor-table__th {
+    padding: 1.2rem 1.4rem;
+    font-weight: 800;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+.sponsor-table__th--label {
+    width: 40%;
+    background: var(--color-primary);
+    color: #ffffff;
+    text-align: left;
+    padding-left: 1.75rem;
+}
+
+.sponsor-table__th--gold {
+    width: 20%;
+    background: #f59e0b;
+    color: #1e1b18;
+}
+
+.sponsor-table__th--silver {
+    width: 20%;
+    background: #fcd34d;
+    color: #1e1b18;
+}
+
+.sponsor-table__th--bronze {
+    width: 20%;
+    background: #fbbf24;
+    color: #1e1b18;
+}
+
+.sponsor-table tbody tr {
+    border-bottom: 1px solid rgba(255, 154, 120, 0.16);
+    transition: background 0.15s ease;
+}
+
+.sponsor-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.sponsor-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.14);
+}
+
+.sponsor-table tbody tr:hover {
+    background: rgba(255, 90, 54, 0.1);
+}
+
+.sponsor-table td {
+    padding: 1.35rem 1.6rem;
+    font-size: 26px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.sponsor-table__label-cell {
+    font-weight: 700;
+    color: var(--color-text);
+    text-align: left;
+    padding-left: 1.75rem !important;
+    background: rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 154, 120, 0.14);
+}
+
+.sponsor-table__value-cell {
+    color: var(--color-text);
+    text-align: center;
+    font-weight: 700;
+    border-right: 1px solid rgba(255, 154, 120, 0.1);
+}
+
+.sponsor-table__value-cell:last-child {
+    border-right: none;
+}
+
+.sponsor-table__value-cell--span-all,
+.sponsor-table__value-cell--span-2 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* Highlight "X" mark */
+.sponsor-table__value-cell--check {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--color-primary-light, #ff9270);
+}
+
+/* ---------- Notes List (Slide 7) ---------- */
+.sponsor-notes-wrapper {
+    width: 100%;
+    margin-top: 0.5rem;
+    flex: none;
+}
+
+.sponsor-notes-list {
+    list-style: disc;
+    padding-left: 2.2rem;
+    margin: 0;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.sponsor-notes-list li {
+    font-size: 26px;
+    line-height: 1.55;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* ---------- Print Rules ---------- */
+@media print {
+    .sponsor-pkg-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}

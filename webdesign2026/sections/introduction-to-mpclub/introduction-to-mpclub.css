@@ -35,7 +35,7 @@
     margin: 0;
     color: var(--color-text-muted);
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .mpclub__heading {
@@ -55,7 +55,7 @@
 
 .mpclub__text {
     color: var(--color-text);
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.7;
 }
 
@@ -130,11 +130,11 @@
     text-decoration: none;
 }
 
-/* ---------- Trang 2: Hoat dong trong tam (mockup, bo sung sau) ---------- */
+/* ---------- Trang 2: Hoat dong trong tam ---------- */
 .page--mpclub-activities {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2.25rem;
 }
 
 .mpclub-activities__header {
@@ -150,36 +150,39 @@
     line-height: 1.15;
 }
 
-/* Grid 2x2 can doi, 4 the bang nhau - anh phu kin ca the (background),
-   chu nam tren lop gradient toi o day, thay vi tach rieng khung anh/khung
-   chu nhu card thong thuong - danh nhieu khong gian cho anh hon. */
 .mpclub-activities__grid {
     flex: 1;
     min-height: 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 1rem 2.5rem;
 }
 
 .mpclub-activities__card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.mpclub-activities__media {
     position: relative;
-    border-radius: 20px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 270px;
+    flex: none;
+    border-radius: 16px;
     overflow: hidden;
-    background: linear-gradient(155deg, var(--color-surface) 0%, var(--color-surface-2) 100%);
+    background: var(--color-surface-2);
     border: 1px solid var(--color-border);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.mpclub-activities__card:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-primary);
-    box-shadow: 0 24px 48px -16px var(--color-shadow-strong);
-}
-
-.mpclub-activities__bg {
-    position: absolute;
-    inset: 0;
+.mpclub-activities__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -187,84 +190,62 @@
     transition: transform 0.5s ease;
 }
 
-.mpclub-activities__card:hover .mpclub-activities__bg {
-    transform: scale(1.06);
-}
-
-.mpclub-activities__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, rgba(10, 6, 5, 0.94) 0%, rgba(10, 6, 5, 0.6) 42%, rgba(10, 6, 5, 0.05) 72%);
-    pointer-events: none;
+.mpclub-activities__card:hover .mpclub-activities__img {
+    transform: scale(1.05);
 }
 
 .mpclub-activities__content {
-    position: relative;
-    z-index: 1;
+    flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
-    height: 100%;
-    padding: 1.5rem;
-    justify-content: flex-end;
-    pointer-events: none;
+    margin-top: 1rem;
+    gap: 0.6rem;
+    background: transparent;
+}
+
+.mpclub-activities__header-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .mpclub-activities__index {
-    align-self: flex-start;
     display: inline-flex;
     align-items: center;
-    padding: 0.2rem 0.7rem;
-    margin-bottom: 0.15rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    color: var(--color-primary-light);
+    justify-content: center;
+    padding: 0.2rem 0.65rem;
+    border-radius: 6px;
+    background: rgba(255, 90, 54, 0.12);
+    border: 1px solid rgba(255, 90, 54, 0.3);
+    color: var(--color-primary);
     font-family: "JetBrains Mono", "Consolas", monospace;
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 800;
+    flex: none;
 }
 
 .mpclub-activities__card-title {
     margin: 0;
-    color: #fff;
-    font-size: 1.7rem;
+    color: var(--color-primary-light);
+    font-size: 30px;
     font-weight: 800;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    line-height: 1.25;
 }
 
 .mpclub-activities__card-text {
     margin: 0;
-    color: rgba(255, 255, 255, 0.86);
-    font-size: 20px;
-    line-height: 1.55;
+    color: var(--color-text);
+    font-size: 24px;
+    line-height: 1.5;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-/* Chua co anh: giu nen the trung tinh, chu tro lai mau thuong (khong nam
-   tren anh nen khong can tuong phan trang). */
+/* Plain state (khi khong co anh) */
 .mpclub-activities__card--plain .mpclub-activities__content {
-    justify-content: flex-start;
-    pointer-events: auto;
-}
-
-.mpclub-activities__card--plain .mpclub-activities__index {
-    background: var(--color-surface-alt);
-    border-color: var(--color-border);
-    color: var(--color-primary);
-}
-
-.mpclub-activities__card--plain .mpclub-activities__card-title {
-    color: var(--color-primary);
-    text-shadow: none;
-}
-
-.mpclub-activities__card--plain .mpclub-activities__card-text {
-    color: var(--color-text);
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
+    margin-top: 0;
 }
