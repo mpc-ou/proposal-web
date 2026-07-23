@@ -1,0 +1,270 @@
+/* ---------- Trang 1: Gioi thieu CLB ---------- */
+.page--mpclub-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 64px;
+    align-items: center;
+}
+
+.mpclub__media,
+.mpclub__content {
+    min-width: 0;
+}
+
+.mpclub__media {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-surface-alt);
+    aspect-ratio: 4 / 3;
+}
+
+.mpclub__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mpclub__tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.mpclub__eyebrow {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.mpclub__heading {
+    margin: 0.25rem 0 0.5rem;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 58px;
+    line-height: 1.15;
+}
+
+.mpclub__meta {
+    margin: 0 0 0.75rem;
+    color: var(--color-text-subtle);
+    font-size: 20px;
+}
+
+.mpclub__text {
+    color: var(--color-text);
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+.mpclub__text strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.mpclub__mission {
+    margin: 1rem 0 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-primary);
+    color: var(--color-text-muted);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.mpclub__mission strong {
+    color: var(--color-primary);
+    font-style: normal;
+}
+
+.mpclub__stats {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.mpclub__stats li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface-alt);
+    min-width: 7rem;
+}
+
+.mpclub__stats-value {
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+.mpclub__stats-label {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.mpclub__socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.mpclub__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+}
+
+.mpclub__link:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* ---------- Trang 2: Hoat dong trong tam (mockup, bo sung sau) ---------- */
+.page--mpclub-activities {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.mpclub-activities__header {
+    flex: none;
+}
+
+.mpclub-activities__heading {
+    margin: 0.25rem 0 0;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 1.15;
+}
+
+/* Grid 2x2 can doi, 4 the bang nhau - anh phu kin ca the (background),
+   chu nam tren lop gradient toi o day, thay vi tach rieng khung anh/khung
+   chu nhu card thong thuong - danh nhieu khong gian cho anh hon. */
+.mpclub-activities__grid {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.mpclub-activities__card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(155deg, var(--color-surface) 0%, var(--color-surface-2) 100%);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mpclub-activities__card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primary);
+    box-shadow: 0 24px 48px -16px var(--color-shadow-strong);
+}
+
+.mpclub-activities__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: transform 0.5s ease;
+}
+
+.mpclub-activities__card:hover .mpclub-activities__bg {
+    transform: scale(1.06);
+}
+
+.mpclub-activities__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(10, 6, 5, 0.94) 0%, rgba(10, 6, 5, 0.6) 42%, rgba(10, 6, 5, 0.05) 72%);
+    pointer-events: none;
+}
+
+.mpclub-activities__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    height: 100%;
+    padding: 1.5rem;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.mpclub-activities__index {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    margin-bottom: 0.15rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: var(--color-primary-light);
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.mpclub-activities__card-title {
+    margin: 0;
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.mpclub-activities__card-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 20px;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Chua co anh: giu nen the trung tinh, chu tro lai mau thuong (khong nam
+   tren anh nen khong can tuong phan trang). */
+.mpclub-activities__card--plain .mpclub-activities__content {
+    justify-content: flex-start;
+    pointer-events: auto;
+}
+
+.mpclub-activities__card--plain .mpclub-activities__index {
+    background: var(--color-surface-alt);
+    border-color: var(--color-border);
+    color: var(--color-primary);
+}
+
+.mpclub-activities__card--plain .mpclub-activities__card-title {
+    color: var(--color-primary);
+    text-shadow: none;
+}
+
+.mpclub-activities__card--plain .mpclub-activities__card-text {
+    color: var(--color-text);
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+}
