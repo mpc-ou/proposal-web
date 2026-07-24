@@ -14,6 +14,11 @@ function setText(root, selector, value) {
     if (el) el.textContent = value || "";
 }
 
+function setHTML(root, selector, value) {
+    const el = root.querySelector(selector);
+    if (el) el.innerHTML = value || "";
+}
+
 function setImage(root, selector, src, alt) {
     const el = root.querySelector(selector);
     if (!el) return;
@@ -53,7 +58,7 @@ export default async function initIntroductionToSchool(root) {
     }
 
     setImage(root, "[data-school-stats-image]", school.statsImage, school.statsImageAlt);
-    setText(root, "[data-school-source]", school.source);
+    setHTML(root, "[data-school-source]", renderMarkdown(school.source));
 
     const overviewEl = root.querySelector("[data-school-overview]");
     const summaryEl = root.querySelector("[data-school-summary]");

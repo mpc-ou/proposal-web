@@ -1,0 +1,145 @@
+[
+  {
+    "year": "2022",
+    "name": "Web Design 2022",
+    "description": "Các dự án Web Design 2022 được thực hiện bởi các thí sinh với chủ đề dịch vụ công cộng, các dự án được thực hiện theo nhóm 2-3 người.",
+    "teams": [
+      {
+        "teamName": "TEAM TOBG",
+        "projectName": "Cycle Of Life",
+        "imgs": [
+          "./sections/exhibitions/img/wd22-TOBG.png"
+        ],
+        "github": null,
+        "website": null
+      },
+      {
+        "teamName": "TEAM BEAST",
+        "projectName": "Beta Projects",
+        "imgs": [
+          "./sections/exhibitions/img/wd22-BEAST.png"
+        ],
+        "github": null,
+        "website": null
+      },
+      {
+        "teamName": "TEAM7",
+        "projectName": "Traveling",
+        "imgs": [
+          "./sections/exhibitions/img/wd22-TEAM7.png"
+        ],
+        "github": null,
+        "website": null
+      },
+      {
+        "teamName": "TEAM4",
+        "projectName": "Your Work",
+        "imgs": [
+          "./sections/exhibitions/img/wd22-TEAM4.png"
+        ],
+        "github": null,
+        "website": null
+      },
+      {
+        "teamName": "TEAM XTCP",
+        "projectName": "Spiderman Cinema",
+        "imgs": [
+          "./sections/exhibitions/img/wd22-XTCP.png"
+        ],
+        "github": null,
+        "website": null
+      },
+      {
+        "teamName": "TEAM KHDCPP",
+        "projectName": "THANHTIEN MOVIE",
+        "imgs": [
+          "./sections/exhibitions/img/wd22-KHDCPP.png"
+        ],
+        "github": null,
+        "website": null
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "name": "Web Design 2023",
+    "description": "Đến với Web Design 2023, các dự án được thực hiện theo chủ đề giáo dục, mang đến trải nghiệm rộng hơn.",
+    "teams": [
+      {
+        "teamName": "TEAM NENE",
+        "projectName": "Eng Quiz",
+        "imgs": [
+          "./sections/exhibitions/img/wd23-NENE001.png",
+          "./sections/exhibitions/img/wd23-NENE002.png",
+          "./sections/exhibitions/img/wd23-NENE003.png"
+        ],
+        "github": null,
+        "website": null
+      },
+      {
+        "teamName": "TEAM BRATO",
+        "projectName": "Edu Web",
+        "imgs": [
+          "./sections/exhibitions/img/wd23-BRATO001.png",
+          "./sections/exhibitions/img/wd23-BRATO002.png",
+          "./sections/exhibitions/img/wd23-BRATO003.png"
+        ],
+        "github": null,
+        "website": null
+      }
+    ]
+  },
+  {
+    "year": "2025",
+    "name": "Web Design 2025",
+    "description": "Nhằm kỉ niệm 35 năm thành lập Trường Đại học Mở Thành phố Hồ Chí Minh, Web Design 2025 được tổ chức với chủ đề \"Giới thiệu về Trường Đại học Mở Thành phố Hồ Chí Minh\".",
+    "teams": [
+      {
+        "teamName": "TEAM FUTURE",
+        "projectName": "Cổng thông tin sinh viên",
+        "imgs": [
+          "./sections/exhibitions/img/wd25-FUTURE001.png",
+          "./sections/exhibitions/img/wd25-FUTURE002.png",
+          "./sections/exhibitions/img/wd25-FUTURE003.png"
+        ],
+        "github": "https://github.com/OUMPC/WebDesign2025-Future",
+        "website": "wd2025-future.vercel.app"
+      },
+      {
+        "teamName": "TEAM NTK",
+        "projectName": "Giới thiệu khoa Công nghệ thông tin",
+        "imgs": [
+          "./sections/exhibitions/img/wd25-NTK001.png",
+          "./sections/exhibitions/img/wd25-NTK002.png",
+          "./sections/exhibitions/img/wd25-NTK003.png",
+          "./sections/exhibitions/img/wd25-NTK004.png"
+        ],
+        "github": "https://github.com/Le-Minh-Nhut/NTK",
+        "website": "https://ntk-frontend.onrender.com"
+      },
+      {
+        "teamName": "TEAM THETHREE",
+        "projectName": "Giới thiệu về Trường ĐH Mở TP.HCM",
+        "imgs": [
+          "./sections/exhibitions/img/wd25-THETHREE001.png",
+          "./sections/exhibitions/img/wd25-THETHREE002.png",
+          "./sections/exhibitions/img/wd25-THETHREE003.png"
+        ],
+        "github": "https://github.com/Teaching2504/WEBDESIGN_THETHREE",
+        "website": "https://webdesignthethree.netlify.app"
+      },
+      {
+        "teamName": "TEAM STACK LIFO",
+        "projectName": "Giới thiệu về Trường ĐH Mở TP.HCM",
+        "imgs": [
+          "./sections/exhibitions/img/wd25-STACKLIFO001.png",
+          "./sections/exhibitions/img/wd25-STACKLIFO002.png",
+          "./sections/exhibitions/img/wd25-STACKLIFO003.png",
+          "./sections/exhibitions/img/wd25-STACKLIFO004.png"
+        ],
+        "github": "https://github.com/Theanh130124/WEB_DESIGN",
+        "website": "https://web-desgin-stacklifo.vercel.app"
+      }
+    ]
+  }
+]

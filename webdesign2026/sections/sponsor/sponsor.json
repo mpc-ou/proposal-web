@@ -1,0 +1,201 @@
+{
+    "packagesPage": {
+        "titlePrefix": "Các Gói",
+        "titleHighlight": "TÀI TRỢ",
+        "cashTitle": "TÀI TRỢ HIỆN KIM",
+        "packages": [
+            {
+                "id": "gold",
+                "tier": "NHÀ TÀI TRỢ VÀNG",
+                "amount": "5.000.000 VNĐ",
+                "colorClass": "sponsor-tier--gold"
+            },
+            {
+                "id": "silver",
+                "tier": "NHÀ TÀI TRỢ BẠC",
+                "amount": "3.000.000 VNĐ",
+                "colorClass": "sponsor-tier--silver"
+            },
+            {
+                "id": "bronze",
+                "tier": "NHÀ TÀI TRỢ ĐỒNG",
+                "amount": "1.000.000 VNĐ",
+                "colorClass": "sponsor-tier--bronze"
+            }
+        ],
+        "inKindTitle": "TÀI TRỢ HIỆN VẬT",
+        "inKindPolicy": "NTT có thể tài trợ kết hợp cả hai hình thức hiện vật(30%) và hiện kim(70%)."
+    },
+    "benefitPages": [
+        {
+            "id": "basic-1",
+            "category": "CƠ BẢN",
+            "titlePrefix": "QUYỀN LỢI NHÀ TÀI TRỢ",
+            "titleHighlight": "CƠ BẢN",
+            "headers": [
+                "QUYỀN LỢI NHÀ TÀI TRỢ",
+                "VÀNG",
+                "BẠC",
+                "ĐỒNG"
+            ],
+            "rows": [
+                {
+                    "label": "Danh xưng",
+                    "type": "full-span",
+                    "value": "Nhà tài trợ Chính thức của chương trình"
+                },
+                {
+                    "label": "Phạm vi truyền thông",
+                    "type": "full-span",
+                    "value": "Hình ảnh NTT được truyền thông trực tiếp đến sinh viên trong và ngoài trường Đại học Mở TP.HCM trong suốt thời gian diễn ra chương trình"
+                },
+                {
+                    "label": "Logo NTT xuất hiện trang trọng trên các tài liệu quảng cáo bao gồm standee, thư mời, backdrop.. (vị trí ưu tiên các logo xuất hiện tùy vào mức tài trợ)",
+                    "gold": "Kích thước bằng logo trường Đại học Mở TP.HCM, LCHSV khoa Công Nghệ Thông Tin và CLB LTTTBDĐ",
+                    "silver": "Kích thước 2/3 NTT Vàng",
+                    "bronze": "Kích thước 2/3 NTT Bạc"
+                }
+            ]
+        },
+        {
+            "id": "basic-2",
+            "category": "CƠ BẢN",
+            "titlePrefix": "QUYỀN LỢI NHÀ TÀI TRỢ",
+            "titleHighlight": "CƠ BẢN",
+            "headers": [
+                "QUYỀN LỢI NHÀ TÀI TRỢ",
+                "VÀNG",
+                "BẠC",
+                "ĐỒNG"
+            ],
+            "rows": [
+                {
+                    "label": "Được dẫn link facebook/instagram vào caption trong những bài đăng suốt thời gian diễn ra chương trình",
+                    "gold": "X",
+                    "silver": "X",
+                    "bronze": "X"
+                },
+                {
+                    "label": "Bài đăng giới thiệu NTT trên fanpage CLB Lập Trình Trên Thiết Bị Di Động",
+                    "gold": "1 bài riêng",
+                    "silver": "1 bài chung",
+                    "bronze": "1 bài chung"
+                },
+                {
+                    "label": "Bài cảm ơn & bài đăng review về Doanh nghiệp trên fanpage CLB",
+                    "gold": "X",
+                    "silver": "X",
+                    "bronze": "X"
+                },
+                {
+                    "label": "Được sử dụng hình ảnh như hoạt động PR của Doanh nghiệp",
+                    "gold": "X",
+                    "silver": "X",
+                    "bronze": "X"
+                }
+            ]
+        },
+        {
+            "id": "special-1",
+            "category": "ĐẶC BIỆT",
+            "titlePrefix": "QUYỀN LỢI NHÀ TÀI TRỢ",
+            "titleHighlight": "ĐẶC BIỆT",
+            "headers": [
+                "QUYỀN LỢI NTT",
+                "VÀNG",
+                "BẠC",
+                "ĐỒNG"
+            ],
+            "rows": [
+                {
+                    "label": "Tên và logo NTT được in trên poster",
+                    "gold": "X",
+                    "silver": "X",
+                    "bronze": "X"
+                },
+                {
+                    "label": "Tên và logo NTT trên các bài Hỗ Trợ Truyền Thông trên các fanpage khác",
+                    "gold": "X",
+                    "silver": "X",
+                    "bronze": "X"
+                },
+                {
+                    "label": "HTTT các sản phẩm mới của NTT trên facebook trong khung giờ vàng",
+                    "gold": "3 Bài đăng",
+                    "silver": "2 Bài đăng",
+                    "bronze": "1 Bài đăng"
+                },
+                {
+                    "label": "Thư mời tham dự chung kết cuộc thi",
+                    "gold": "2 Vé",
+                    "silver": "1 Vé",
+                    "bronze": "1 Vé"
+                }
+            ]
+        },
+        {
+            "id": "special-2",
+            "category": "ĐẶC BIỆT",
+            "titlePrefix": "QUYỀN LỢI NHÀ TÀI TRỢ",
+            "titleHighlight": "ĐẶC BIỆT",
+            "headers": [
+                "QUYỀN LỢI NTT",
+                "VÀNG",
+                "BẠC",
+                "ĐỒNG"
+            ],
+            "rows": [
+                {
+                    "label": "Được nhận thông tin các sự kiện tiếp theo với tư cách đối tác CLB",
+                    "gold": "X",
+                    "silver": "X",
+                    "bronze": "X"
+                },
+                {
+                    "label": "Đặt standee trong ngày diễn ra buổi thi chung kết (Nếu NTT yêu cầu, và phải gửi trước đến BTC trước 5 ngày)",
+                    "gold": "X",
+                    "silver": "X",
+                    "bronze": ""
+                },
+                {
+                    "label": "Đặt bàn quảng cáo sản phẩm buổi thi chung kết (dành cho NTT có sản phẩm)",
+                    "gold": "X",
+                    "silver": "",
+                    "bronze": ""
+                },
+                {
+                    "label": "Làm thành viên trong Ban giám khảo cuộc thi (Người chấm thi có chuyên môn về lập trình website)",
+                    "gold": "X",
+                    "silver": "",
+                    "bronze": ""
+                }
+            ]
+        },
+        {
+            "id": "special-3",
+            "category": "ĐẶC BIỆT",
+            "titlePrefix": "QUYỀN LỢI NHÀ TÀI TRỢ",
+            "titleHighlight": "ĐẶC BIỆT",
+            "headers": [
+                "QUYỀN LỢI NHÀ TÀI TRỢ",
+                "VÀNG",
+                "BẠC",
+                "ĐỒNG"
+            ],
+            "rows": [
+                {
+                    "label": "Hỗ trợ tổ chức 01 hội thảo/ workshop cho Doanh nghiệp với thời lượng 2 giờ/ buổi.",
+                    "gold": "X",
+                    "silver": "",
+                    "bronze": ""
+                }
+            ],
+            "notes": [
+                "Nhà tài trợ hiện vật giao hiện vật cho đại diện của BTC. Địa điểm giao nhận do BTC và nhà tài trợ thỏa thuận. Hiện vật được giao không muộn hơn 5 ngày sau khi ký hợp đồng tài trợ.",
+                "Mức tài trợ cụ thể cũng như các quyền lợi tài trợ có thể được thỏa thuận.",
+                "Ngoài những quyền lợi do ban tổ chức đưa ra, nhà tài trợ có thể đề nghị một số quyền lợi khác phù hợp với điều kiện của đơn vị mình. BTC sẽ cố gắng đáp ứng những nhu cầu hợp lý của nhà tài trợ trong khả năng có thể.",
+                "Nhà tài trợ có trách nhiệm cung cấp khoản tiền tài trợ, hiện vật và dịch vụ đầy đủ, đảm bảo chất lượng và đúng theo thời gian ấn định bởi thỏa thuận của cả hai bên."
+            ]
+        }
+    ]
+}

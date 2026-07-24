@@ -1,0 +1,3 @@
+Câu lạc bộ Lập trình trên thiết bị di động (Mobile Programming Club – MPC) là một trong những câu lạc bộ hoạt động năng động, sôi nổi và đầy sáng tạo của Khoa Công nghệ thông tin – Trường Đại học Mở Tp.HCM. MPC được thành lập với mục tiêu tạo ra một môi trường học tập, nghiên cứu và phát triển công nghệ thông tin không chỉ trên thiết bị di động như web, mobile app... mà còn nhiều ngành phổ biến khác cho sinh viên Khoa CNTT, cũng như các bạn yêu thích lập trình.
+
+**Sứ mệnh & Mục đích:** Chúng tôi hướng tới việc xây dựng một cộng đồng học thuật năng động, thực tế và gắn kết, nơi sinh viên có thể chia sẻ kiến thức, rèn luyện kỹ năng và chuẩn bị vững vàng cho sự nghiệp.

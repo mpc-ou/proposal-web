@@ -1,0 +1,150 @@
+.page--organizing-resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.organizing-resources__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+.organizing-resources__left {
+    flex: 1.15;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.organizing-resources__title {
+    margin: 0 0 1.5rem;
+    font-size: 56px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: left;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+}
+
+.organizing-resources__title-highlight {
+    color: var(--color-primary);
+}
+
+.organizing-resources__card {
+    background: var(--color-surface-alt);
+    border-radius: 16px;
+    padding: 2.25rem 2.5rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 20px 40px -20px var(--color-shadow-strong);
+    width: 100%;
+}
+
+.organizing-resources__text p {
+    margin: 0 0 1.25rem;
+    font-size: 28px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.organizing-resources__text p:last-child {
+    margin-bottom: 0;
+}
+
+.organizing-resources__text strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Cột Phải: Bộ sưu tập thẻ ảnh Cửa sổ Mac OS */
+.organizing-resources__right {
+    flex: 0.85;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.organizing-resources__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.organizing-resources__photo-card {
+    position: relative;
+    background-color: var(--color-surface-alt);
+    border-radius: 14px;
+    padding: 34px 10px 10px 10px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 18px 40px -10px var(--color-shadow-strong);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    width: 100%;
+}
+
+.organizing-resources__photo-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 24px 50px var(--color-glow);
+}
+
+.organizing-resources__photo-card .cwindow__dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 12px;
+    z-index: 2;
+}
+
+.organizing-resources__photo-card .cwindow__dot--red {
+    background-color: var(--color-error, #ff5f57);
+    left: 14px;
+}
+
+.organizing-resources__photo-card .cwindow__dot--yellow {
+    background-color: var(--color-warning, #febc2e);
+    left: 30px;
+}
+
+.organizing-resources__photo-card .cwindow__dot--green {
+    background-color: var(--color-success, #28c840);
+    left: 46px;
+}
+
+.organizing-resources__img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--color-surface-2, rgba(0, 0, 0, 0.2));
+}
+
+.organizing-resources__img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.4s ease;
+}
+
+.organizing-resources__photo-card:hover .organizing-resources__img-wrapper img {
+    transform: scale(1.04);
+}
+
+.organizing-resources__caption {
+    margin-top: 0.65rem;
+    padding: 0 0.25rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-align: center;
+}

@@ -1,0 +1,45 @@
+{
+    "eyebrow": "TIMELINE CUỘC THI",
+    "heading": "Web Design 2026",
+    "image": "./sections/timeline/img/timeline-cover.jpg",
+    "imageAlt": "Sinh viên tham gia cuộc thi Web Design",
+    "milestones": [
+        {
+            "icon": "bi-pencil-square",
+            "date": "17/08 - 23/08",
+            "label": "Đăng ký dự thi",
+            "text": "Mở cổng đăng ký tham gia cuộc thi dành cho các đội dự thi."
+        },
+        {
+            "icon": "bi-megaphone",
+            "date": "30/08",
+            "label": "Khai mạc",
+            "text": "Buổi khai mạc cuộc thi, phổ biến thể lệ và giải đáp thắc mắc."
+        },
+        {
+            "icon": "bi-code-slash",
+            "date": "31/08 - 04/09",
+            "label": "Vòng sơ loại",
+            "text": "Các đội thực hiện thiết kế website và nộp sản phẩm vòng sơ loại.",
+            "note": "Chấm sơ loại: 13h00 ngày 04/09 - Cơ sở Nhà Bè"
+        },
+        {
+            "icon": "bi-people",
+            "date": "05/09 - 11/09",
+            "label": "Đăng ký cổ vũ",
+            "text": "Mở cổng đăng ký tham dự cổ vũ đêm Chung kết."
+        },
+        {
+            "icon": "bi-rocket-takeoff",
+            "date": "05/09 - 11/09",
+            "label": "Vòng triển khai",
+            "text": "Các đội hoàn thiện, nâng cấp tính năng sản phẩm chuẩn bị cho Chung kết."
+        },
+        {
+            "icon": "bi-trophy",
+            "date": "13/09",
+            "label": "Chung kết",
+            "text": "Các đội trình bày sản phẩm trước Ban giám khảo, tổng kết và trao giải."
+        }
+    ]
+}

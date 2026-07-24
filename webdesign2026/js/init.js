@@ -18,6 +18,30 @@ const SECTIONS = [
 
         module: "./sections/WebDesign-recap/WebDesign-recap.js"
     },
+    {
+        html: "./sections/introduction-to-mpclub/introduction-to-mpclub.html",
+        module: "../sections/introduction-to-mpclub/introduction-to-mpclub.js"
+    },
+    {
+        html: "./sections/exhibitions/exhibitions.html",
+        module: "../sections/exhibitions/exhibitions.js"
+    },
+    {
+        html: "./sections/timeline/timeline.html",
+        module: "../sections/timeline/timeline.js"
+    },
+    {
+        html: "./sections/media-effectiveness/media-effectiveness.html",
+        module: "../sections/media-effectiveness/media-effectiveness.js"
+    },
+    {
+        html: "./sections/organizing-resources/organizing-resources.html",
+        module: "../sections/organizing-resources/organizing-resources.js"
+    },
+    {
+        html: "./sections/sponsor/sponsor.html",
+        module: "../sections/sponsor/sponsor.js"
+    }
 ];
 
 async function loadSharedData() {
