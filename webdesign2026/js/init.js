@@ -10,8 +10,13 @@ const SECTIONS = [
         module: "../sections/open-letter-page/open-letter-page.js"
     },
     {
-        html: "./sections/introduction-to-school/introduction-to-school.html", 
+        html: "./sections/introduction-to-school/introduction-to-school.html",
         module: "../sections/introduction-to-school/introduction-to-school.js"
+    },
+    {
+        html: "./sections/WebDesign-recap/WebDesign-recap.html",
+
+        module: "./sections/WebDesign-recap/WebDesign-recap.js"
     },
 ];
 
