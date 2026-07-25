@@ -14,6 +14,10 @@ const SECTIONS = [
     module: "../sections/introduction-to-school/introduction-to-school.js",
   },
   {
+    html: "./sections/introduction-to-faculty/introduction-to-faculty.html",
+    module: "../sections/introduction-to-faculty/introduction-to-faculty.js",
+  },
+  {
     html: "./sections/introduction-to-mpclub/introduction-to-mpclub.html",
     module: "../sections/introduction-to-mpclub/introduction-to-mpclub.js",
   },
