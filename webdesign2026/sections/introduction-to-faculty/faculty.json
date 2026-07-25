@@ -1,0 +1,35 @@
+{
+    "tag": "KHOA CÔNG NGHỆ THÔNG TIN",
+    "image": "./sections/introduction-to-faculty/img/it-ou.jpg",
+    "imageAlt": "Khoa Công nghệ Thông tin - Trường Đại học Mở TP.HCM",
+    "eyebrow": "Giới thiệu",
+    "heading": "Khoa Công nghệ Thông tin",
+    "stats": [
+        { "value": "06", "label": "Ngành đào tạo đại học" },
+        { "value": "02", "label": "Chương trình Sau Đại học (Thạc sĩ, Tiến sĩ Khoa học máy tính)" },
+        { "value": "03", "label": "Chương trình đào tạo tài năng (02 Kỹ sư, 01 Thạc sĩ)" },
+        { "value": "500+", "label": "Công bố quốc tế" }
+    ],
+    "contact": {
+        "address": {
+            "icon": "bi-geo-alt-fill",
+            "text": "Phòng 604, số 35-37 Hồ Hảo Hớn, P. Cầu Ông Lãnh, TP.HCM",
+            "url": "https://maps.app.goo.gl/otzSmJE5cEwYyFDs5"
+        },
+        "phone": {
+            "icon": "bi-telephone-fill",
+            "text": "(84-028) 3838 6603",
+            "url": "tel:+842838386603"
+        },
+        "website": {
+            "icon": "bi-globe2",
+            "text": "it.ou.edu.vn",
+            "url": "https://it.ou.edu.vn"
+        },
+        "email": {
+            "icon": "bi-envelope-fill",
+            "text": "fcs@ou.edu.vn",
+            "url": "mailto:fcs@ou.edu.vn"
+        }
+    }
+}
