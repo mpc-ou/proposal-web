@@ -40,6 +40,14 @@ const SECTIONS = [
     {
         html: "./sections/sponsor/sponsor.html",
         module: "../sections/sponsor/sponsor.js"
+    },
+    {
+        html: "./sections/web-design-info/web-design-info.html",
+        module: "../sections/web-design-info/web-design-info.js"
+    },
+    {
+        html: "./sections/contest-value/contest-value.html",
+        module: "../sections/contest-value/contest-value.js"
     }
 ];
 
