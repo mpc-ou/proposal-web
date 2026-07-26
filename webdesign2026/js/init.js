@@ -14,9 +14,9 @@ const SECTIONS = [
         module: "../sections/introduction-to-school/introduction-to-school.js"
     },
     {
-        html: "./sections/WebDesign-recap/WebDesign-recap.html",
+        html: "./sections/webdesign-recap/WebDesign-recap.html",
 
-        module: "./sections/WebDesign-recap/WebDesign-recap.js"
+        module: "./sections/webdesign-recap/WebDesign-recap.js"
     },
     {
         html: "./sections/introduction-to-mpclub/introduction-to-mpclub.html",
