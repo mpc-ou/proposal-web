@@ -1,0 +1,23 @@
+{
+    "heading": "HIỆU QUẢ TRUYỀN THÔNG",
+    "tocHeading": "Hiệu quả truyền thông",
+    "webDesign": {
+        "subheading": "Cuộc thi",
+        "title": "WEBDESIGN 2025",
+        "description": "Thu hút sự quan tâm của cộng đồng với hơn 1000 lượt tiếp cận và tương tác",
+        "images": [
+            "./sections/media-effectiveness/img/wd2025003.jpg",
+            "./sections/media-effectiveness/img/wd2025002.jpg",
+            "./sections/media-effectiveness/img/wd2025001.jpg"
+        ]
+    },
+    "common": {
+        "subheading": "Các bài đăng truyền thông",
+        "title": "Gần đây",
+        "description": "Các bài đăng truyền thông gần đây của CLB",
+        "images": [
+            "./sections/media-effectiveness/img/solieuchung002.jpg",
+            "./sections/media-effectiveness/img/solieuchung001.jpg"
+        ]
+    }
+}

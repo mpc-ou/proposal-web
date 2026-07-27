@@ -70,8 +70,28 @@
       rel="stylesheet"
       href="./sections/introduction-to-school/introduction-to-school.css"
     />
+    <link
+      rel="stylesheet"
+      href="./sections/introduction-to-faculty/introduction-to-faculty.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./sections/introduction-to-mpclub/introduction-to-mpclub.css"
+    />
+    <link rel="stylesheet" href="./sections/exhibitions/exhibitions.css" />
+    <link
+      rel="stylesheet"
+      href="./sections/media-effectiveness/media-effectiveness.css"
+    />
+    <link rel="stylesheet" href="./sections/timeline/timeline.css" />
+    <link
+      rel="stylesheet"
+      href="./sections/organizing-resources/organizing-resources.css"
+    />
+    <link rel="stylesheet" href="./sections/sponsor/sponsor.css" />
     <link rel="stylesheet" href="./sections/thank-you/thank-you.css" />
   </head>
+
   <body>
     <!-- Thanh tien trinh cuon trang -->
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -90,6 +110,16 @@
       </button>
     </div>
 
+    <!-- Nút "Lên đầu trang" - chi hien sau khi cuon xuong 1 doan -->
+    <button
+      type="button"
+      class="back-to-top"
+      id="backToTop"
+      aria-label="Lên đầu trang"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
     <!-- Zoom in/out cho khung 1920x1080 co dinh -->
     <div class="zoom-control" id="zoomControl">
       <button
@@ -100,7 +130,7 @@
       >
         <i class="bi bi-dash-lg"></i>
       </button>
-      <span class="zoom-control__level" id="zoomLevel">100%</span>
+      <span class="zoom-control__level" id="zoomLevel">70%</span>
       <button
         type="button"
         class="zoom-control__btn"
@@ -109,6 +139,25 @@
       >
         <i class="bi bi-plus-lg"></i>
       </button>
+      <span class="zoom-control__divider"></span>
+      <span class="zoom-control__page" id="pageIndicator">1 / 1</span>
+    </div>
+
+    <div class="toc" id="toc">
+      <button
+        type="button"
+        class="toc__toggle"
+        id="tocToggle"
+        aria-expanded="false"
+        aria-controls="tocPanel"
+        aria-label="Mục lục"
+      >
+        <i class="bi bi-list-ul"></i>
+      </button>
+      <div class="toc__panel" id="tocPanel">
+        <p class="toc__panel-title">Mục lục</p>
+        <ul class="toc__list"></ul>
+      </div>
     </div>
 
     <!-- JS thư viện -->
@@ -119,7 +168,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- JS của dự án -->
+    <!-- JS của dự án - Không được viết lại -->
     <script src="./js/app.js" type="module"></script>
     <script src="./js/init.js" type="module"></script>
   </body>

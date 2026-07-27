@@ -1,0 +1,3 @@
+Khoa Công nghệ Thông tin – Trường Đại học Mở TP. Hồ Chí Minh được thành lập từ tháng 9 năm 1990, là một trong những khoa đầu tiên của Nhà trường. Sau hơn **35 năm phát triển**, Khoa đã khẳng định uy tín trong đào tạo và nghiên cứu lĩnh vực Công nghệ thông tin, với đội ngũ giảng viên trình độ cao, giàu kinh nghiệm, được đào tạo trong và ngoài nước.
+
+Khoa đã đào tạo hơn **6.000 cử nhân** hệ chính quy, cung cấp nguồn nhân lực CNTT chất lượng cho xã hội. Chất lượng đào tạo được minh chứng qua các kết quả kiểm định: ngành Hệ thống thông tin quản lý, Công nghệ thông tin đạt chuẩn Bộ Giáo dục và Đào tạo, ngành Khoa học máy tính đạt chuẩn **AUN**.

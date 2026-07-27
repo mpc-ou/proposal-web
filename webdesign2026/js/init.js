@@ -14,6 +14,34 @@ const SECTIONS = [
     module: "../sections/introduction-to-school/introduction-to-school.js",
   },
   {
+    html: "./sections/introduction-to-faculty/introduction-to-faculty.html",
+    module: "../sections/introduction-to-faculty/introduction-to-faculty.js",
+  },
+  {
+    html: "./sections/introduction-to-mpclub/introduction-to-mpclub.html",
+    module: "../sections/introduction-to-mpclub/introduction-to-mpclub.js",
+  },
+  {
+    html: "./sections/exhibitions/exhibitions.html",
+    module: "../sections/exhibitions/exhibitions.js",
+  },
+  {
+    html: "./sections/timeline/timeline.html",
+    module: "../sections/timeline/timeline.js",
+  },
+  {
+    html: "./sections/media-effectiveness/media-effectiveness.html",
+    module: "../sections/media-effectiveness/media-effectiveness.js",
+  },
+  {
+    html: "./sections/organizing-resources/organizing-resources.html",
+    module: "../sections/organizing-resources/organizing-resources.js",
+  },
+  {
+    html: "./sections/sponsor/sponsor.html",
+    module: "../sections/sponsor/sponsor.js",
+  },
+  {
     html: "./sections/thank-you/thank-you.html",
     module: "../sections/thank-you/thank-you.js",
   },

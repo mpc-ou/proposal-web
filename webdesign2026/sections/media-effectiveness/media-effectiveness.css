@@ -1,0 +1,186 @@
+.page--media-effectiveness {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ---------- Top Header ---------- */
+.media-effectiveness__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    z-index: 5;
+}
+
+.media-effectiveness__heading {
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+/* ---------- Info Block ---------- */
+.media-effectiveness__info-block {
+    text-align: right;
+}
+
+.media-effectiveness__subheading {
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.media-effectiveness__title {
+    margin: 0.25rem 0 0;
+    color: var(--color-text);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.media-effectiveness__description {
+    margin: 0.5rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 28px;
+    line-height: 1.55;
+    max-width: 600px;
+}
+
+/* ---------- Stage (Khung chứa ảnh) ---------- */
+.media-effectiveness__stage {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    margin-top: 1rem;
+}
+
+/* ---------- Reusable cwindow (Mac OS Window Box) ---------- */
+.cwindow {
+    position: relative;
+    background-color: var(--color-surface-alt);
+    border-radius: 14px;
+    padding: 0.6rem;
+    padding-top: 2.2rem;
+    box-shadow: 0 20px 40px -20px var(--color-shadow-strong);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cwindow:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 24px 48px -18px var(--color-shadow-strong);
+    border-color: var(--color-primary);
+    z-index: 10 !important;
+}
+
+.cwindow>img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    cursor: zoom-in;
+}
+
+.cwindow__dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: 12px;
+    z-index: 2;
+}
+
+.cwindow__dot--red {
+    background-color: #ff5f57;
+    left: 14px;
+}
+
+.cwindow__dot--yellow {
+    background-color: #febc2e;
+    left: 30px;
+}
+
+.cwindow__dot--green {
+    background-color: #28c840;
+    left: 46px;
+}
+
+/* ---------- Position rules for 3-images layout (Slide 1) ---------- */
+.media-effectiveness__stage--3-items .media-effectiveness__card--pos-1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 56%;
+    z-index: 1;
+}
+
+.media-effectiveness__stage--3-items .media-effectiveness__card--pos-2 {
+    position: absolute;
+    top: 12%;
+    right: 0%;
+    width: 56%;
+    z-index: 2;
+}
+
+.media-effectiveness__stage--3-items .media-effectiveness__card--pos-3 {
+    position: absolute;
+    bottom: 0%;
+    left: 18%;
+    width: 58%;
+    z-index: 3;
+}
+
+/* ---------- Position rules for 2-images layout (Slide 2) ---------- */
+.media-effectiveness__stage--2-items .media-effectiveness__card--pos-1 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 62%;
+    z-index: 1;
+}
+
+.media-effectiveness__stage--2-items .media-effectiveness__card--pos-2 {
+    position: absolute;
+    top: 18%;
+    right: 0%;
+    width: 62%;
+    z-index: 2;
+}
+
+.media-effectiveness__stage--2-items .media-effectiveness__info-block {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    text-align: left;
+    max-width: 44%;
+    z-index: 5;
+}
+
+.media-effectiveness__stage--2-items .media-effectiveness__subheading {
+    font-size: 30px;
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+.media-effectiveness__stage--2-items .media-effectiveness__title {
+    font-size: 46px;
+    color: var(--color-text);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+/* ---------- Print rules ---------- */
+@media print {
+    .cwindow:hover {
+        transform: none;
+        box-shadow: 0 20px 40px -20px var(--color-shadow-strong);
+    }
+}
