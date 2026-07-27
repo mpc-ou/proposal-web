@@ -88,8 +88,9 @@
   
 }
 
-.recap-image {overflow: hidden;
-  
+.recap-image {
+  position: relative;
+  overflow: hidden; 
   align-self: flex-end;
   width: 100%;
   max-width: 750px;
@@ -105,12 +106,169 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .recap-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-.recap-image:last-child {
+.recap-image .recap-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 5;
+  background: var(--color-primary);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transform-origin: left top;
+}
+
+/* Large badge variant (like example) */
+
+/* .recap-image .recap-tag--large {
+  top: -14px; /* push badge above the image */
+  /* right: -18px; let badge hang out to the right */
+  /* left: auto;  /* --badge-bg:#ff5a36; */
+  /* --badge-ink: #111;
+  --badge-accent: rgba(0,0,0,0.08);
+  background: linear-gradient(90deg,var(--badge-bg), #ff5a36); */ 
+  /* color: var(--badge-ink);
+   padding: 0.3rem 0.3rem;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  box-shadow: 0 14px 44px rgba(0,0,0,0.42), 0 2px 0 rgba(255,255,255,0.04) inset;
+  transform: translateZ(0);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 60; /* make sure badge sits above other elements */
+
+
+/* layered decorative pseudo-elements to add depth */
+/* .recap-image .recap-tag--large::before,
+.recap-image .recap-tag--large::after {
+  content: "";
+  position: absolute;
+  z-index: 55; /* behind the badge but above the image */
+  /* border-radius: 8px;
+  pointer-events: none;
+} */
+
+/* .recap-image .recap-tag--large::before {
+  right: -8px;
+  top: -8px;
+  width: calc(100% + 34px);
+  height: calc(100% + 24px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.14), rgba(0,0,0,0.06));
+  transform: rotate(-1.5deg);
+  filter: blur(8px);
+  opacity: 0.95;
+} */
+
+/* .recap-image .recap-tag--large::after {
+  right: -22px;
+  top: 4px;
+  width: calc(100% + 44px);
+  height: calc(100% + 36px);
+  background: linear-gradient(90deg, rgba(255,180,64,0.14), rgba(0,0,0,0));
+  transform: rotate(-3deg);
+  filter: blur(12px);
+  opacity: 0.85;
+  z-index: 52;
+} */
+
+/* small caret element (visual arrow) */
+/* .recap-image .recap-tag--large .caret {
+  display: inline-block;
+  background: rgba(0,0,0,0.08);
+  padding: 4px 2px;
+  border-radius: 4px;
+  font-weight: 900;
+} */
+
+/* top-right helper (if needed) */
+/* .recap-image .recap-tag--top-right { left: auto; right: 12px; } */
+
+/* .recap-image:last-child {
   margin-bottom: 0;
+} */ 
+
+/* Generic tag styles (for tags appended outside the image container)
+.recap-tag {
+  position: absolute;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateZ(0);
+}
+
+.recap-tag--large {
+  --badge-bg:var
+  --badge-ink: #111;
+  background: linear-gradient(90deg,var(--badge-bg), #f39c12);
+  color: var(--badge-ink);
+  padding: 22px 22px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 0.20rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  
+  box-shadow: 0 14px 44px rgba(0,0,0,0.42), 0 2px 0 rgba(255,255,255,0.04) inset;
+}
+
+.recap-tag--large::before,
+.recap-tag--large::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.recap-tag--large::before {
+  right: -8px;
+  top: -8px;
+  width: calc(100% + 34px);
+  height: calc(100% + 24px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.14), rgba(0,0,0,0.06));
+  transform: rotate(-1.5deg);
+  filter: blur(8px);
+  opacity: 0.95;
+}
+
+.recap-tag--large::after {
+  right: -22px;
+  top: 6px;
+  width: calc(100% + 44px);
+  height: calc(100% + 36px);
+  background: linear-gradient(90deg, rgba(255,180,64,0.14), rgba(0,0,0,0));
+  transform: rotate(-3deg);
+  filter: blur(12px);
+  opacity: 0.85;
+}
+
+.recap-tag .caret { display: inline-block; background: rgba(0,0,0,0.08); padding: 6px 8px; border-radius:4px; font-weight:900; } */
+.recap-image .recap-tagname {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  left: auto;
+  padding: 10px 30px;
+  background: var(--color-primary);
+  border-radius: 12px;
+  
+  color: black;
+  font-weight: 700;
+  z-index: 5;
 }
