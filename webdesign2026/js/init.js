@@ -41,6 +41,10 @@ const SECTIONS = [
     {
         html: "./sections/sponsor/sponsor.html",
         module: "../sections/sponsor/sponsor.js"
+    },
+     {
+        html: "./sections/lookback/lookback2022.html",
+        module: "../sections/lookback/lookback2022.js",
     }
 ];
 
