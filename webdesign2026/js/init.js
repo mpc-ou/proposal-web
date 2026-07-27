@@ -45,7 +45,11 @@ const SECTIONS = [
      {
         html: "./sections/lookback/lookback2022.html",
         module: "../sections/lookback/lookback2022.js",
-    }
+    },
+    {
+        html: "./sections/lookback/lookback2023.html",
+        module: "../sections/lookback/lookback2023.js",
+    },
 ];
 
 async function loadSharedData() {
