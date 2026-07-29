@@ -30,6 +30,10 @@ const SECTIONS = [
     module: "../sections/timeline/timeline.js",
   },
   {
+    html: "./sections/media-plan/media-plan.html",
+    module: "../sections/media-plan/media-plan.js",
+  },
+  {
     html: "./sections/media-effectiveness/media-effectiveness.html",
     module: "../sections/media-effectiveness/media-effectiveness.js",
   },
@@ -40,10 +44,6 @@ const SECTIONS = [
   {
     html: "./sections/sponsor/sponsor.html",
     module: "../sections/sponsor/sponsor.js",
-  },
-  {
-    html: "./sections/media-plan/media-plan.html",
-    module: "../sections/media-plan/media-plan.js",
   },
 ];
 
