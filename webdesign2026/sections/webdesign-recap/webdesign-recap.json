@@ -1,0 +1,41 @@
+{
+    "pages": [
+        {
+            "id": "early",
+            "toc": "Cùng nhìn lại - Những kỳ đầu tiên",
+            "label": "Cùng nhìn lại",
+            "brand": "WEB DESIGN",
+            "title": "NHỮNG KỲ ĐẦU TIÊN",
+            "tag": "WEB DESIGN 2022 - 2023",
+            "text": "Web Design 2022 mở đầu hành trình với chủ đề dịch vụ công cộng, thu hút đông đảo thí sinh và những sản phẩm dự thi độc đáo. Nối tiếp thành công đó, Web Design 2023 mang chủ đề giáo dục, mang đến trải nghiệm rộng hơn và chất lượng bài dự thi được nâng cao rõ rệt.",
+            "images": [
+                { "image": "./sections/webdesign-recap/img/webdesign-2022-003.jpg", "alt": "Sinh viên tham gia Web Design những kỳ đầu" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2023-000.jpg", "alt": "Buổi giao lưu cùng Web Design những kỳ đầu" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2022-000.jpg", "alt": "Sinh viên tham gia Web Design những kỳ đầu" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2022-001.jpg", "alt": "Sinh viên tham gia Web Design những kỳ đầu" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2022-002.jpg", "alt": "Sinh viên tham gia Web Design những kỳ đầu" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2023-001.jpg", "alt": "Sinh viên tham gia Web Design những kỳ đầu" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2023-002.jpg", "alt": "Sinh viên tham gia Web Design những kỳ đầu" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2023-003.jpg", "alt": "Sinh viên tham gia Web Design những kỳ đầu" }
+
+            ]
+        },
+        {
+            "id": "recent",
+            "toc": "Cùng nhìn lại - Đến hiện tại",
+            "label": "Cùng nhìn lại",
+            "brand": "WEB DESIGN",
+            "title": "ĐẾN HIỆN TẠI",
+            "tag": "WEB DESIGN 2025",
+            "text": "Nhân dịp kỷ niệm 35 năm thành lập Trường Đại học Mở TP.HCM, Web Design 2025 được tổ chức với chủ đề giới thiệu về trường, quy mô và chất lượng bài dự thi ngày càng được nâng cao. Hành trình đồng hành cùng sinh viên yêu thích lập trình giao diện web của CLB vẫn tiếp tục phát triển từng năm.",
+            "images": [
+                { "image": "./sections/webdesign-recap/img/webdesign-2025-001.jpg", "alt": "Lễ trao giải Web Design 2025" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2025-010.jpg", "alt": "Buổi seminar khai mạc Web Design 2025" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2025-002.jpg", "alt": "Buổi seminar khai mạc Web Design 2025" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2025-004.jpg", "alt": "Buổi seminar khai mạc Web Design 2025" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2025-006.jpg", "alt": "Buổi seminar khai mạc Web Design 2025" },
+                { "image": "./sections/webdesign-recap/img/webdesign-2025-008.jpg", "alt": "Buổi seminar khai mạc Web Design 2025" }
+            ]
+        }
+    ]
+}

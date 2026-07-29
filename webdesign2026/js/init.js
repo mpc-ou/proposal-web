@@ -22,6 +22,14 @@ const SECTIONS = [
     module: "../sections/introduction-to-mpclub/introduction-to-mpclub.js",
   },
   {
+    html: "./sections/our-contest/our-contest.html",
+    module: "../sections/our-contest/our-contest.js",
+  },
+  {
+    html: "./sections/webdesign-recap/webdesign-recap.html",
+    module: "../sections/webdesign-recap/webdesign-recap.js",
+  },
+  {
     html: "./sections/exhibitions/exhibitions.html",
     module: "../sections/exhibitions/exhibitions.js",
   },
@@ -57,9 +65,6 @@ const SECTIONS = [
     html: "./sections/thank-you/thank-you.html",
     module: "../sections/thank-you/thank-you.js",
   },
-
-
-
 ];
 
 async function loadSharedData() {

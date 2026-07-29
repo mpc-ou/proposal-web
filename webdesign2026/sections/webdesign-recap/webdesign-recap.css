@@ -1,0 +1,163 @@
+.page--webdesign-recap .recap__container {
+    position: relative;
+    height: 100%;
+}
+
+/* ================= HEADER ================= */
+.page--webdesign-recap .recap__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44%;
+    z-index: 3;
+}
+
+.page--webdesign-recap .recap__label {
+    margin: 0 0 0.5rem;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.page--webdesign-recap .recap__brand {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: 1px;
+}
+
+.page--webdesign-recap .recap__title {
+    margin: 0.25rem 0 0;
+    font-size: 58px;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+/* ================= KHUNG LỜI BÌNH (đoạn văn) ================= */
+.page--webdesign-recap .recap__quote {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    width: 40%;
+    z-index: 3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: var(--color-surface-alt);
+    border-left: 6px solid var(--color-primary);
+    border-radius: 16px;
+    padding: 2rem 2.25rem;
+    box-shadow: 0 20px 50px var(--color-shadow-strong);
+}
+
+.page--webdesign-recap .recap__quote-icon {
+    position: absolute;
+    top: -0.5rem;
+    right: 0.5rem;
+    font-size: 120px;
+    color: var(--color-primary);
+    opacity: 0.12;
+    line-height: 1;
+}
+
+.page--webdesign-recap .recap__text {
+    position: relative;
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+/* ================= 2 ẢNH (tỉ lệ 16:9, đè nhau gần giữa) ================= */
+.page--webdesign-recap .recap__media {
+    position: absolute;
+    inset: 0;
+}
+
+.page--webdesign-recap .recap__media-item {
+    position: absolute;
+    width: 58%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px var(--color-shadow-strong);
+    cursor: zoom-in;
+}
+
+.page--webdesign-recap .recap__media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.page--webdesign-recap .recap__media-item:hover img {
+    transform: scale(1.05);
+}
+
+.page--webdesign-recap .recap__media-item--primary {
+    top: 0;
+    z-index: 1;
+}
+
+.page--webdesign-recap .recap__media-item--secondary {
+    top: 36%;
+    z-index: 2;
+    border: 6px solid var(--color-surface);
+}
+
+.page--webdesign-recap .recap__tag {
+    position: absolute;
+    top: 1rem;
+    z-index: 3;
+    font-size: 1.2rem;
+}
+
+/* ================= TRANG "NHỮNG KỲ ĐẦU TIÊN": ảnh 1 trên-phải, ảnh 2 dưới-trái ================= */
+.page--webdesign-recap--early .recap__media-item--primary {
+    right: 0;
+}
+
+.page--webdesign-recap--early .recap__media-item--secondary {
+    left: 0;
+}
+
+.page--webdesign-recap--early .recap__tag {
+    right: 1rem;
+}
+
+/* ================= TRANG "ĐẾN HIỆN TẠI": ảnh 1 trên-trái, ảnh 2 dưới-phải (đảo ngược) ================= */
+.page--webdesign-recap--recent .recap__header {
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+
+.page--webdesign-recap--recent .recap__quote {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 6px solid var(--color-primary);
+}
+
+.page--webdesign-recap--recent .recap__quote-icon {
+    right: auto;
+    left: 0.5rem;
+}
+
+.page--webdesign-recap--recent .recap__media-item--primary {
+    left: 0;
+}
+
+.page--webdesign-recap--recent .recap__media-item--secondary {
+    right: 0;
+}
+
+.page--webdesign-recap--recent .recap__tag {
+    left: 1rem;
+    right: auto;
+}

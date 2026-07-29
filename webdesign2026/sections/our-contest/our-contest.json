@@ -1,0 +1,28 @@
+{
+    "header": {
+        "label": "Cuộc thi tổ chức bởi",
+        "org": "CLB LẬP TRÌNH TRÊN THIẾT BỊ DI ĐỘNG"
+    },
+    "robocode": {
+        "tag": "ROBOCODE",
+        "images": [
+            { "image": "./sections/our-contest/img/robocode-2021.jpg", "alt": "Lễ trao giải cuộc thi Robocode 2021" },
+            { "image": "./sections/our-contest/img/robocode-2021-000.jpg", "alt": "Lễ trao giải cuộc thi Robocode 2021" },
+            { "image": "./sections/our-contest/img/robocode-2021-001.jpg", "alt": "Lễ trao giải cuộc thi Robocode 2021" },
+            { "image": "./sections/our-contest/img/robocode-2022-000.jpg", "alt": "Cuộc thi Robocode 2022" },
+            { "image": "./sections/our-contest/img/robocode-2022-001.jpg", "alt": "Cuộc thi Robocode 2022" },
+            { "image": "./sections/our-contest/img/robocode-2022-002.jpg", "alt": "Cuộc thi Robocode 2022" }
+        ]
+    },
+    "photo": {
+        "tag": "WEB DESIGN",
+        "images": [
+            { "image": "./sections/our-contest/img/webdesign-000.jpg", "alt": "Cuộc thi Web Design do CLB tổ chức" },
+            { "image": "./sections/our-contest/img/webdesign-2022-000.jpg", "alt": "Cuộc thi Web Design 2022" },
+            { "image": "./sections/our-contest/img/webdesign-2022-001.jpg", "alt": "Cuộc thi Web Design 2022" },
+            { "image": "./sections/our-contest/img/webdesign-2023-000.jpg", "alt": "Cuộc thi Web Design 2023" },
+            { "image": "./sections/our-contest/img/webdesign-2023-001.jpg", "alt": "Cuộc thi Web Design 2023" }
+        ]
+    },
+    "feeling": "Không chỉ là cuộc thi, nó còn là một sân chơi giúp các thí sinh có thể học hỏi và trao đổi kinh nghiệm, tạo môi trường học tập lập trình sinh động, sáng tạo và khả năng làm việc nhóm cho các bạn sinh viên Trường Đại học Mở TP.HCM yêu thích lập trình."
+}
