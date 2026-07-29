@@ -1,0 +1,48 @@
+{
+    "header": {
+        "subtitle": "Thông tin cuộc thi",
+        "title": "WEB DESIGN 2026"
+    },
+    "intro": {
+        "image": "./sections/web-design-info/img/contest-highlight.jpg",
+        "imageAlt": "Sinh viên đăng ký tham gia Web Design 2026",
+        "cardTitle": "Thông tin",
+        "infoList": [
+            { "label": "Thời gian:", "value": "24/08/2026 - 16/09/2026" },
+            { "label": "Địa điểm dự kiến:", "value": "Hội trường - Cơ sở 97 Võ Văn Tần" },
+            { "label": "Chủ đề:", "value": "LANDING PAGE - Website giới thiệu tổ chức giả tưởng (bốc thăm chủ đề)" },
+            { "label": "Đối tượng tham gia:", "value": "Toàn thể sinh viên Trường ĐH Mở TP.HCM; mỗi đội tối đa 3 thành viên, có ít nhất 1 bạn chuyên ngành IT." }
+        ]
+    },
+    "criteria": {
+        "sectionTitle": "TIÊU CHÍ CHÍNH",
+        "intro": "Tiêu chí cốt lõi: mã nguồn có tổ chức, dễ dàng thay đổi nội dung, hiển thị và bố cục web. Ví dụ: dữ liệu đọc từ data.json ảo, CSS tạo biến, các nút hay bố cục có thể linh động sửa đổi để tạo thành một style khác.",
+        "list": [
+            "Web WhiteLabel: dễ tùy biến, thay đổi thương hiệu.",
+            "Vanilla stack (HTML, CSS, JS và các thư viện hỗ trợ) - No Framework.",
+            "Có ứng dụng AI trong lúc lập trình hoặc ứng dụng trong trang web.",
+            "Có hiệu ứng animation sáng tạo, đẹp mắt; màu sắc thẩm mỹ cao và mới lạ."
+        ],
+        "footerNote": "Có tính đoàn kết, minh chứng xây dựng mã nguồn theo thiết kế và phân công nhóm rõ ràng.",
+        "themeTitle": "CHỦ ĐỀ CUỘC THI",
+        "participationTitle": "HÌNH THỨC THAM GIA",
+        "participation": [
+            { "label": "Theo nhóm:", "text": "Tối đa 3 thành viên/nhóm, có ít nhất 1 bạn chuyên ngành IT." },
+            { "label": "Công nghệ:", "text": "Chỉ dùng HTML, CSS, JS thuần (Vanilla) kèm thư viện hỗ trợ (icon, animation...), không dùng framework/biên dịch như React, Vue, Node.js." },
+            { "label": "Dữ liệu:", "text": "Không cần xây dựng Back-end, tối thiểu mock dữ liệu bằng file JSON." }
+        ]
+    },
+    "finalRules": {
+        "sectionTitle": "CÁC YÊU CẦU CHÍNH",
+        "list": [
+            "Chỉ thiết kế thuần giao diện, không cần xây dựng Back-end, tối thiểu có phương pháp Mockup dữ liệu (như file JSON,...).",
+            "Chỉ sử dụng HTML, CSS, JS thuần túy, kết hợp một số thư viện mức Vanilla như Icon, Animation,... không dùng các framework biên dịch, Node.js như React, Vue,...",
+            "Có tính linh động: sinh viên tự chủ động thiết kế lưu trữ nội dung và giao diện (CSS), kèm tài liệu, tối thiểu 2 bộ nội dung từ một mã nguồn trang, có thể thay đổi ngay trong lúc demo để cho thấy web có tính linh động về bố cục, giao diện và nội dung.",
+            "Có sử dụng Git, GitHub để lưu trữ mã nguồn và triển khai.",
+            "Có tài liệu mô tả cách sử dụng tối thiểu (README).",
+            "Clean Code: mã nguồn có tổ chức, hướng đến phát triển lâu dài (tránh trường hợp dùng AI thuần mà không hiểu code).",
+            "Chỉ sử dụng các thư viện chính thống miễn phí, không dùng tài nguyên lậu, crack,...",
+            "Có ứng dụng AI vào một tính năng liên quan đến đổi bố cục trang hoặc tính năng nổi bật khác."
+        ]
+    }
+}

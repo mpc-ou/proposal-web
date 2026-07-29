@@ -26,6 +26,14 @@ const SECTIONS = [
     module: "../sections/exhibitions/exhibitions.js",
   },
   {
+    html: "./sections/web-design-info/web-design-info.html",
+    module: "../sections/web-design-info/web-design-info.js"
+  },
+  {
+    html: "./sections/contest-value/contest-value.html",
+    module: "../sections/contest-value/contest-value.js"
+  },
+  {
     html: "./sections/timeline/timeline.html",
     module: "../sections/timeline/timeline.js",
   },
@@ -49,6 +57,9 @@ const SECTIONS = [
     html: "./sections/thank-you/thank-you.html",
     module: "../sections/thank-you/thank-you.js",
   },
+
+
+
 ];
 
 async function loadSharedData() {
@@ -60,11 +71,11 @@ async function loadSharedData() {
 }
 
 async function loadSection(root, entry, data) {
-    const res = await fetch(entry.html);
-    if (!res.ok) {
-        throw new Error(`Khong tai duoc ${entry.html} (HTTP ${res.status})`);
-    }
-    const html = await res.text();
+  const res = await fetch(entry.html);
+  if (!res.ok) {
+    throw new Error(`Khong tai duoc ${entry.html} (HTTP ${res.status})`);
+  }
+  const html = await res.text();
 
   const wrapper = document.createElement("div");
   wrapper.className = "section-wrapper";
