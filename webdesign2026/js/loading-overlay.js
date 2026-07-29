@@ -63,5 +63,5 @@
 
     // Luoi an toan: neu vi ly do gi do "sections:loaded" khong bao gio ban
     // ra (loi mang, section bi treo...), van tu dong tat overlay.
-    setTimeout(finish, 12000);
+    setTimeout(finish, 30000);
 })();
