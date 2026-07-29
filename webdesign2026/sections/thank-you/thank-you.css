@@ -19,15 +19,20 @@
 
 .thank-you__text {
   color: var(--color-text);
-  font-size: 32px;
+  font-size: 28px;
   line-height: 1.6;
   max-width: 1580px;
   margin: 0;
 }
 
-.thank-you__highlight {
+.thank-you__highlight,
+.thank-you__text strong {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+.thank-you__text p {
+  margin: 0;
 }
 
 .thank-you__grid {
