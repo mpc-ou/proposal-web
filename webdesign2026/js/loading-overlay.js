@@ -32,18 +32,19 @@
         percentEl.textContent = `${Math.round(progress)}%`;
     }
 
-    // Chua co tien do that (init.js khong bi sua), nen mo phong chay nhanh
-    // luc dau roi cham dan, dung o 92% cho toi khi "sections:loaded" ban ra.
-    const timer = setInterval(() => {
+    // Khong co tien do that (khong duoc dung MutationObserver/patch fetch -
+    // qua nang voi trang co nhieu section+anh, gay treo may), nen mo phong
+    // chay nhanh roi cham dan, dung o 90% cho toi khi "sections:loaded".
+    const ramp = setInterval(() => {
         if (done) return;
-        const remaining = 92 - progress;
-        setProgress(progress + Math.max(remaining * 0.06, 0.4));
+        const remaining = 90 - progress;
+        setProgress(progress + Math.max(remaining * 0.06, 0.3));
     }, 120);
 
     function finish() {
         if (done) return;
         done = true;
-        clearInterval(timer);
+        clearInterval(ramp);
         setProgress(100);
         setTimeout(() => {
             overlay.classList.add("is-hidden");
@@ -51,6 +52,16 @@
         }, 250);
     }
 
-    document.addEventListener("sections:loaded", finish, { once: true });
-    window.addEventListener("load", () => setTimeout(finish, 800));
+    // "sections:loaded" duoc init.js ban ra sau khi TAT CA section da
+    // fetch+init xong (bao gom fetch JSON/markdown rieng cua tung section).
+    // Doi them 1 chut de anh vua duoc gan src kip bat dau tai.
+    document.addEventListener(
+        "sections:loaded",
+        () => setTimeout(finish, 500),
+        { once: true }
+    );
+
+    // Luoi an toan: neu vi ly do gi do "sections:loaded" khong bao gio ban
+    // ra (loi mang, section bi treo...), van tu dong tat overlay.
+    setTimeout(finish, 12000);
 })();
