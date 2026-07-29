@@ -1,0 +1,40 @@
+{
+    "header": {
+        "title": "LỜI CẢM ƠN",
+        "text": "Ban tổ chức cuộc thi **Web Design 2026** - **CLB Lập Trình Trên Thiết Bị Di Động** xin chân thành cảm ơn Quý Doanh Nghiệp đã dành thời gian xem qua Hồ sơ tài trợ của **CLB**. Chúng tôi rất mong có thể nhận được cơ hội hợp tác với Quý Doanh Nghiệp trong thời gian sắp tới."
+    },
+    "contacts": [
+        {
+            "role": "TRƯỞNG BAN TỔ CHỨC",
+            "name": "(Mr) Nguyễn Duy Hoàng",
+            "email": "nguyenduyhoang0605@gmail.com",
+            "phone": "0333541724"
+        },
+        {
+            "role": "TRƯỞNG BAN ĐỐI NGOẠI",
+            "name": "(Mr) Huỳnh Văn Quế Khoa",
+            "email": "quekhoa2005@gmail.com",
+            "phone": "0916499634"
+        }
+    ],
+    "info": {
+        "title": "Thông tin liên lạc",
+        "items": [
+            {
+                "label": "Email",
+                "text": "it.mpclub@ou.edu.vn",
+                "url": "mailto:it.mpclub@ou.edu.vn"
+            },
+            {
+                "label": "Fanpage",
+                "text": "CLB Lập Trình Trên Thiết Bị Di Động",
+                "url": "https://www.facebook.com/CLBLapTrinhTrenThietBiDiDong?locale=vi_VN"
+            },
+            {
+                "label": "Website",
+                "text": "mpclub.dev",
+                "url": "https://mpclub.dev"
+            }
+        ]
+    }
+}
