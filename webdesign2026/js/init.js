@@ -45,6 +45,10 @@ const SECTIONS = [
     html: "./sections/sponsor/sponsor.html",
     module: "../sections/sponsor/sponsor.js",
   },
+  {
+    html: "./sections/thank-you/thank-you.html",
+    module: "../sections/thank-you/thank-you.js",
+  },
 ];
 
 async function loadSharedData() {
@@ -56,11 +60,11 @@ async function loadSharedData() {
 }
 
 async function loadSection(root, entry, data) {
-  const res = await fetch(entry.html);
-  if (!res.ok) {
-    throw new Error(`Khong tai duoc ${entry.html} (HTTP ${res.status})`);
-  }
-  const html = await res.text();
+    const res = await fetch(entry.html);
+    if (!res.ok) {
+        throw new Error(`Khong tai duoc ${entry.html} (HTTP ${res.status})`);
+    }
+    const html = await res.text();
 
   const wrapper = document.createElement("div");
   wrapper.className = "section-wrapper";
