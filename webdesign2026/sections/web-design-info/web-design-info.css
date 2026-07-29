@@ -1,4 +1,29 @@
 /* ========================================================================================
+   HEADER DÙNG CHUNG CẢ 3 SLIDE (Thông tin / Tiêu chí / Quy định)
+   ======================================================================================== */
+.page--web-design-info .web-design-info__subtitle,
+.page--evaluation-criteria .evaluation-criteria__subtitle,
+.page--final-rules .final-rules__subtitle {
+    font-size: 76px;
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+    line-height: 1.2;
+}
+
+.page--web-design-info .web-design-info__title,
+.page--evaluation-criteria .evaluation-criteria__title,
+.page--final-rules .final-rules__title {
+    font-size: 76px;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin: 5px 0 0 0;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ========================================================================================
    SLIDE 1: THÔNG TIN CUỘC THI
    ======================================================================================== */
 .page--web-design-info .web-design-info__container {
@@ -13,24 +38,6 @@
 .page--web-design-info .web-design-info__header {
     margin-bottom: 25px;
     padding-right: 80px;
-}
-
-.page--web-design-info .web-design-info__subtitle {
-    font-size: 76px;
-    font-weight: 700;
-    color: var(--color-text);
-    display: block;
-    line-height: 1.2;
-}
-
-.page--web-design-info .web-design-info__title {
-    font-size: 76px;
-    font-weight: 900;
-    color: var(--color-primary);
-    margin: 5px 0 0 0;
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* ================= CONTENT 2 CỘT ================= */
@@ -49,13 +56,13 @@
 }
 
 .page--web-design-info .web-design-info__description p {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1.7;
     color: var(--color-text);
     margin: 50px 0;
 }
 
-.page--web-design-info .highlight {
+.page--web-design-info .web-design-info__description strong {
     color: var(--color-primary);
     font-weight: 700;
 }
@@ -76,6 +83,9 @@
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     cursor: zoom-in;
+    position: absolute;
+    top: -6rem;
+    left: 1rem;
 }
 
 .page--web-design-info .web-design-info__img {
@@ -84,6 +94,7 @@
     object-fit: cover;
     display: block;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
 }
 
 .page--web-design-info .web-design-info__image-wrapper:hover .web-design-info__img {
@@ -92,9 +103,9 @@
 
 .page--web-design-info .web-design-info__card {
     position: absolute;
-    bottom: 40px;
-    left: -60px;
-    width: 85%;
+    bottom: -40px;
+    left: -20px;
+    width: 95%;
     background-color: var(--color-surface-alt);
     border-left: 6px solid var(--color-primary);
     border-top: 1px solid var(--color-border);
@@ -121,7 +132,7 @@
 }
 
 .page--web-design-info .web-design-info__list li {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 1.5;
     margin-bottom: 10px;
     color: var(--color-text);
@@ -153,7 +164,7 @@
 
 /* ================= CỘT TRÁI (FLEX 1.1) ================= */
 .page--evaluation-criteria .evaluation-criteria__left {
-    flex: 1.1;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -162,23 +173,6 @@
 
 .page--evaluation-criteria .evaluation-criteria__header {
     margin-bottom: 20px;
-}
-
-.page--evaluation-criteria .evaluation-criteria__subtitle {
-    font-size: 76px;
-    font-weight: 700;
-    color: var(--color-text);
-    display: block;
-    line-height: 1.2;
-}
-
-.page--evaluation-criteria .evaluation-criteria__title {
-    font-size: 76px;
-    font-weight: 900;
-    color: var(--color-primary);
-    margin: 5px 0 0 0;
-    line-height: 1;
-    text-transform: uppercase;
 }
 
 /* Nội dung tiêu chí */
@@ -191,7 +185,7 @@
 }
 
 .page--evaluation-criteria .evaluation-criteria__intro {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.6;
     color: var(--color-text);
     margin: 0 0 15px 0;
@@ -204,7 +198,7 @@
 }
 
 .page--evaluation-criteria .evaluation-criteria__list li {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.5;
     margin-bottom: 10px;
 }
@@ -222,46 +216,50 @@
 
 /* ================= CỘT PHẢI (FLEX 0.9 - PANEL NỀN) ================= */
 .page--evaluation-criteria .evaluation-criteria__right {
-    flex: 0.9;
+    flex: 1.1;
     display: flex;
     height: 100%;
+    align-items: center;
 }
 
 .page--evaluation-criteria .evaluation-criteria__sidebar-card {
     width: 100%;
-    height: 100%;
     background-color: var(--color-surface-alt);
     border-left: 6px solid var(--color-primary);
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
-    padding: 40px 50px 40px 40px;
+    padding: 32px 44px 32px 36px;
     box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 35px;
+    gap: 22px;
 
     border-radius: 12px 0 0 12px;
     box-shadow: -10px 0 30px var(--color-shadow);
 }
 
 .page--evaluation-criteria .evaluation-criteria__block-title {
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 900;
     color: var(--color-primary);
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     text-transform: uppercase;
 }
 
 .page--evaluation-criteria .evaluation-criteria__block-text {
-    font-size: 26px;
-    line-height: 1.75;
+    font-size: 28px;
+    line-height: 1.5;
     color: var(--color-text);
     margin: 0;
 }
 
-.page--evaluation-criteria .highlight-text {
+.page--evaluation-criteria .evaluation-criteria__block-text p {
+    margin: 0;
+}
+
+.page--evaluation-criteria .evaluation-criteria__block-text strong {
     color: var(--color-primary-light);
 }
 
@@ -272,10 +270,10 @@
 }
 
 .page--evaluation-criteria .evaluation-criteria__info-list li {
-    font-size: 26px;
-    line-height: 1.7;
+    font-size: 28px;
+    line-height: 1.5;
     color: var(--color-text);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .page--evaluation-criteria .evaluation-criteria__info-list li strong {
@@ -296,23 +294,6 @@
 /* ================= HEADER ================= */
 .page--final-rules .final-rules__header {
     margin-bottom: 35px;
-}
-
-.page--final-rules .final-rules__subtitle {
-    font-size: 76px;
-    font-weight: 700;
-    color: var(--color-text);
-    display: block;
-    line-height: 1.2;
-}
-
-.page--final-rules .final-rules__title {
-    font-size: 76px;
-    font-weight: 900;
-    color: var(--color-primary);
-    margin: 5px 0 0 0;
-    line-height: 1;
-    text-transform: uppercase;
 }
 
 /* ================= BODY & SECTION TITLE ================= */
@@ -356,8 +337,8 @@
 }
 
 .page--final-rules .final-rules__list li {
-    font-size: 30px;
-    line-height: 1.6;
+    font-size: 28px;
+    line-height: 1.5;
     color: var(--color-text);
 }
 
