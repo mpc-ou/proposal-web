@@ -30,6 +30,10 @@ const SECTIONS = [
     module: "../sections/timeline/timeline.js",
   },
   {
+    html: "./sections/media-plan/media-plan.html",
+    module: "../sections/media-plan/media-plan.js",
+  },
+  {
     html: "./sections/media-effectiveness/media-effectiveness.html",
     module: "../sections/media-effectiveness/media-effectiveness.js",
   },
@@ -56,11 +60,11 @@ async function loadSharedData() {
 }
 
 async function loadSection(root, entry, data) {
-  const res = await fetch(entry.html);
-  if (!res.ok) {
-    throw new Error(`Khong tai duoc ${entry.html} (HTTP ${res.status})`);
-  }
-  const html = await res.text();
+    const res = await fetch(entry.html);
+    if (!res.ok) {
+        throw new Error(`Khong tai duoc ${entry.html} (HTTP ${res.status})`);
+    }
+    const html = await res.text();
 
   const wrapper = document.createElement("div");
   wrapper.className = "section-wrapper";
