@@ -27,13 +27,12 @@
 }
 
 .exhibitions__entries {
-    width: 100%;
+    width: 85%;
     flex: 1;
-    min-height: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.25rem;
+    gap: 1rem;
 }
 
 .exhibitions__entry {
@@ -53,13 +52,13 @@
 }
 
 .exhibitions__media {
-    flex: 0.85;
+    flex: 1;
     min-width: 0;
     display: flex;
 }
 
 .exhibitions__info {
-    flex: 1;
+    flex: 0.8;
     min-width: 0;
     text-align: left;
 }

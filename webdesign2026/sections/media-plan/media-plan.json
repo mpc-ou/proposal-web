@@ -33,7 +33,8 @@
     ],
     "targets": {
         "mainTitle": "ĐỐI TƯỢNG MỤC TIÊU",
-        "mainText": "Tiếp cận hơn **300 sinh viên** Trường ĐH Mở TP.HCM",
+        "mainNumber": "300+",
+        "mainLabel": "sinh viên Trường ĐH Mở TP.HCM",
         "heading": "MỤC TIÊU DỰ KIẾN",
         "events": [
             {

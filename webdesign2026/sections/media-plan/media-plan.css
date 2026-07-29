@@ -306,8 +306,29 @@
 
 .target-card--main {
   width: 75%;
-  padding: 2rem 2.5rem;
+  padding: 2.5rem;
   border-top: 10px solid var(--color-primary);
+}
+
+.target-card__main-stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.target-card__main-number {
+  font-size: 72px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.target-card__main-label {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 .target-card--event {

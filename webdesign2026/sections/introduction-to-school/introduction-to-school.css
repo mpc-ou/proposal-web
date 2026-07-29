@@ -19,7 +19,7 @@
     border-radius: 12px;
     overflow: hidden;
     background: var(--color-surface-alt);
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
 }
 
 .overview__media img,
@@ -27,12 +27,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: zoom-in;
 }
 
 .overview__tag {
     position: absolute;
     top: 1rem;
     left: 1rem;
+    font-size: 1.2rem;
 }
 
 .overview__eyebrow {

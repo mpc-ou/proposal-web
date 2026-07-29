@@ -19,6 +19,8 @@ function setImage(root, selector, src, alt) {
     if (!el) return;
     el.src = src || "";
     el.alt = alt || "";
+    el.setAttribute("data-lightbox", JSON.stringify([src]));
+    el.setAttribute("data-lightbox-index", "0");
 }
 
 function renderStats(root, stats) {

@@ -26,12 +26,80 @@ function renderWindowCard(imgUrl, index, totalImages, galleryAttr, altText, anim
     `;
 }
 
+function renderStatList(stats) {
+    return (stats || []).map((stat) => `<li>${stat}</li>`).join("");
+}
+
+function renderStatsPage(item, tocAttr) {
+    const cardsHtml = (item.cards || [])
+        .map(
+            (card) => `
+                <div class="stat-card stat-card--secondary" data-animate="fadeInRight">
+                    <h4 class="stat-card__title">${card.title || ""}</h4>
+                    <ul class="stat-card__list">${renderStatList(card.stats)}</ul>
+                </div>
+            `
+        )
+        .join("");
+
+    const main = item.mainCard || {};
+
+    const fanpage = item.fanpage;
+    const bannerHtml = fanpage
+        ? `
+            <div class="media-effectiveness__stats-banner fb-mock" data-animate="fadeInDown">
+                <div class="fb-mock__cover" style="background-image:url('${fanpage.cover || ""}')"></div>
+                <div class="fb-mock__profile">
+                    <div class="fb-mock__avatar" style="background-image:url('${fanpage.avatar || ""}')"></div>
+                    <div class="fb-mock__info">
+                        <a href="${fanpage.url || "#"}" target="_blank">
+                            <h4 class="fb-mock__name">
+                                ${fanpage.name || ""}
+                            </h4>
+                        </a>
+                        <div class="fb-mock__meta">${fanpage.meta || ""}</div>
+                        <div class="fb-mock__desc">${(fanpage.descriptionLines || []).join("<br>")}</div>
+                    </div>
+                </div>
+            </div>
+        `
+        : "";
+
+    return `
+        <div class="page page--media-effectiveness page--media-effectiveness-stats"${tocAttr}>
+            <div class="media-effectiveness__stats-header" data-animate="fadeInDown">
+                ${renderHeading(item.heading || "HIỆU QUẢ TRUYỀN THÔNG")}
+            </div>
+            <h3 class="media-effectiveness__stats-subheading" data-animate="fadeInDown">${item.subheading || ""}</h3>
+
+            <div class="media-effectiveness__stats-grid">
+                ${bannerHtml}
+                <div class="stat-card stat-card--main" data-animate="fadeInLeft">
+                    <h4 class="stat-card__title"><i class="bi ${main.icon || "bi-facebook"}"></i> ${main.title || ""}</h4>
+                    <ul class="stat-card__list">${renderStatList(main.stats)}</ul>
+                </div>
+                <div class="media-effectiveness__stats-side">
+                    ${cardsHtml}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 function renderPage(item, isFirstPage, data) {
     const images = item.images || [];
     const galleryAttr = JSON.stringify(images).replace(/'/g, "&#39;");
     const imageCount = images.length;
     const tocHeading = data.tocHeading || data.heading || "Hiệu quả truyền thông";
-    const tocAttr = isFirstPage ? ` data-toc="${tocHeading}"` : "";
+    const tocAttr = item.toc
+        ? ` data-toc="${item.toc}"`
+        : isFirstPage
+            ? ` data-toc="${tocHeading}"`
+            : "";
+
+    if (item.type === "stats") {
+        return renderStatsPage(item, tocAttr);
+    }
 
     const cardsHtml = images.map((img, idx) =>
         renderWindowCard(img, idx, imageCount, galleryAttr, item.title || item.heading || data.heading, (idx * 0.15 + 0.1).toFixed(2))

@@ -83,8 +83,8 @@ function renderTimeline(root, milestones) {
 function renderTargets(root, targets) {
     if (!targets) return;
     setText(root, "[data-media-plan-target-main-title]", targets.mainTitle);
-    const mainTextEl = root.querySelector("[data-media-plan-target-main-text]");
-    if (mainTextEl) mainTextEl.innerHTML = inlineMarkdown(targets.mainText);
+    setText(root, "[data-media-plan-target-main-number]", targets.mainNumber);
+    setText(root, "[data-media-plan-target-main-label]", targets.mainLabel);
     setText(root, "[data-media-plan-targets-heading]", targets.heading);
 
     const gridEl = root.querySelector("[data-media-plan-targets-grid]");

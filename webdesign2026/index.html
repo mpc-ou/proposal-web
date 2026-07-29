@@ -57,11 +57,21 @@
   <link rel="stylesheet" href="./sections/media-plan/media-plan.css">
   <link rel="stylesheet" href="./sections/web-design-info/web-design-info.css">
   <link rel="stylesheet" href="./sections/contest-value/contest-value.css">
-  <link rel="stylesheet" href="./sections/lookback/lookback2022.css">
-  <link rel="stylesheet" href="./sections/lookback/lookback2023.css">
 </head>
 
 <body>
+  <!-- Overlay bao hieu qua trinh nap trang - dat truoc de hien ngay lap tuc -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <video class="loading-overlay__anim" id="loadingAnim" autoplay loop muted playsinline>
+      <source src="./img/loading.webm" type="video/webm">
+    </video>
+    <div class="loading-overlay__bar">
+      <div class="loading-overlay__bar-fill" id="loadingBarFill"></div>
+    </div>
+    <p class="loading-overlay__label">Đang tải nội dung... <span id="loadingPercent">0%</span></p>
+  </div>
+  <script src="./js/loading-overlay.js"></script>
+
   <!-- Thanh tien trinh cuon trang -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
