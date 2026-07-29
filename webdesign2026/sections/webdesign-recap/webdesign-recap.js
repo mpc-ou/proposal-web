@@ -26,11 +26,18 @@ function renderPage(pageEl, page) {
 
     const mediaEl = pageEl.querySelector("[data-recap-media]");
     if (mediaEl && Array.isArray(page.images)) {
+        const gallery = JSON.stringify(page.images.map((img) => img.image));
         mediaEl.innerHTML = page.images
+            .slice(0, 2)
             .map(
                 (img, index) => `
                     <div class="recap__media-item recap__media-item--${index === 0 ? "primary" : "secondary"}">
-                        <img src="${img.image}" alt="${img.alt || ""}">
+                        <img
+                            src="${img.image}"
+                            alt="${img.alt || ""}"
+                            data-lightbox='${gallery}'
+                            data-lightbox-index="${index}"
+                        >
                     </div>
                 `
             )

@@ -1,17 +1,15 @@
 .page--our-contest .our-contest__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    column-gap: 3rem;
-    row-gap: 2rem;
+    position: relative;
     height: 100%;
 }
 
 /* ================= HEADER (trên-trái) ================= */
 .page--our-contest .our-contest__header {
-    grid-column: 1;
-    grid-row: 1;
-    align-self: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 46%;
+    z-index: 3;
 }
 
 .page--our-contest .our-contest__label {
@@ -30,14 +28,15 @@
     line-height: 1.2;
 }
 
-/* ================= 2 ẢNH (tỉ lệ 16:9) ================= */
+/* ================= 2 ẢNH (tỉ lệ 16:9, đè nhau gần giữa) ================= */
 .page--our-contest .our-contest__media {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 58%;
     aspect-ratio: 16 / 9;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 50px var(--color-shadow-strong);
+    cursor: zoom-in;
 }
 
 .page--our-contest .our-contest__media img {
@@ -45,20 +44,24 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
+}
+
+.page--our-contest .our-contest__media:hover img {
+    transform: scale(1.05);
 }
 
 .page--our-contest .our-contest__media--robocode {
-    grid-column: 2;
-    grid-row: 1;
-    align-self: start;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .page--our-contest .our-contest__media--photo {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: start;
-    margin-top: -2.5rem;
+    top: 36%;
+    left: 0;
     z-index: 2;
+    border: 6px solid var(--color-surface);
 }
 
 .page--our-contest .our-contest__tag {
@@ -66,6 +69,7 @@
     top: 1rem;
     left: 1rem;
     z-index: 2;
+    font-size: 1.2rem;
 }
 
 .page--our-contest .our-contest__media--robocode .our-contest__tag {
@@ -75,9 +79,11 @@
 
 /* ================= CẢM NGHĨ CUỘC THI (dưới-phải) ================= */
 .page--our-contest .our-contest__feeling {
-    grid-column: 2;
-    grid-row: 2;
-    position: relative;
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    width: 40%;
+    z-index: 3;
     overflow: hidden;
     display: flex;
     align-items: center;

@@ -1,15 +1,15 @@
 .page--webdesign-recap .recap__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 3.5rem;
-    align-items: center;
+    position: relative;
     height: 100%;
 }
 
-/* ================= HEADER + ĐOẠN VĂN (trái) ================= */
+/* ================= HEADER ================= */
 .page--webdesign-recap .recap__header {
-    grid-column: 1;
-    grid-row: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44%;
+    z-index: 3;
 }
 
 .page--webdesign-recap .recap__label {
@@ -36,42 +36,55 @@
     line-height: 1.15;
 }
 
+/* ================= KHUNG LỜI BÌNH (đoạn văn) ================= */
+.page--webdesign-recap .recap__quote {
+    position: absolute;
+    bottom: 4rem;
+    right: 0;
+    width: 40%;
+    z-index: 3;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: var(--color-surface-alt);
+    border-left: 6px solid var(--color-primary);
+    border-radius: 16px;
+    padding: 2rem 2.25rem;
+    box-shadow: 0 20px 50px var(--color-shadow-strong);
+}
+
+.page--webdesign-recap .recap__quote-icon {
+    position: absolute;
+    top: -0.5rem;
+    right: 0.5rem;
+    font-size: 120px;
+    color: var(--color-primary);
+    opacity: 0.12;
+    line-height: 1;
+}
+
 .page--webdesign-recap .recap__text {
-    grid-column: 1;
-    grid-row: 2;
-    margin: 2rem 0 0;
+    position: relative;
+    margin: 0;
     font-size: 28px;
-    line-height: 1.7;
+    line-height: 1.6;
     color: var(--color-text);
 }
 
-/* ================= 2 ẢNH ĐÈ LÊN NHAU (phải, tỉ lệ 16:9) ================= */
+/* ================= 2 ẢNH (tỉ lệ 16:9, đè nhau gần giữa) ================= */
 .page--webdesign-recap .recap__media {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    position: relative;
-}
-
-.page--webdesign-recap .recap__tag {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 3;
-}
-
-.page--webdesign-recap .recap__media-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    inset: 0;
 }
 
 .page--webdesign-recap .recap__media-item {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    width: 58%;
     aspect-ratio: 16 / 9;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 50px var(--color-shadow-strong);
+    cursor: zoom-in;
 }
 
 .page--webdesign-recap .recap__media-item img {
@@ -87,13 +100,64 @@
 }
 
 .page--webdesign-recap .recap__media-item--primary {
+    top: 0;
     z-index: 1;
 }
 
 .page--webdesign-recap .recap__media-item--secondary {
-    width: 62%;
-    margin-top: -3rem;
-    margin-right: 8%;
+    top: 36%;
     z-index: 2;
     border: 6px solid var(--color-surface);
+}
+
+.page--webdesign-recap .recap__tag {
+    position: absolute;
+    top: 1rem;
+    z-index: 3;
+    font-size: 1.2rem;
+}
+
+/* ================= TRANG "NHỮNG KỲ ĐẦU TIÊN": ảnh 1 trên-phải, ảnh 2 dưới-trái ================= */
+.page--webdesign-recap--early .recap__media-item--primary {
+    right: 0;
+}
+
+.page--webdesign-recap--early .recap__media-item--secondary {
+    left: 0;
+}
+
+.page--webdesign-recap--early .recap__tag {
+    right: 1rem;
+}
+
+/* ================= TRANG "ĐẾN HIỆN TẠI": ảnh 1 trên-trái, ảnh 2 dưới-phải (đảo ngược) ================= */
+.page--webdesign-recap--recent .recap__header {
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+
+.page--webdesign-recap--recent .recap__quote {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 6px solid var(--color-primary);
+}
+
+.page--webdesign-recap--recent .recap__quote-icon {
+    right: auto;
+    left: 0.5rem;
+}
+
+.page--webdesign-recap--recent .recap__media-item--primary {
+    left: 0;
+}
+
+.page--webdesign-recap--recent .recap__media-item--secondary {
+    right: 0;
+}
+
+.page--webdesign-recap--recent .recap__tag {
+    left: 1rem;
+    right: auto;
 }
