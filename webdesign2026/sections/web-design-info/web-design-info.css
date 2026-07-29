@@ -1,0 +1,348 @@
+/* ========================================================================================
+   HEADER DÙNG CHUNG CẢ 3 SLIDE (Thông tin / Tiêu chí / Quy định)
+   ======================================================================================== */
+.page--web-design-info .web-design-info__subtitle,
+.page--evaluation-criteria .evaluation-criteria__subtitle,
+.page--final-rules .final-rules__subtitle {
+    font-size: 76px;
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+    line-height: 1.2;
+}
+
+.page--web-design-info .web-design-info__title,
+.page--evaluation-criteria .evaluation-criteria__title,
+.page--final-rules .final-rules__title {
+    font-size: 76px;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin: 5px 0 0 0;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ========================================================================================
+   SLIDE 1: THÔNG TIN CUỘC THI
+   ======================================================================================== */
+.page--web-design-info .web-design-info__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 50px 0 50px 80px;
+    box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+.page--web-design-info .web-design-info__header {
+    margin-bottom: 25px;
+    padding-right: 80px;
+}
+
+/* ================= CONTENT 2 CỘT ================= */
+.page--web-design-info .web-design-info__content {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+    flex: 1;
+    height: 100%;
+    align-items: stretch;
+}
+
+/* CỘT TRÁI: NỘI DUNG MIÊU TẢ */
+.page--web-design-info .web-design-info__left {
+    padding-top: 10px;
+}
+
+.page--web-design-info .web-design-info__description p {
+    font-size: 28px;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 50px 0;
+}
+
+.page--web-design-info .web-design-info__description strong {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* CỘT PHẢI: KHUNG ẢNH */
+.page--web-design-info .web-design-info__right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.page--web-design-info .web-design-info__image-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+    overflow: hidden;
+    border-left: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    cursor: zoom-in;
+    position: absolute;
+    top: -6rem;
+    left: 1rem;
+}
+
+.page--web-design-info .web-design-info__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.page--web-design-info .web-design-info__image-wrapper:hover .web-design-info__img {
+    transform: scale(1.08);
+}
+
+.page--web-design-info .web-design-info__card {
+    position: absolute;
+    bottom: -40px;
+    left: -20px;
+    width: 95%;
+    background-color: var(--color-surface-alt);
+    border-left: 6px solid var(--color-primary);
+    border-top: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 22px 28px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 12px 35px var(--color-shadow-strong);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+}
+
+.page--web-design-info .web-design-info__card-title {
+    font-size: 36px;
+    color: var(--color-primary);
+    margin: 0 0 12px 0;
+    font-weight: 700;
+}
+
+.page--web-design-info .web-design-info__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page--web-design-info .web-design-info__list li {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.page--web-design-info .web-design-info__list li:last-child {
+    margin-bottom: 20px;
+}
+
+.page--web-design-info .web-design-info__list .label {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.page--web-design-info .web-design-info__list .value {
+    color: var(--color-text);
+}
+
+/* ========================================================================================
+   SLIDE 2: TIÊU CHÍ ĐÁNH GIÁ
+   ======================================================================================== */
+.page--evaluation-criteria .evaluation-criteria__container {
+    display: flex;
+    height: 100%;
+    padding: 50px 0px 50px 80px;
+    box-sizing: border-box;
+    gap: 40px;
+}
+
+/* ================= CỘT TRÁI (FLEX 1.1) ================= */
+.page--evaluation-criteria .evaluation-criteria__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-right: 20px;
+}
+
+.page--evaluation-criteria .evaluation-criteria__header {
+    margin-bottom: 20px;
+}
+
+/* Nội dung tiêu chí */
+.page--evaluation-criteria .evaluation-criteria__section-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color-text);
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+}
+
+.page--evaluation-criteria .evaluation-criteria__intro {
+    font-size: 28px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0 0 15px 0;
+}
+
+.page--evaluation-criteria .evaluation-criteria__list {
+    margin: 0 0 20px 0;
+    padding-left: 25px;
+    color: var(--color-text);
+}
+
+.page--evaluation-criteria .evaluation-criteria__list li {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.page--evaluation-criteria .evaluation-criteria__list li::marker {
+    color: var(--color-primary);
+}
+
+.page--evaluation-criteria .evaluation-criteria__footer-note {
+    font-size: 28px;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* ================= CỘT PHẢI (FLEX 0.9 - PANEL NỀN) ================= */
+.page--evaluation-criteria .evaluation-criteria__right {
+    flex: 1.1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.page--evaluation-criteria .evaluation-criteria__sidebar-card {
+    width: 100%;
+    background-color: var(--color-surface-alt);
+    border-left: 6px solid var(--color-primary);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 32px 44px 32px 36px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+
+    border-radius: 12px 0 0 12px;
+    box-shadow: -10px 0 30px var(--color-shadow);
+}
+
+.page--evaluation-criteria .evaluation-criteria__block-title {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--color-primary);
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+.page--evaluation-criteria .evaluation-criteria__block-text {
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.page--evaluation-criteria .evaluation-criteria__block-text p {
+    margin: 0;
+}
+
+.page--evaluation-criteria .evaluation-criteria__block-text strong {
+    color: var(--color-primary-light);
+}
+
+.page--evaluation-criteria .evaluation-criteria__info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page--evaluation-criteria .evaluation-criteria__info-list li {
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.page--evaluation-criteria .evaluation-criteria__info-list li strong {
+    color: var(--color-primary-light);
+}
+
+/* ========================================================================================
+   SLIDE 3: QUY ĐỊNH CUỘc THI
+   ======================================================================================== */
+.page--final-rules .final-rules__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 50px 80px;
+    box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+.page--final-rules .final-rules__header {
+    margin-bottom: 35px;
+}
+
+/* ================= BODY & SECTION TITLE ================= */
+.page--final-rules .final-rules__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.page--final-rules .final-rules__section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.page--final-rules .final-rules__accent-bar {
+    width: 12px;
+    height: 42px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+}
+
+.page--final-rules .final-rules__section-title {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--color-text);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ================= DANH SÁCH QUY ĐỊNH ================= */
+.page--final-rules .final-rules__list {
+    margin: 0;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    color: var(--color-text-muted);
+}
+
+.page--final-rules .final-rules__list li {
+    font-size: 28px;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+.page--final-rules .final-rules__list li::marker {
+    color: var(--color-primary);
+    font-size: 24px;
+}

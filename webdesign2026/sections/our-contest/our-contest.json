@@ -1,0 +1,17 @@
+{
+    "header": {
+        "label": "Cuộc thi tổ chức bởi",
+        "org": "CLB LẬP TRÌNH TRÊN THIẾT BỊ DI ĐỘNG"
+    },
+    "robocode": {
+        "tag": "ROBOCODE 2021",
+        "image": "./sections/our-contest/img/robocode-2021.jpg",
+        "imageAlt": "Lễ trao giải cuộc thi Robocode 2021"
+    },
+    "photo": {
+        "tag": "WEB DESIGN",
+        "image": "./sections/our-contest/img/webdesign-highlight.jpg",
+        "imageAlt": "Cuộc thi Web Design do CLB tổ chức"
+    },
+    "feeling": "Không chỉ là cuộc thi, nó còn là một sân chơi giúp các thí sinh có thể học hỏi và trao đổi kinh nghiệm, tạo môi trường học tập lập trình sinh động, sáng tạo và khả năng làm việc nhóm cho các bạn sinh viên Trường Đại học Mở TP.HCM yêu thích lập trình."
+}

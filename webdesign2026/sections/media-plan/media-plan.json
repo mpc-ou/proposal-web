@@ -1,0 +1,55 @@
+{
+    "header": {
+        "icon": "bi-megaphone-fill",
+        "subTitle": "Kế hoạch",
+        "mainTitle": "TRUYỀN THÔNG"
+    },
+    "purpose": {
+        "title": "MỤC ĐÍCH TRUYỀN THÔNG",
+        "items": [
+            "Cung cấp thông tin chính xác, đầy đủ về cuộc thi đến các **đối tượng tham gia trực tiếp** và **các bạn sinh viên quan tâm đến cuộc thi** thông qua các bài viết truyền thông.",
+            "Khởi dậy **tinh thần học tập** trong cộng đồng từ **cá nhân đến tập thể** quan tâm đến lĩnh vực này; Đồng thời muốn cuộc thi **gây ấn tượng đến với người tham gia**."
+        ]
+    },
+    "audience": {
+        "title": "ĐỐI TƯỢNG TRUYỀN THÔNG",
+        "text": "Sinh viên **trường Đại học Mở TP.HCM** có niềm đam mê, muốn thử sức cũng như muốn trải nghiệm bầu không khí của một cuộc thi về lĩnh vực CNTT."
+    },
+    "goal": {
+        "title": "MỤC TIÊU TRUYỀN THÔNG",
+        "text": "Ở phạm vi toàn trường sẽ đạt chỉ tiêu **gần 70%** sinh viên biết đến. Để đạt được mục tiêu này, cần đẩy mạnh các công tác quảng bá offline hữu dụng như **truyền thông banner dán ở từng lớp học** và **liên hệ với các CLB khác** thông qua HTTT để tuyên truyền, tạo một số **minigame làm sân chơi tăng lượt tương tác** trên fanpage {{highlight}},...",
+        "highlight": "CLB Lập Trình Trên Thiết Bị Di Động"
+    },
+    "milestones": [
+        { "date": "16/09", "title": "CÔNG BỐ KẾT QUẢ CUỘC THI", "side": "right" },
+        { "date": "14/09", "title": "VÒNG CHUNG KẾT & TRAO GIẢI", "side": "left" },
+        { "date": "12/09", "title": "GIỚI THIỆU HỘI ĐỒNG CHẤM THI", "side": "right" },
+        { "date": "08/09 - 12/09", "title": "BÌNH CHỌN BÀI THI YÊU THÍCH & MINI GAME CHỌN RA BẠN MAY MẮN", "side": "left" },
+        { "date": "07/09", "title": "BÀI ĐĂNG MỜI THAM GIA CỔ VŨ", "side": "right" },
+        { "date": "29/08 - 06/09", "title": "VÒNG TRIỂN KHAI", "side": "left" },
+        { "date": "24/08 - 28/08", "title": "VÒNG SƠ LOẠI", "side": "right" },
+        { "date": "11/08", "title": "CÒN MỘT NGÀY ĐĂNG KÝ", "side": "left" },
+        { "date": "05/08", "title": "MỞ FORM ĐĂNG KÝ", "side": "right" }
+    ],
+    "targets": {
+        "mainTitle": "ĐỐI TƯỢNG MỤC TIÊU",
+        "mainText": "Tiếp cận hơn **300 sinh viên** Trường ĐH Mở TP.HCM",
+        "heading": "MỤC TIÊU DỰ KIẾN",
+        "events": [
+            {
+                "title": "SEMINAR + KHAI MẠC",
+                "stats": [
+                    { "number": "75+", "label": "lượt người đăng ký tham gia" },
+                    { "number": "200+", "label": "lượt tiếp cận" }
+                ]
+            },
+            {
+                "title": "ĐÊM CHUNG KẾT",
+                "stats": [
+                    { "number": "100+", "label": "lượt người tham gia cổ vũ" },
+                    { "number": "300+", "label": "lượt tiếp cận" }
+                ]
+            }
+        ]
+    }
+}
