@@ -318,14 +318,12 @@
     color: var(--color-text);
 }
 
-/* Highlight "X" mark */
 .sponsor-table__value-cell--check {
     font-size: 28px;
     font-weight: 800;
     color: var(--color-primary-light, #ff9270);
 }
 
-/* ---------- Notes List (Slide 7) ---------- */
 .sponsor-notes-wrapper {
     width: 100%;
     margin-top: 0.5rem;
@@ -349,7 +347,6 @@
     font-weight: 500;
 }
 
-/* ---------- Print Rules ---------- */
 @media print {
     .sponsor-pkg-card:hover {
         transform: none;
