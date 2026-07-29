@@ -172,9 +172,8 @@
 }
 
 .page--evaluation-criteria .evaluation-criteria__header {
-    margin-bottom: 20px;
+    margin-bottom: 5rem;
 }
-
 /* Nội dung tiêu chí */
 .page--evaluation-criteria .evaluation-criteria__section-title {
     font-size: 30px;

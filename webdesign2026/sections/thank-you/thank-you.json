@@ -6,15 +6,15 @@
     "contacts": [
         {
             "role": "TRƯỞNG BAN TỔ CHỨC",
-            "name": "(Mr) Nguyễn Duy Hoàng",
-            "email": "nguyenduyhoang0605@gmail.com",
-            "phone": "0333541724"
+            "name": "(Mrs) Nguyễn Thị Kim Oanh",
+            "email": "example1@gmail.com",
+            "phone": "0123456789"
         },
         {
             "role": "TRƯỞNG BAN ĐỐI NGOẠI",
-            "name": "(Mr) Huỳnh Văn Quế Khoa",
-            "email": "quekhoa2005@gmail.com",
-            "phone": "0916499634"
+            "name": "(Mr) Phạm Đức Thắng",
+            "email": "example2@gmail.com",
+            "phone": "0123456789"
         }
     ],
     "info": {

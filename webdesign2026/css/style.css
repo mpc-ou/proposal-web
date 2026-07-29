@@ -878,3 +878,70 @@ body.lightbox-open {
         transform-origin: top left;
     }
 }
+
+/* ---------- Overlay bao hieu qua trinh nap trang (spinner SVG + thanh tien trinh) ---------- */
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: var(--color-surface);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-overlay.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loading-overlay__anim {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.loading-overlay__bar {
+    width: 260px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--color-surface-alt);
+    overflow: hidden;
+}
+
+.loading-overlay__bar-fill {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--color-primary);
+    transition: width 0.35s ease;
+}
+
+.loading-overlay__label {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.loading-overlay__label #loadingPercent {
+    color: var(--color-primary);
+    font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .loading-overlay__anim {
+        animation-play-state: paused !important;
+    }
+}
+
+@media print {
+    .loading-overlay {
+        display: none !important;
+    }
+}
