@@ -874,8 +874,23 @@ body.lightbox-open {
     .page__inner {
         width: 1920px;
         height: 1358px;
-        transform: scale(calc(297mm / 1920px));
-        transform-origin: top left;
+        /*
+          Dung "zoom", KHONG dung "transform: scale()": transform chi ve lai
+          hinh anh (paint), khong thu nho kich thuoc bo cuc (layout box) -
+          .page__inner van chiem dung 1358px chieu cao trong luong lay out,
+          cao hon nhieu so voi .page (210mm ~ 793px). Trinh duyet in tinh so
+          trang theo kich thuoc layout THAT (chua scale) nen phan tran ra bi
+          tach thanh hang loat trang in du (phan lon la trang trang) - vi du
+          33 trang bi nhan len thanh ~4x trang. "zoom" thu nho ca layout that
+          nen khong con phan tran, het bi sinh trang du.
+
+          KHONG dung calc(297mm / 1920px): chia 2 don vi tuyet doi khac loai
+          (mm/px) trong calc() Firefox tinh sai ty le (Chrome thi dung), gay
+          in ra khong dung kich thuoc that. Quy doi san 297mm ve px theo
+          chuan CSS (1in = 96px = 25.4mm) roi chia px/px (cung don vi) de
+          moi trinh duyet tinh giong nhau: 297 * 96 / 25.4 / 1920.
+        */
+        zoom: 0.5844000213;
     }
 }
 

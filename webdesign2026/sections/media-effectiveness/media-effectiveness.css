@@ -227,6 +227,7 @@
     background-color: #ddd;
     background-size: cover;
     background-position: center;
+    z-index: 0;
 }
 
 .fb-mock__profile {
@@ -282,6 +283,7 @@
     flex-direction: column;
     gap: 2rem;
     min-height: 0;
+    z-index: 1;
 }
 
 .stat-card {
@@ -292,6 +294,7 @@
     border-radius: 12px;
     padding: 2rem 2.25rem;
     box-shadow: 0 12px 32px var(--color-shadow-strong);
+    z-index: 1;
 }
 
 .stat-card--main {
