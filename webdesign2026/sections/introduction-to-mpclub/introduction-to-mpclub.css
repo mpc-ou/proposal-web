@@ -97,17 +97,18 @@
     border-radius: 12px;
     border: 1px solid var(--color-border);
     background: var(--color-surface-alt);
+    flex: 1;
     min-width: 7rem;
 }
 
 .mpclub__stats-value {
     font-weight: 800;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--color-primary);
 }
 
 .mpclub__stats-label {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: var(--color-text-muted);
 }
 
