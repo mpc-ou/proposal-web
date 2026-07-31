@@ -1,8 +1,11 @@
 {
     "header": {
-        "icon": "bi-megaphone-fill",
         "subTitle": "Kế hoạch",
         "mainTitle": "TRUYỀN THÔNG"
+    },
+    "image": {
+        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy3113RgSpBBG0xjBdap0Fmgx7pQoD50TvAMpgKzxRcQ&s=10",
+        "alt": ""
     },
     "purpose": {
         "title": "MỤC ĐÍCH TRUYỀN THÔNG",
@@ -18,23 +21,22 @@
     "goal": {
         "title": "MỤC TIÊU TRUYỀN THÔNG",
         "text": "Ở phạm vi toàn trường sẽ đạt chỉ tiêu **gần 70%** sinh viên biết đến. Để đạt được mục tiêu này, cần đẩy mạnh các công tác quảng bá offline hữu dụng như **truyền thông banner dán ở từng lớp học** và **liên hệ với các CLB khác** thông qua HTTT để tuyên truyền, tạo một số **minigame làm sân chơi tăng lượt tương tác** trên fanpage {{highlight}},...",
-        "highlight": "CLB Lập Trình Trên Thiết Bị Di Động"
+        "highlight": "CLB Lập trình trên thiết bị Di động"
     },
     "milestones": [
-        { "date": "16/09", "title": "CÔNG BỐ KẾT QUẢ CUỘC THI", "side": "right" },
-        { "date": "14/09", "title": "VÒNG CHUNG KẾT & TRAO GIẢI", "side": "left" },
+        { "date": "13/09", "title": "VÒNG CHUNG KẾT & TRAO GIẢI", "side": "left" },
         { "date": "12/09", "title": "GIỚI THIỆU HỘI ĐỒNG CHẤM THI", "side": "right" },
         { "date": "08/09 - 12/09", "title": "BÌNH CHỌN BÀI THI YÊU THÍCH & MINI GAME CHỌN RA BẠN MAY MẮN", "side": "left" },
         { "date": "07/09", "title": "BÀI ĐĂNG MỜI THAM GIA CỔ VŨ", "side": "right" },
-        { "date": "29/08 - 06/09", "title": "VÒNG TRIỂN KHAI", "side": "left" },
-        { "date": "24/08 - 28/08", "title": "VÒNG SƠ LOẠI", "side": "right" },
-        { "date": "11/08", "title": "CÒN MỘT NGÀY ĐĂNG KÝ", "side": "left" },
-        { "date": "05/08", "title": "MỞ FORM ĐĂNG KÝ", "side": "right" }
+        { "date": "05/09 - 11/09", "title": "VÒNG TRIỂN KHAI", "side": "left" },
+        { "date": "31/08 - 04/09", "title": "VÒNG SƠ LOẠI", "side": "right" },
+        { "date": "22/08", "title": "CÒN MỘT NGÀY ĐĂNG KÝ", "side": "left" },
+        { "date": "17/08", "title": "MỞ FORM ĐĂNG KÝ", "side": "right" }
     ],
     "targets": {
         "mainTitle": "ĐỐI TƯỢNG MỤC TIÊU",
         "mainNumber": "300+",
-        "mainLabel": "sinh viên Trường ĐH Mở TP.HCM",
+        "mainLabel": "sinh viên Trường Đại học Mở TP.HCM",
         "heading": "MỤC TIÊU DỰ KIẾN",
         "events": [
             {
@@ -47,8 +49,8 @@
             {
                 "title": "ĐÊM CHUNG KẾT",
                 "stats": [
-                    { "number": "100+", "label": "lượt người tham gia cổ vũ" },
-                    { "number": "300+", "label": "lượt tiếp cận" }
+                    { "number": "250+", "label": "lượt người tham gia cổ vũ" },
+                    { "number": "1000+", "label": "lượt tiếp cận" }
                 ]
             }
         ]

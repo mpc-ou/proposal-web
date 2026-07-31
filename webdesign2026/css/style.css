@@ -25,6 +25,7 @@ body {
     color: var(--color-text);
     font-family: "Be Vietnam Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 28px;
+    text-align: justify;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -91,6 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.25;
     color: var(--color-text);
+    text-align: left;
 }
 
 h1 { font-size: 72px; }
@@ -411,7 +413,7 @@ h6 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 96px;
+    padding: 72px;
     overflow: hidden;
 }
 
@@ -508,14 +510,15 @@ h6 {
 }
 
 .logo-row__item {
-    height: 64px;
+    height: 140px;
     width: auto;
+    filter: drop-shadow(0 4px 8px var(--color-shadow-strong)) drop-shadow(0 0 24px var(--color-glow)) brightness(1.08);
     transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .logo-row__item:hover {
     transform: translateY(-4px);
-    filter: drop-shadow(0 6px 14px var(--color-glow));
+    filter: drop-shadow(0 8px 14px var(--color-shadow-strong)) drop-shadow(0 0 32px var(--color-glow)) brightness(1.12);
 }
 
 /* ---------- Animation on scroll (animate.css driven) ---------- */

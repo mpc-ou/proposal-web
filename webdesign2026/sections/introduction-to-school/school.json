@@ -5,26 +5,41 @@
     "eyebrow": "Tổng quan về",
     "heading": "TRƯỜNG ĐẠI HỌC MỞ TP.HCM",
     "majors": [
-        "Kinh tế và Quản lý công",
+        "Đào tạo đặc biệt",
+        "Công nghệ sinh học",
+        "Công nghệ thông tin",
         "Luật",
+        "Kế toán kiểm toán",
+        "Kinh tế và quản lý công",
+        "Quản trị kinh doanh",
         "Ngoại ngữ",
-        "Công nghệ Sinh học",
+        "Tài chính ngân hàng",
+        "Xã hội học - công tác xã hội - Đông Nam Á",
         "Xây dựng",
-        "Khoa Đào tạo sau Đại học",
-        "Xã hội học - Công tác xã hội - Đông Nam Á",
-        "Đào tạo Đặc biệt",
-        "Quản trị Kinh doanh",
-        "Công nghệ Thông tin",
-        "Tài chính - Ngân hàng",
-        "Kế toán - Kiểm toán",
-        "Khoa Khoa học cơ bản"
+        "Khoa học cơ bản",
+        "Đào tạo sau đại học"
     ],
     "stats": [
-        { "label": "giáo sư", "value": "06" },
-        { "label": "phó giáo sư", "value": "24" },
-        { "label": "tiến sĩ", "value": "136" },
-        { "label": "thạc sĩ", "value": "301" },
-        { "label": "giảng viên", "value": "499" }
+        {
+            "label": "giáo sư",
+            "value": "06"
+        },
+        {
+            "label": "phó giáo sư",
+            "value": "20+"
+        },
+        {
+            "label": "tiến sĩ",
+            "value": "130+"
+        },
+        {
+            "label": "thạc sĩ",
+            "value": "300+"
+        },
+        {
+            "label": "giảng viên",
+            "value": "500+"
+        }
     ],
     "statsImage": "./sections/introduction-to-school/img/ou-totnghiep.jpg",
     "statsImageAlt": "Lễ tốt nghiệp sinh viên Trường Đại học Mở TP.HCM",

@@ -94,17 +94,7 @@
     "name": "Web Design 2025",
     "description": "Nhằm kỉ niệm 35 năm thành lập Trường Đại học Mở Thành phố Hồ Chí Minh, Web Design 2025 được tổ chức với chủ đề \"Giới thiệu về Trường Đại học Mở Thành phố Hồ Chí Minh\".",
     "teams": [
-      {
-        "teamName": "TEAM FUTURE",
-        "projectName": "Cổng thông tin sinh viên",
-        "imgs": [
-          "./sections/exhibitions/img/wd25-FUTURE001.png",
-          "./sections/exhibitions/img/wd25-FUTURE002.png",
-          "./sections/exhibitions/img/wd25-FUTURE003.png"
-        ],
-        "github": "https://github.com/OUMPC/WebDesign2025-Future",
-        "website": "wd2025-future.vercel.app"
-      },
+      
       {
         "teamName": "TEAM NTK",
         "projectName": "Giới thiệu khoa Công nghệ thông tin",
@@ -119,7 +109,7 @@
       },
       {
         "teamName": "TEAM THETHREE",
-        "projectName": "Giới thiệu về Trường ĐH Mở TP.HCM",
+        "projectName": "Giới thiệu về Trường Đại học Mở TP.HCM",
         "imgs": [
           "./sections/exhibitions/img/wd25-THETHREE001.png",
           "./sections/exhibitions/img/wd25-THETHREE002.png",
@@ -130,7 +120,7 @@
       },
       {
         "teamName": "TEAM STACK LIFO",
-        "projectName": "Giới thiệu về Trường ĐH Mở TP.HCM",
+        "projectName": "Giới thiệu về Trường Đại học Mở TP.HCM",
         "imgs": [
           "./sections/exhibitions/img/wd25-STACKLIFO001.png",
           "./sections/exhibitions/img/wd25-STACKLIFO002.png",
@@ -139,6 +129,16 @@
         ],
         "github": "https://github.com/Theanh130124/WEB_DESIGN",
         "website": "https://web-desgin-stacklifo.vercel.app"
+      },
+      {
+        "teamName": "TEAM FUTURE",
+        "projectName": "Cổng thông tin sinh viên",
+        "imgs": [
+          "./sections/exhibitions/img/wd25-FUTURE001.png",
+          "./sections/exhibitions/img/wd25-FUTURE002.png",
+          "./sections/exhibitions/img/wd25-FUTURE003.png"
+        ],
+        "website": "wd2025-future.vercel.app"
       }
     ]
   }

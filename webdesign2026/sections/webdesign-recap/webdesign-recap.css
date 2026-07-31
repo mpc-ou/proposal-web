@@ -36,6 +36,11 @@
     line-height: 1.15;
 }
 
+.page--webdesign-recap--recent .recap__title,
+.page--webdesign-recap--recent .recap__brand  {
+    text-align: right;
+}
+
 /* ================= KHUNG LỜI BÌNH (đoạn văn) ================= */
 .page--webdesign-recap .recap__quote {
     position: absolute;

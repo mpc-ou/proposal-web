@@ -14,6 +14,11 @@ function setText(root, selector, value) {
     if (el) el.textContent = value || "";
 }
 
+function setHTML(root, selector, value) {
+    const el = root.querySelector(selector);
+    if (el) el.innerHTML = value || "";
+}
+
 function setImage(root, selector, src, alt) {
     const el = root.querySelector(selector);
     if (!el) return;
@@ -67,6 +72,7 @@ export default async function initIntroductionToFaculty(root) {
 
     renderStats(root, faculty.stats);
     renderContact(root, faculty.contact);
+    setHTML(root, "[data-faculty-source]", renderMarkdown(faculty.source || ""));
 
     const overviewEl = root.querySelector("[data-faculty-overview]");
 

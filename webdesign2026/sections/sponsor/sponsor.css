@@ -117,7 +117,7 @@
 
 .sponsor-pkg-card__tier {
     font-weight: 800;
-    font-size: 30px;
+    font-size: 32px;
     text-transform: uppercase;
     letter-spacing: 0.02em;
 }
@@ -166,7 +166,7 @@
     background: #475569;
     color: #ffffff;
     font-weight: 800;
-    font-size: 28px;
+    font-size: 32px;
     letter-spacing: 0.05em;
     padding: 0.6rem 2rem;
     text-transform: uppercase;
@@ -186,7 +186,7 @@
 .sponsor-inkind-card p {
     margin: 0;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.5;
 }
 
@@ -200,7 +200,7 @@
 }
 
 .sponsor-benefit__title {
-    margin: 1.5rem 0 2rem;
+    margin: 1.5rem 0 5rem;
     font-size: 56px;
     font-weight: 800;
     text-transform: uppercase;
@@ -235,7 +235,7 @@
 .sponsor-table__th {
     padding: 1.2rem 1.4rem;
     font-weight: 800;
-    font-size: 26px;
+    font-size: 32px;
     text-transform: uppercase;
     text-align: center;
     border-bottom: 3px solid rgba(0, 0, 0, 0.25);
@@ -268,7 +268,7 @@
 }
 
 .sponsor-table tbody tr {
-    border-bottom: 1px solid rgba(255, 154, 120, 0.16);
+    border-bottom: 2px solid rgba(255, 154, 120, 0.3);
     transition: background 0.15s ease;
 }
 
@@ -286,7 +286,7 @@
 
 .sponsor-table td {
     padding: 1.35rem 1.6rem;
-    font-size: 26px;
+    font-size: 32px;
     line-height: 1.5;
     vertical-align: middle;
 }
@@ -297,30 +297,34 @@
     text-align: left;
     padding-left: 1.75rem !important;
     background: rgba(0, 0, 0, 0.2);
-    border-right: 1px solid rgba(255, 154, 120, 0.14);
+    border-right: 2px solid rgba(255, 154, 120, 0.28);
 }
 
 .sponsor-table__value-cell {
     color: var(--color-text);
     text-align: center;
     font-weight: 700;
-    border-right: 1px solid rgba(255, 154, 120, 0.1);
+    border-right: 2px solid rgba(255, 154, 120, 0.2);
 }
 
 .sponsor-table__value-cell:last-child {
     border-right: none;
 }
 
+/* O gop cot (colspan) - lam noi bat ranh gioi de thay ro dang gop */
 .sponsor-table__value-cell--span-all,
 .sponsor-table__value-cell--span-2 {
     text-align: center;
     font-weight: 700;
     color: var(--color-text);
+    background: rgba(255, 90, 54, 0.08);
+    border-left: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
 }
 
-/* Highlight "X" mark */
+/* Highlight dau tick */
 .sponsor-table__value-cell--check {
-    font-size: 28px;
+    font-size: 56px;
     font-weight: 800;
     color: var(--color-primary-light, #ff9270);
 }
@@ -343,7 +347,7 @@
 }
 
 .sponsor-notes-list li {
-    font-size: 26px;
+    font-size: 32px;
     line-height: 1.55;
     color: var(--color-text);
     font-weight: 500;

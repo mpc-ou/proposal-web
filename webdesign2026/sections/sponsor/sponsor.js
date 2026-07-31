@@ -62,7 +62,7 @@ function renderPackagesPage(packagesData, isFirstPage) {
 function formatCellText(val) {
     if (!val) return "";
     if (val === "X") {
-        return `<span class="sponsor-table__value-cell--check">X</span>`;
+        return `<span class="sponsor-table__value-cell--check"><i class="bi bi-check-lg"></i></span>`;
     }
     return val;
 }

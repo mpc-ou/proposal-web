@@ -1,20 +1,20 @@
 {
     "header": {
         "title": "LỜI CẢM ƠN",
-        "text": "Ban tổ chức cuộc thi **Web Design 2026** - **CLB Lập Trình Trên Thiết Bị Di Động** xin chân thành cảm ơn Quý Doanh Nghiệp đã dành thời gian xem qua Hồ sơ tài trợ của **CLB**. Chúng tôi rất mong có thể nhận được cơ hội hợp tác với Quý Doanh Nghiệp trong thời gian sắp tới."
+        "text": "Ban tổ chức cuộc thi **Web Design 2026** - **CLB Lập trình trên thiết bị Di động** xin chân thành cảm ơn **Quý Doanh Nghiệp** đã dành thời gian xem qua Hồ sơ tài trợ của **CLB**. Chúng tôi rất mong có thể nhận được cơ hội hợp tác với **Quý Doanh Nghiệp** trong thời gian sắp tới."
     },
     "contacts": [
         {
             "role": "TRƯỞNG BAN TỔ CHỨC",
-            "name": "(Mrs) Nguyễn Thị Kim Oanh",
-            "email": "example1@gmail.com",
-            "phone": "0123456789"
+            "name": "(Ms) Nguyễn Thị Kim Oanh",
+            "email": "2451012071oanh@ou.edu.vn",
+            "phone": "0347105631"
         },
         {
             "role": "TRƯỞNG BAN ĐỐI NGOẠI",
             "name": "(Mr) Phạm Đức Thắng",
-            "email": "example2@gmail.com",
-            "phone": "0123456789"
+            "email": "2451052243thang@ou.edu.vn",
+            "phone": "0769843314"
         }
     ],
     "info": {
@@ -27,7 +27,7 @@
             },
             {
                 "label": "Fanpage",
-                "text": "CLB Lập Trình Trên Thiết Bị Di Động",
+                "text": "CLB Lập trình trên thiết bị Di động",
                 "url": "https://www.facebook.com/CLBLapTrinhTrenThietBiDiDong?locale=vi_VN"
             },
             {

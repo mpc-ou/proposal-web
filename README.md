@@ -1,6 +1,6 @@
 # Web Design 2026 - Hồ sơ mời tài trợ
 
-Website proposal dạng "slide cuộn" (mỗi section = 1 trang) cho CLB Lập Trình Trên Thiết Bị Di Động - Khoa CNTT - Trường Đại học Mở TP.HCM. Không dùng framework/build tool, HTML/CSS/JS thuần, các trang được nạp động và mỗi section gộp chung html+css+js+data+ảnh riêng trong 1 thư mục.
+Website proposal dạng "slide cuộn" (mỗi section = 1 trang) cho CLB Lập trình trên thiết bị Di động - Khoa CNTT - Trường Đại học Mở TP.HCM. Không dùng framework/build tool, HTML/CSS/JS thuần, các trang được nạp động và mỗi section gộp chung html+css+js+data+ảnh riêng trong 1 thư mục.
 
 ## Công nghệ sử dụng
 

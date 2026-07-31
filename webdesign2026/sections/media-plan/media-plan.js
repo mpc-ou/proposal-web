@@ -22,11 +22,16 @@ function setText(root, selector, value) {
 
 function renderHeader(root, header) {
     if (!header) return;
-    root.querySelectorAll("[data-media-plan-icon]").forEach((el) => {
-        el.className = `bi ${header.icon || ""}`;
-    });
     setText(root, "[data-media-plan-sub-title]", header.subTitle);
     setText(root, "[data-media-plan-main-title]", header.mainTitle);
+}
+
+function renderImage(root, image) {
+    if (!image) return;
+    const imgEl = root.querySelector("[data-media-plan-image]");
+    if (!imgEl) return;
+    imgEl.src = image.src || "";
+    imgEl.alt = image.alt || "";
 }
 
 function renderPurpose(root, purpose) {
@@ -125,6 +130,7 @@ export default async function initMediaPlan(root) {
     }
 
     renderHeader(root, data.header);
+    renderImage(root, data.image);
     renderPurpose(root, data.purpose);
     renderAudience(root, data.audience);
     renderGoal(root, data.goal);

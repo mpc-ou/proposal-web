@@ -25,6 +25,9 @@
 /* ---------- Info Block ---------- */
 .media-effectiveness__info-block {
     text-align: right;
+    position: absolute;
+    right: 7rem;
+    top: 8rem;
 }
 
 .media-effectiveness__subheading {
@@ -47,9 +50,9 @@
 .media-effectiveness__description {
     margin: 0.5rem 0 0;
     color: var(--color-text-muted);
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.55;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 /* ---------- Stage (Khung chứa ảnh) ---------- */
@@ -58,7 +61,7 @@
     position: relative;
     width: 100%;
     min-height: 0;
-    margin-top: 1rem;
+    margin-top: 4rem;
 }
 
 /* ---------- Reusable cwindow (Mac OS Window Box) ---------- */
@@ -157,10 +160,10 @@
 
 .media-effectiveness__stage--2-items .media-effectiveness__info-block {
     position: absolute;
-    bottom: 0%;
+    top: 70%;
     left: 0%;
     text-align: left;
-    max-width: 44%;
+    max-width: 40%;
     z-index: 5;
 }
 
@@ -168,6 +171,7 @@
     font-size: 30px;
     color: var(--color-primary);
     font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 .media-effectiveness__stage--2-items .media-effectiveness__title {
@@ -309,7 +313,7 @@
 
 .stat-card__title {
     margin: 0 0 1rem;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 700;
     color: var(--color-primary);
 }
@@ -332,13 +336,12 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
 }
 
 .stat-card__list li {
     position: relative;
     padding-left: 1.5rem;
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.5;
     color: var(--color-text);
 }

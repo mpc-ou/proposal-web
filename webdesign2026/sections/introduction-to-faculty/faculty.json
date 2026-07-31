@@ -6,8 +6,8 @@
     "heading": "Khoa Công nghệ Thông tin",
     "stats": [
         { "value": "06", "label": "Ngành đào tạo đại học" },
-        { "value": "02", "label": "Chương trình Sau Đại học (Thạc sĩ, Tiến sĩ Khoa học máy tính)" },
-        { "value": "03", "label": "Chương trình đào tạo tài năng (02 Kỹ sư, 01 Thạc sĩ)" },
+        { "value": "02", "label": "Chương trình Sau Đại học" },
+        { "value": "03", "label": "Chương trình đào tạo tài năng" },
         { "value": "500+", "label": "Công bố quốc tế" }
     ],
     "contact": {
@@ -31,5 +31,6 @@
             "text": "fcs@ou.edu.vn",
             "url": "mailto:fcs@ou.edu.vn"
         }
-    }
+    },
+    "source": "Thông tin được tổng hợp từ website Khoa Công nghệ Thông tin.<br/> Nguồn: [it.ou.edu.vn](https://it.ou.edu.vn)"
 }

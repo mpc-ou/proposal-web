@@ -19,7 +19,7 @@
     border-radius: 12px;
     overflow: hidden;
     background: var(--color-surface-alt);
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
 }
 
 .overview__media img,
@@ -41,7 +41,7 @@
     margin: 0;
     color: var(--color-text-muted);
     font-weight: 500;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .overview__heading,
@@ -83,12 +83,12 @@
 
 .stats__majors li {
     margin: 0;
-    padding: 0.4rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 999px;
     border: 1px solid var(--color-border);
     background: var(--color-surface-alt);
     color: var(--color-text-muted);
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.4;
     transition: border-color 0.15s ease, color 0.15s ease;
 }
@@ -123,7 +123,7 @@
 
 .stats__source {
     margin-top: 1.25rem;
-    font-size: 18px;
+    font-size: 20px;
     font-style: italic;
     color: var(--color-text-subtle);
 }

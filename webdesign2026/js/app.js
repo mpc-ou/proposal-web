@@ -153,13 +153,24 @@ function setupZoomControl() {
     let level = stored !== null && stored >= min && stored <= max ? stored : defaultLevel;
 
     const apply = () => {
+        const oldHeight = viewport.offsetHeight;
+        const focusRatio = oldHeight > 0
+            ? (window.scrollY + window.innerHeight / 2) / oldHeight
+            : 0;
+
         const scale = level * getUnit();
         content.style.transform = `scale(${scale})`;
-        viewport.style.height = `${content.scrollHeight * scale}px`;
+        const newHeight = content.scrollHeight * scale;
+        viewport.style.height = `${newHeight}px`;
         if (levelEl) levelEl.textContent = `${Math.round(level * 100)}%`;
         outBtn.disabled = level <= min;
         inBtn.disabled = level >= max;
         saveStoredZoom(level);
+
+        if (oldHeight > 0) {
+            const newScrollY = focusRatio * newHeight - window.innerHeight / 2;
+            window.scrollTo(0, Math.max(0, newScrollY));
+        }
     };
 
     inBtn.addEventListener("click", () => {
@@ -172,7 +183,14 @@ function setupZoomControl() {
         apply();
     });
 
-    window.addEventListener("resize", apply);
+    let lastWidth = window.innerWidth;
+    let resizeTimer = null;
+    window.addEventListener("resize", () => {
+        if (window.innerWidth === lastWidth) return; // bo qua resize do thanh dia chi mobile an/hien (chi doi cao, khong doi rong)
+        lastWidth = window.innerWidth;
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(apply, 100);
+    });
 
     apply();
 }
@@ -311,17 +329,24 @@ function setupPrintButton() {
     }
 
     const contentEl = document.getElementById(CONFIG.zoom.contentId);
+    const viewportEl = contentEl ? contentEl.closest("#zoomViewport") : null;
     let previousTransform = "";
+    let previousViewportHeight = "";
 
     window.addEventListener("beforeprint", () => {
         if (!contentEl) return;
         previousTransform = contentEl.style.transform;
         contentEl.style.transform = "none";
+        if (viewportEl) {
+            previousViewportHeight = viewportEl.style.height;
+            viewportEl.style.height = "";
+        }
     });
 
     window.addEventListener("afterprint", () => {
         if (!contentEl) return;
         contentEl.style.transform = previousTransform;
+        if (viewportEl) viewportEl.style.height = previousViewportHeight;
     });
 }
 

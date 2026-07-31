@@ -39,7 +39,7 @@ function renderMilestones(root, milestones) {
                             <span class="timeline__date">${item.date || ""}</span>
                         </div>
                         <p class="timeline__text">
-                            ${item.label ? `<strong>${item.label}</strong> - ` : ""}${inlineMarkdown(item.text)}
+                            ${item.label ? `<strong>${item.label}</strong> </br>` : ""}${inlineMarkdown(item.text)}
                         </p>
                         ${item.note ? `<p class="timeline__note">${inlineMarkdown(item.note)}</p>` : ""}
                         <span class="timeline__arrow"><i class="bi bi-chevron-double-right"></i></span>

@@ -26,11 +26,14 @@
 /* ========================================================================================
    SLIDE 1: THÔNG TIN CUỘC THI
    ======================================================================================== */
+.evaluation-criteria__body{
+    margin-top: 3rem;
+}
+
 .page--web-design-info .web-design-info__container {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 50px 0 50px 80px;
     box-sizing: border-box;
 }
 
@@ -43,7 +46,7 @@
 /* ================= CONTENT 2 CỘT ================= */
 .page--web-design-info .web-design-info__content {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 50px;
     flex: 1;
     height: 100%;
@@ -53,10 +56,12 @@
 /* CỘT TRÁI: NỘI DUNG MIÊU TẢ */
 .page--web-design-info .web-design-info__left {
     padding-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .page--web-design-info .web-design-info__description p {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.7;
     color: var(--color-text);
     margin: 50px 0;
@@ -75,8 +80,8 @@
 }
 
 .page--web-design-info .web-design-info__image-wrapper {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     border-radius: 12px 0 0 12px;
     overflow: hidden;
     border-left: 1px solid var(--color-border);
@@ -84,8 +89,8 @@
     border-bottom: 1px solid var(--color-border);
     cursor: zoom-in;
     position: absolute;
-    top: -6rem;
-    left: 1rem;
+    top: -1rem;
+    left: 5rem;
 }
 
 .page--web-design-info .web-design-info__img {
@@ -103,23 +108,24 @@
 
 .page--web-design-info .web-design-info__card {
     position: absolute;
-    bottom: -40px;
-    left: -20px;
+    bottom: 0;
+    left: -10px;
     width: 95%;
     background-color: var(--color-surface-alt);
     border-left: 6px solid var(--color-primary);
     border-top: 1px solid var(--color-border);
     border-right: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
-    padding: 22px 28px;
+    padding: 24px 28px;
     border-radius: 0 10px 10px 0;
     box-shadow: 0 12px 35px var(--color-shadow-strong);
     backdrop-filter: blur(8px);
     z-index: 2;
+    line-height: 1;
 }
 
 .page--web-design-info .web-design-info__card-title {
-    font-size: 36px;
+    font-size: 48px;
     color: var(--color-primary);
     margin: 0 0 12px 0;
     font-weight: 700;
@@ -157,7 +163,6 @@
 .page--evaluation-criteria .evaluation-criteria__container {
     display: flex;
     height: 100%;
-    padding: 50px 0px 50px 80px;
     box-sizing: border-box;
     gap: 40px;
 }
@@ -176,7 +181,7 @@
 }
 /* Nội dung tiêu chí */
 .page--evaluation-criteria .evaluation-criteria__section-title {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 800;
     color: var(--color-text);
     margin: 0 0 12px 0;
@@ -219,6 +224,7 @@
     display: flex;
     height: 100%;
     align-items: center;
+    margin-top: 4rem;
 }
 
 .page--evaluation-criteria .evaluation-criteria__sidebar-card {
@@ -240,7 +246,7 @@
 }
 
 .page--evaluation-criteria .evaluation-criteria__block-title {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 900;
     color: var(--color-primary);
     margin: 0 0 10px 0;
@@ -286,7 +292,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 50px 80px;
     box-sizing: border-box;
 }
 
@@ -317,7 +322,7 @@
 }
 
 .page--final-rules .final-rules__section-title {
-    font-size: 35px;
+    font-size: 36px;
     font-weight: 800;
     color: var(--color-text);
     margin: 0;
@@ -331,12 +336,12 @@
     padding-left: 30px;
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 12px;
     color: var(--color-text-muted);
 }
 
 .page--final-rules .final-rules__list li {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 1.5;
     color: var(--color-text);
 }

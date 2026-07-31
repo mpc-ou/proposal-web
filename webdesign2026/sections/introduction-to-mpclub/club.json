@@ -3,9 +3,9 @@
     "abbr": "MPClub",
     "founded": "24/12/2015",
     "image": "./sections/introduction-to-mpclub/img/mpclub-common.jpg",
-    "imageAlt": "CLB Lập trình trên thiết bị di động",
+    "imageAlt": "CLB Lập trình trên thiết bị Di động",
     "eyebrow": "Giới thiệu",
-    "heading": "CLB Lập trình trên thiết bị di động",
+    "heading": "CLB Lập trình trên thiết bị Di động",
     "activitiesHeading": "Hoạt động trọng tâm",
     "social": {
         "email": {
@@ -13,7 +13,7 @@
             "url": "mailto:it.mpclub@ou.edu.vn"
         },
         "facebook": {
-            "label": "CLB Lập trình trên thiết bị di động",
+            "label": "CLB Lập trình trên thiết bị Di động",
             "url": "https://www.facebook.com/CLBLapTrinhTrenThietBiDiDong"
         },
         "website": {

@@ -1,6 +1,6 @@
 .page--faculty {
     display: grid;
-    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
     gap: 64px;
     align-items: center;
 }
@@ -15,7 +15,7 @@
     border-radius: 12px;
     overflow: hidden;
     background: var(--color-surface-alt);
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
 }
 
 .faculty__media img {
@@ -35,7 +35,7 @@
     margin: 0;
     color: var(--color-text-muted);
     font-weight: 500;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .faculty__heading {
@@ -49,8 +49,8 @@
 
 .faculty__text {
     color: var(--color-text);
-    font-size: 26px;
-    line-height: 1.65;
+    font-size: 28px;
+    line-height: 1.5;
 }
 
 .faculty__text p {
@@ -87,12 +87,12 @@
 
 .faculty__stats-value {
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 32px;
     color: var(--color-primary);
 }
 
 .faculty__stats-label {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1.35;
     color: var(--color-text-muted);
 }
@@ -110,6 +110,13 @@
     gap: 0.5rem;
     color: var(--color-text-muted);
     font-size: 20px;
+}
+
+.faculty__source {
+    margin-top: 1.25rem;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--color-text-subtle);
 }
 
 a.faculty__contact-item:hover {
