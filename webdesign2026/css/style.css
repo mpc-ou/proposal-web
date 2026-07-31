@@ -1,11 +1,3 @@
-/*
-  style.css
-  Reset + typography dung chung (h1-h6, p, span, ul/li,...) + cac class utility
-  mac dinh (flex, box, card,...) + component dung chung cho tung "page" (slide)
-  + animation-on-scroll hook + print styles.
-  Mau sac lay tu color.css, KHONG khai bao mau truc tiep o day.
-*/
-
 /* ---------- Reset ---------- */
 *,
 *::before,
@@ -16,6 +8,27 @@
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary-dark) var(--color-surface-alt);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface-alt);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary-dark);
+    border-radius: 999px;
+    border: 2px solid var(--color-surface-alt);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
 }
 
 body {
@@ -398,6 +411,37 @@ h6 {
     box-shadow: 0 24px 60px -24px var(--color-shadow-strong);
     color: var(--color-text);
     overflow: hidden;
+    /* Chu watermark chim o goc duoi-phai moi trang (page__inner::after ben
+       duoi doc bien nay). Doi noi dung theo tung section bang cach override
+       bien nay tren class .page--xxx tuong ung (vd trang CLB). */
+    /* --page-watermark: "WEBDESIGN 2026";
+    --page-watermark-size: 160px; */
+}
+
+/* Watermark chu in hoa, cuc mo, chim o goc duoi-phai, khong chan chon/
+   click duoc noi dung. z-index:-1 (trong stacking context cua .page__inner)
+   nen luon nam duoi chu/anh that. Text lay tu bien --page-watermark de
+   tung section co the doi noi dung ma khong can lap lai toan bo rule. */
+/* .page__inner::after {
+    content: var(--page-watermark);
+    position: absolute;
+    right: -0.05em;
+    bottom: -0.12em;
+    z-index: -1;
+    font-family: "Be Vietnam Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: var(--page-watermark-size);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    color: var(--color-text);
+    opacity: 0.045;
+    pointer-events: none;
+    user-select: none;
+} */
+
+@media print {
+    .page__inner::after { display: none !important; }
 }
 
 /* Lop trong (JS tu boc trong app.js) - giu nguyen kich thuoc thiet ke goc
@@ -415,6 +459,56 @@ h6 {
     justify-content: center;
     padding: 72px;
     overflow: hidden;
+}
+
+/* Hoa tiet mach dien 45/90 do (Dark Modern Tech), chim o 2 goc CUA TUNG
+   TRANG (khong phai nen ngoai), mo dan vao giua bang mask de trung tam
+   luon giu toi/trong cho text. z-index:-1 (trong stacking context rieng
+   cua .page__inner do co z-index:1) nen luon nam DUOI toan bo noi dung
+   that, khong bao gio choi len chu/anh. Dung mask-image (alpha that) thay
+   vi "ve de mau nen" vi nen .page la gradient cheo - de bi lech mau neu
+   dung mau dac de che. */
+.page__inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        repeating-linear-gradient(45deg, transparent 0 15px, var(--color-circuit-line) 15px 16px, transparent 16px 31px),
+        repeating-linear-gradient(-45deg, transparent 0 15px, var(--color-circuit-metal) 15px 16px, transparent 16px 31px),
+        repeating-linear-gradient(90deg, transparent 0 31px, rgba(255, 255, 255, 0.03) 31px 32px, transparent 32px 63px),
+        repeating-linear-gradient(0deg, transparent 0 31px, rgba(255, 255, 255, 0.03) 31px 32px, transparent 32px 63px);
+    -webkit-mask-image:
+        radial-gradient(circle 620px at 0% 0%, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 45%, transparent 75%),
+        radial-gradient(circle 620px at 100% 100%, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 45%, transparent 75%);
+    mask-image:
+        radial-gradient(circle 620px at 0% 0%, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 45%, transparent 75%),
+        radial-gradient(circle 620px at 100% 100%, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 45%, transparent 75%);
+    /*
+      Chi dung opacity (chay tren compositor, khong ve lai) - KHONG dung
+      animate background-position: no bat ve lai (repaint) toan bo lop
+      gradient+mask moi frame, nhan len tren toi 35 trang cung luc se lam
+      GPU/CPU tang rat cao du dang o ngoai khung nhin (xem bai hoc tuong
+      tu o .page::after ben duoi - dung transform thay vi background-position).
+    */
+    animation: pageCircuitPulse 9s ease-in-out infinite;
+}
+
+@keyframes pageCircuitPulse {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 0.6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page__inner::before { animation: none; }
+}
+
+/* Tat trong PDF: mask-image tren nhieu trang de bi trinh duyet rasterize
+   thanh bitmap khi in, lam file PDF nang len - trong khi ban in da du gon
+   nhe (van con radial-gradient/sheen khac lam nen). */
+@media print {
+    .page__inner::before { display: none !important; }
 }
 
 .page::before {

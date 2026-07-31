@@ -35,6 +35,11 @@ const CONFIG = {
         panelId: "tocPanel",
         listSelector: ".toc__list",
     },
+    counter: {
+        selector: "[data-counter]",
+        threshold: 0.5,
+        duration: 1400,
+    },
     zoom: {
         contentId: "content",
         levelId: "zoomLevel",
@@ -44,8 +49,6 @@ const CONFIG = {
         max: 1.5,
         step: 0.1,
         default: 0.7,
-        // Doi ten key: gia tri cu la % TUYET DOI cua khung 1920px, khong
-        // con dung duoc voi cach tinh "% tuong doi so voi fit-width" moi.
         storageKey: "webdesign2026:zoomLevelRel",
     },
 };
@@ -195,6 +198,58 @@ function setupZoomControl() {
     apply();
 }
 
+function setupCounters() {
+    const items = document.querySelectorAll(CONFIG.counter.selector);
+    if (!items.length) return;
+
+    items.forEach((el) => {
+        el.dataset.counterFinal = el.textContent.trim();
+    });
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion || !("IntersectionObserver" in window)) return;
+
+    const animateCount = (el) => {
+        const raw = el.dataset.counterFinal || "";
+        const match = raw.match(/^([\d.,]+)(.*)$/);
+        if (!match) return;
+
+        const numStr = match[1].replace(/,/g, "");
+        const suffix = match[2];
+        const target = parseFloat(numStr);
+        if (!Number.isFinite(target)) return;
+
+        const decimals = (numStr.split(".")[1] || "").length;
+        const duration = CONFIG.counter.duration;
+        const start = performance.now();
+
+        const tick = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = (target * eased).toFixed(decimals) + suffix;
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            } else {
+                el.textContent = raw;
+            }
+        };
+        requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+        (entries, obs) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                animateCount(entry.target);
+                obs.unobserve(entry.target);
+            });
+        },
+        { threshold: CONFIG.counter.threshold }
+    );
+
+    items.forEach((el) => observer.observe(el));
+}
+
 function setupScrollProgress() {
     const bar = document.getElementById(CONFIG.scrollProgress.barId);
     if (!bar) return;
@@ -341,6 +396,10 @@ function setupPrintButton() {
             previousViewportHeight = viewportEl.style.height;
             viewportEl.style.height = "";
         }
+
+        document.querySelectorAll(CONFIG.counter.selector).forEach((el) => {
+            if (el.dataset.counterFinal) el.textContent = el.dataset.counterFinal;
+        });
     });
 
     window.addEventListener("afterprint", () => {
@@ -419,6 +478,7 @@ function onSectionsLoaded() {
     setupScrollProgress();
     setupPageIndicator();
     setupTableOfContents();
+    setupCounters();
 }
 
 document.addEventListener("sections:loaded", onSectionsLoaded);

@@ -35,7 +35,7 @@ function renderStats(root, stats) {
         .map(
             (stat) => `
                 <li>
-                    <span class="faculty__stats-value">${stat.value}</span>
+                    <span class="faculty__stats-value" data-counter>${stat.value}</span>
                     <span class="faculty__stats-label">${stat.label}</span>
                 </li>
             `

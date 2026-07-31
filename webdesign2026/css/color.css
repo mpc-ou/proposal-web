@@ -16,6 +16,8 @@
     /* Lop nen trang tri dung chung (.app-bg): luoi + quang sang */
     --color-grid-line: rgba(255, 130, 90, 0.06);
     --color-glow: rgba(255, 87, 51, 0.3);
+    --color-circuit-line: rgba(255, 122, 74, 0.55);   /* net cam neon (mach dien) */
+    --color-circuit-metal: rgba(178, 184, 192, 0.4);  /* net xam kim loai */
 
     /* Nhan / accent - tong cam do */
     --color-primary: #ff5a36;

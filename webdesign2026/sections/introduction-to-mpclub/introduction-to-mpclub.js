@@ -47,7 +47,7 @@ function renderStats(root, stats) {
         .map(
             (stat) => `
                 <li>
-                    <span class="mpclub__stats-value">${stat.value}</span>
+                    <span class="mpclub__stats-value" data-counter>${stat.value}</span>
                     <span class="mpclub__stats-label">${stat.label}</span>
                 </li>
             `

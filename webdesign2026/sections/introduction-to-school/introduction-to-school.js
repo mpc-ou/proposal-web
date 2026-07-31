@@ -55,7 +55,7 @@ export default async function initIntroductionToSchool(root) {
     const statsEl = root.querySelector("[data-school-stats]");
     if (statsEl && Array.isArray(school.stats)) {
         statsEl.innerHTML = school.stats
-            .map((stat) => `<li>${stat.value} ${stat.label}</li>`)
+            .map((stat) => `<li><span data-counter>${stat.value}</span> ${stat.label}</li>`)
             .join("");
     }
 

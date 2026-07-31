@@ -1,4 +1,4 @@
-.media-plan__container{
+.media-plan__container {
   height: 100%;
 }
 
@@ -228,6 +228,35 @@
   border-bottom: 16px solid var(--color-primary);
 }
 
+.page--media-plan .timeline__line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  width: 4px;
+  transform: translateX(-50%);
+  background: linear-gradient(to top,
+      transparent 0%,
+      var(--color-primary-light) 42%,
+      #fff 50%,
+      var(--color-primary-light) 58%,
+      transparent 100%);
+  background-size: 100% 260%;
+  background-position: 0 160%;
+  filter: drop-shadow(0 0 6px var(--color-primary));
+  animation: timelineSweep 2.6s linear infinite;
+}
+
+@keyframes timelineSweep {
+  from {
+    background-position: 0 -60%;
+  }
+
+  to {
+    background-position: 0 160%;
+  }
+}
+
 .page--media-plan .timeline__item {
   position: relative;
   width: 50%;
@@ -259,7 +288,7 @@
   text-align: right;
 }
 
-.page--media-plan .timeline__item.left .timeline__date{
+.page--media-plan .timeline__item.left .timeline__date {
   text-align: right;
 }
 
@@ -431,4 +460,17 @@
   color: var(--color-text);
   line-height: 1.3;
   max-width: 250px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page--media-plan .timeline__line::after {
+    animation: none;
+  }
+}
+
+/* In PDF: tat vuot sang tren timeline, hien dung so lieu that (khong dang dem) */
+@media print {
+  .page--media-plan .timeline__line::after {
+    display: none !important;
+  }
 }

@@ -21,9 +21,9 @@
             "icon": "bi-facebook",
             "title": "Fanpage ",
             "stats": [
-                "Có hơn <strong>5.5k</strong> người theo dõi",
-                "Hơn <strong>5k+</strong> lượt tiếp cận mỗi bài viết",
-                "Hơn <strong>100+</strong> lượt tương tác (like, share và comment trung bình mỗi bài đăng)"
+                "Có hơn <strong data-counter>5.5k</strong> người theo dõi",
+                "Hơn <strong data-counter>5k+</strong> lượt tiếp cận mỗi bài viết",
+                "Hơn <strong data-counter>100+</strong> lượt tương tác (like, share và comment trung bình mỗi bài đăng)"
             ]
         },
         "cards": [

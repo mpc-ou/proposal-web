@@ -1,3 +1,12 @@
+/* Watermark chim rieng cho 2 trang gioi thieu CLB (ghi de bien dung chung
+   o .page trong style.css, xem .page__inner::after) */
+.page--mpclub-overview,
+.page--mpclub-activities {
+    --page-watermark: "MOBILE PROGRAMMING CLUB";
+    /* Chu dai hon "WEBDESIGN 2026" nen giam co de khong tran ra ngoai trang */
+    --page-watermark-size: 108px;
+}
+
 /* ---------- Trang 1: Gioi thieu CLB ---------- */
 .page--mpclub-overview {
     display: grid;
@@ -24,6 +33,11 @@
     height: 100%;
     object-fit: cover;
     cursor: zoom-in;
+    transition: transform 0.5s ease;
+}
+
+.mpclub__media:hover img {
+    transform: scale(1.06);
 }
 
 .mpclub__tag {

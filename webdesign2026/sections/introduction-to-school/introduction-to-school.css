@@ -28,6 +28,12 @@
     height: 100%;
     object-fit: cover;
     cursor: zoom-in;
+    transition: transform 0.5s ease;
+}
+
+.overview__media:hover img,
+.stats__media:hover img {
+    transform: scale(1.06);
 }
 
 .overview__tag {

@@ -107,7 +107,7 @@ function renderTargets(root, targets) {
                     .map(
                         (stat) => `
                                     <div class="data-item">
-                                        <span class="data-item__number">${stat.number || ""}</span>
+                                        <span class="data-item__number" data-counter>${stat.number || ""}</span>
                                         <span class="data-item__label">${stat.label || ""}</span>
                                     </div>
                                 `
