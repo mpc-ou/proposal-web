@@ -28,7 +28,7 @@
         },
         "cards": [
             {
-                "title": "Cuộc thi Webdesign 2025",
+                "title": "Cuộc thi Web Design 2025",
                 "stats": [
                     "Có hơn <strong>40</strong> sinh viên tham gia thi",
                     "Hơn <strong>40k</strong> lượt tiếp cận qua các nền tảng truyền thông",
@@ -45,9 +45,9 @@
         ]
     },
     "webDesign": {
-        "toc": "Hiệu quả truyền thông - Cuộc thi Webdesign",
+        "toc": "Hiệu quả truyền thông - Cuộc thi Web Design",
         "subheading": "Cuộc thi",
-        "title": "WEBDESIGN 2025",
+        "title": "WEB DESIGN 2025",
         "description": "Thu hút sự quan tâm của cộng đồng với hơn 1000 lượt tiếp cận và tương tác",
         "images": [
             "./sections/media-effectiveness/img/wd2025003.jpg",
