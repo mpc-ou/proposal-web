@@ -4,8 +4,8 @@
         "mainTitle": "TRUYỀN THÔNG"
     },
     "image": {
-        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy3113RgSpBBG0xjBdap0Fmgx7pQoD50TvAMpgKzxRcQ&s=10",
-        "alt": ""
+        "src": "./sections/media-plan/img/students.jpg",
+        "alt": "Đông đảo sinh viên tham gia"
     },
     "purpose": {
         "title": "MỤC ĐÍCH TRUYỀN THÔNG",

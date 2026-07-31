@@ -81,8 +81,8 @@
 
 .page--web-design-info .web-design-info__image-wrapper {
     width: 90%;
-    height: 90%;
-    border-radius: 12px 0 0 12px;
+    height: 70%;
+    border-radius: 24px;
     overflow: hidden;
     border-left: 1px solid var(--color-border);
     border-top: 1px solid var(--color-border);
