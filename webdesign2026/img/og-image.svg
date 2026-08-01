@@ -1,0 +1,71 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Web Design 2026 - Hồ sơ mời tài trợ - CLB Lập trình trên thiết bị Di động">
+  <title>Web Design 2026 - Hồ sơ mời tài trợ</title>
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d2620" />
+      <stop offset="100%" stop-color="#221310" />
+    </linearGradient>
+
+    <radialGradient id="glow" cx="90%" cy="6%" r="55%">
+      <stop offset="0%" stop-color="#ff5733" stop-opacity="0.38" />
+      <stop offset="100%" stop-color="#ff5733" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="hairline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff8a5c" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ff8a5c" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#ff8a5c" stop-opacity="0" />
+    </linearGradient>
+
+    <pattern id="circuitOrange" width="31" height="31" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="31" stroke="#ff7a4a" stroke-opacity="0.55" stroke-width="1" />
+    </pattern>
+    <pattern id="circuitMetal" width="31" height="31" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="31" stroke="#b2b8c0" stroke-opacity="0.35" stroke-width="1" />
+    </pattern>
+
+    <radialGradient id="fadeTL" cx="0%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="fadeBR" cx="100%" cy="100%" r="75%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <mask id="maskTL"><rect width="1200" height="630" fill="url(#fadeTL)" /></mask>
+    <mask id="maskBR"><rect width="1200" height="630" fill="url(#fadeBR)" /></mask>
+  </defs>
+
+  <!-- Nen -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect width="1200" height="630" fill="url(#glow)" />
+
+  <!-- Hoa tiet mach dien chim o 2 goc, cung mo-tip voi .page__inner::before ngoai web -->
+  <rect width="1200" height="630" fill="url(#circuitOrange)" mask="url(#maskTL)" />
+  <rect width="1200" height="630" fill="url(#circuitMetal)" mask="url(#maskBR)" />
+
+  <!-- Watermark chim goc duoi-phai, dong bo voi watermark tren cac trang -->
+  <text x="1170" y="600" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="800"
+    fill="#f4ece9" fill-opacity="0.05" letter-spacing="1">WEBDESIGN 2026</text>
+
+  <!-- Vien khung + hairline tren, dong bo voi .page/.page::before -->
+  <rect x="0" y="0" width="1200" height="2" fill="url(#hairline)" />
+  <rect x="16" y="16" width="1168" height="598" rx="18" fill="none" stroke="#ff9a78" stroke-opacity="0.22" stroke-width="1.5" />
+
+  <!-- Noi dung chinh -->
+  <text x="600" y="228" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700"
+    letter-spacing="7" fill="#ff5a36">HỒ SƠ MỜI TÀI TRỢ</text>
+
+  <text x="600" y="332" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="98" font-weight="800"
+    letter-spacing="1" fill="#f4ece9">WEB DESIGN 2026</text>
+
+  <rect x="530" y="366" width="140" height="4" rx="2" fill="#ff5a36" />
+
+  <text x="600" y="424" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="500"
+    fill="#c9b4ac">CLB Lập trình trên thiết bị Di động</text>
+  <text x="600" y="460" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400"
+    fill="#93807a">Khoa Công nghệ Thông tin  ·  Trường Đại học Mở TP.HCM</text>
+</svg>
