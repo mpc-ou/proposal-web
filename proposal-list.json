@@ -1,9 +1,12 @@
-{"generated": "2026-08-03T15:48:22Z", "proposals": [
 {
-  "id": "webdesign2026",
-  "name": "Web Design 2026 - Hồ sơ mời tài trợ",
-  "organization": "CLB Lập trình trên thiết bị Di động - Khoa CNTT - Trường Đại học Mở TP.HCM",
-  "path": "webdesign2026/",
-  "lastModified": "2026-08-03T22:47:58+07:00"
+  "generated": "2026-08-03T16:03:53Z",
+  "proposals": [
+    {
+      "id": "webdesign2026",
+      "name": "Web Design 2026 - Hồ sơ mời tài trợ",
+      "organization": "CLB Lập trình trên thiết bị Di động - Khoa CNTT - Trường Đại học Mở TP.HCM",
+      "path": "proposals/webdesign2026/",
+      "lastModified": "2026-08-03T23:03:31+07:00"
+    }
+  ]
 }
-]}
