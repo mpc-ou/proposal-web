@@ -83,10 +83,6 @@ function renderHeader(edition) {
     return `<h2 class="exhibitions__heading" data-animate="fadeInLeft">${editionTitle(edition)}</h2>`;
 }
 
-/*
-  Description chi hien 1 lan duy nhat, o trang dau tien cua moi ky (isFirstPage)
-  - cac trang sau cung ky khong lap lai de do rom.
-*/
 function renderDescription(edition) {
     if (!edition.description) return "";
     return `<p class="exhibitions__description" data-animate="fadeInLeft">${edition.description}</p>`;
@@ -113,7 +109,7 @@ async function fetchEditions() {
     return res.json();
 }
 
-export default async function initExhibitions(root) {
+export async function loadDynamic(root) {
     const exhibitionsZone = root.querySelector("#exhibitions");
     if (!exhibitionsZone) return;
 

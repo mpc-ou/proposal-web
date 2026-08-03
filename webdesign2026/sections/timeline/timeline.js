@@ -50,7 +50,7 @@ function renderMilestones(root, milestones) {
         .join("");
 }
 
-export default async function initTimeline(root) {
+export async function loadDynamic(root) {
     let timeline;
     try {
         timeline = await fetchTimeline();

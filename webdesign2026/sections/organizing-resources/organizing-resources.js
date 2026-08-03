@@ -8,7 +8,7 @@ async function fetchConfig() {
     return res.json();
 }
 
-export default async function initOrganizingResources(root) {
+export async function loadDynamic(root) {
     const container = root.querySelector("#organizing-resources");
     if (!container) return;
 

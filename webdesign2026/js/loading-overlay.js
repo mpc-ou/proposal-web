@@ -52,12 +52,9 @@
         }, 250);
     }
 
-    // "sections:loaded" duoc init.js ban ra sau khi TAT CA section da
-    // fetch+init xong (bao gom fetch JSON/markdown rieng cua tung section).
-    // Doi them 1 chut de anh vua duoc gan src kip bat dau tai.
     document.addEventListener(
-        "sections:loaded",
-        () => setTimeout(finish, 500),
+        "sections:first-ready",
+        () => setTimeout(finish, 200),
         { once: true }
     );
 

@@ -1,4 +1,4 @@
-export default function initTitlePage(root, data) {
+export function renderStatic(root, data) {
     const titlePage = data && data.titlePage;
     if (!titlePage) return;
 

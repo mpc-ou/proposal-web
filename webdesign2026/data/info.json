@@ -12,9 +12,9 @@
             "CLB Lập trình trên thiết bị Di động"
         ],
         "logos": [
-            { "src": "./sections/title-page/img/ou.png", "alt": "Trường Đại học Mở TP.HCM" },
-            { "src": "./sections/title-page/img/cntt.png", "alt": "Khoa Công nghệ thông tin" },
-            { "src": "./sections/title-page/img/mpclub.png", "alt": "CLB Lập trình trên thiết bị Di động" }
+            { "src": "./sections/title-page/img/ou.webp", "alt": "Trường Đại học Mở TP.HCM" },
+            { "src": "./sections/title-page/img/cntt.webp", "alt": "Khoa Công nghệ thông tin" },
+            { "src": "./sections/title-page/img/mpclub.webp", "alt": "CLB Lập trình trên thiết bị Di động" }
         ],
         "eyebrow": "HỒ SƠ MỜI TÀI TRỢ",
         "headline": "WEB DESIGN 2026"

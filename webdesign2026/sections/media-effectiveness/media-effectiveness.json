@@ -6,8 +6,8 @@
         "toc": "Hiệu quả truyền thông - Lượt tương tác",
         "subheading": "Lượt tương tác Fanpage",
         "fanpage": {
-            "cover": "./sections/media-effectiveness/img/fanpage_cover.jpg",
-            "avatar": "./sections/media-effectiveness/img/fanpage_avatar.jpg",
+            "cover": "./sections/media-effectiveness/img/fanpage_cover.webp",
+            "avatar": "./sections/media-effectiveness/img/fanpage_avatar.webp",
             "name": "CLB - Lập Trình Trên Thiết Bị Di Động",
             "url": "https://www.facebook.com/CLBLapTrinhTrenThietBiDiDong",
             "meta": "5,5K người theo dõi &middot; 28 đang theo dõi",
@@ -50,9 +50,9 @@
         "title": "WEB DESIGN 2025",
         "description": "Thu hút sự quan tâm của cộng đồng với hơn 1000 lượt tiếp cận và tương tác",
         "images": [
-            "./sections/media-effectiveness/img/wd2025003.jpg",
-            "./sections/media-effectiveness/img/wd2025002.jpg",
-            "./sections/media-effectiveness/img/wd2025001.jpg"
+            "./sections/media-effectiveness/img/wd2025003.webp",
+            "./sections/media-effectiveness/img/wd2025002.webp",
+            "./sections/media-effectiveness/img/wd2025001.webp"
         ]
     },
     "common": {
@@ -61,8 +61,8 @@
         "title": "Gần đây",
         "description": "Các bài đăng truyền thông gần đây của CLB",
         "images": [
-            "./sections/media-effectiveness/img/solieuchung002.jpg",
-            "./sections/media-effectiveness/img/solieuchung001.jpg"
+            "./sections/media-effectiveness/img/solieuchung002.webp",
+            "./sections/media-effectiveness/img/solieuchung001.webp"
         ]
     }
 }

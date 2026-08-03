@@ -103,7 +103,7 @@ function renderActivities(root, activities) {
         .join("");
 }
 
-export default async function initIntroductionToMpclub(root) {
+export async function loadDynamic(root) {
     let club;
     try {
         club = await fetchClub();

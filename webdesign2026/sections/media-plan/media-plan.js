@@ -120,7 +120,7 @@ function renderTargets(root, targets) {
         .join("");
 }
 
-export default async function initMediaPlan(root) {
+export async function loadDynamic(root) {
     let data;
     try {
         data = await fetchMediaPlan();

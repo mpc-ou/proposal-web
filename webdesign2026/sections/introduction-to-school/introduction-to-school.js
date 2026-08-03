@@ -28,7 +28,7 @@ function setImage(root, selector, src, alt) {
     el.setAttribute("data-lightbox-index", "0");
 }
 
-export default async function initIntroductionToSchool(root) {
+export async function loadDynamic(root) {
     let school;
     try {
         school = await fetchSchool();

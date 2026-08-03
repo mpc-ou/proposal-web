@@ -1,6 +1,6 @@
 {
     "tag": "HCMC OPEN UNIVERSITY",
-    "image": "./sections/introduction-to-school/img/ou-building.jpg",
+    "image": "./sections/introduction-to-school/img/ou-building.webp",
     "imageAlt": "Trường Đại học Mở Thành phố Hồ Chí Minh",
     "eyebrow": "Tổng quan về",
     "heading": "TRƯỜNG ĐẠI HỌC MỞ TP.HCM",
@@ -41,7 +41,7 @@
             "value": "500+"
         }
     ],
-    "statsImage": "./sections/introduction-to-school/img/ou-totnghiep.jpg",
+    "statsImage": "./sections/introduction-to-school/img/ou-totnghiep.webp",
     "statsImageAlt": "Lễ tốt nghiệp sinh viên Trường Đại học Mở TP.HCM",
     "source": "Số liệu được thống kê tại sổ tay sinh viên của Trường Đại Học Mở TP.HCM.<br/> Nguồn: [https://ou.edu.vn](https://ou.edu.vn)"
 }

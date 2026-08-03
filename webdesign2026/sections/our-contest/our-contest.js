@@ -34,7 +34,7 @@ function renderGalleryMedia(root, tagSelector, imageSelector, data) {
     imageEl.setAttribute("data-lightbox-index", "0");
 }
 
-export default async function initOurContest(root) {
+export async function loadDynamic(root) {
     let data;
     try {
         data = await fetchOurContest();

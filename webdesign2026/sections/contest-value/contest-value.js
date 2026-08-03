@@ -44,7 +44,7 @@ function renderCards(root, cards) {
         .join("");
 }
 
-export default async function initContestValue(root) {
+export async function loadDynamic(root) {
     let data;
     try {
         data = await fetchContestValue();

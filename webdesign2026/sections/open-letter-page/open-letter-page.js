@@ -2,13 +2,13 @@ import { renderMarkdown, fetchMarkdown } from "../../js/markdown-utils.js";
 
 const MD_URL = "./sections/open-letter-page/open-letter-page.md";
 
-export default async function initOpenLetterPage(root, data) {
+export function renderStatic(root, data) {
     const letter = data && data.letter;
-    const footer = data && data.footer;
-
     const titleEl = root.querySelector("[data-letter-title]");
     if (titleEl) titleEl.textContent = (letter && letter.title) || "Thư Ngỏ";
+}
 
+export async function loadDynamic(root) {
     const bodyEl = root.querySelector("[data-letter-body]");
     if (!bodyEl) return;
 

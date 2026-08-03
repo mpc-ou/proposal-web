@@ -4,7 +4,7 @@
         "highlight": "CUỘC THI"
     },
     "icon": "bi-award",
-    "image": "./sections/contest-value/img/contest-award.jpg",
+    "image": "./sections/contest-value/img/contest-award.webp",
     "imageAlt": "Lễ trao giải cuộc thi Web Design",
     "cards": [
         {

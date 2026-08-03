@@ -1,13 +1,17 @@
+import { applyLazyImages } from "./dom-utils.js";
+
 const DATA_URL = "./data/info.json";
 
 const SECTIONS = [
   {
     html: "./sections/title-page/title-page.html",
     module: "../sections/title-page/title-page.js",
+    aboveTheFold: true,
   },
   {
     html: "./sections/open-letter-page/open-letter-page.html",
     module: "../sections/open-letter-page/open-letter-page.js",
+    aboveTheFold: true,
   },
   {
     html: "./sections/introduction-to-school/introduction-to-school.html",
@@ -35,11 +39,11 @@ const SECTIONS = [
   },
   {
     html: "./sections/web-design-info/web-design-info.html",
-    module: "../sections/web-design-info/web-design-info.js"
+    module: "../sections/web-design-info/web-design-info.js",
   },
   {
     html: "./sections/contest-value/contest-value.html",
-    module: "../sections/contest-value/contest-value.js"
+    module: "../sections/contest-value/contest-value.js",
   },
   {
     html: "./sections/timeline/timeline.html",
@@ -67,56 +71,86 @@ const SECTIONS = [
   },
 ];
 
-async function loadSharedData() {
-  const res = await fetch(DATA_URL);
-  if (!res.ok) {
-    throw new Error(`Khong tai duoc ${DATA_URL} (HTTP ${res.status})`);
-  }
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Khong tai duoc ${url} (HTTP ${res.status})`);
   return res.json();
 }
 
-async function loadSection(root, entry, data) {
-  const res = await fetch(entry.html);
-  if (!res.ok) {
-    throw new Error(`Khong tai duoc ${entry.html} (HTTP ${res.status})`);
-  }
-  const html = await res.text();
+async function fetchText(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Khong tai duoc ${url} (HTTP ${res.status})`);
+  return res.text();
+}
 
+async function renderSectionModule(wrapper, entry, sharedData) {
+  const mod = await import(entry.module);
+
+  if (typeof mod.renderStatic === "function") {
+    mod.renderStatic(wrapper, sharedData);
+    applyLazyImages(wrapper);
+  }
+
+  if (typeof mod.loadDynamic === "function") {
+    await mod.loadDynamic(wrapper, sharedData);
+  } else if (typeof mod.default === "function") {
+    await mod.default(wrapper, sharedData);
+  }
+  applyLazyImages(wrapper);
+}
+
+async function buildSection(entry, sharedData) {
   const wrapper = document.createElement("div");
   wrapper.className = "section-wrapper";
-  wrapper.innerHTML = html;
-  root.appendChild(wrapper);
 
-  const mod = await import(entry.module);
-  if (typeof mod.default === "function") {
-    await mod.default(wrapper, data);
+  try {
+    wrapper.innerHTML = await fetchText(entry.html);
+    applyLazyImages(wrapper);
+    await renderSectionModule(wrapper, entry, sharedData);
+  } catch (error) {
   }
+
+  return wrapper;
+}
+
+function appendSectionsInOrder(contentDOM, sectionBuilds, onSectionAppended) {
+  let chain = Promise.resolve();
+  sectionBuilds.forEach((buildPromise, index) => {
+    chain = chain.then(async () => {
+      const wrapper = await buildPromise;
+      contentDOM.appendChild(wrapper);
+      onSectionAppended(index);
+    });
+  });
+  return chain;
 }
 
 async function main() {
   const contentDOM = document.getElementById("content");
   if (!contentDOM) return;
 
-  let data = {};
+  let sharedData = {};
   try {
-    data = await loadSharedData();
+    sharedData = await fetchJSON(DATA_URL);
   } catch (error) {
-    console.error(`data/info.json khong tai duoc. ERR: ${error.message}`);
   }
 
-  for (const entry of SECTIONS) {
-    try {
-      await loadSection(contentDOM, entry, data);
-      console.info(`${entry.html} da duoc load!`);
-    } catch (error) {
-      console.error(`${entry.html} khong load duoc!. ERR: ${error.message}`);
+  const sectionBuilds = SECTIONS.map((entry) => buildSection(entry, sharedData));
+  const lastAboveTheFoldIndex = SECTIONS.reduce(
+    (acc, entry, i) => (entry.aboveTheFold ? i : acc),
+    -1,
+  );
+
+  await appendSectionsInOrder(contentDOM, sectionBuilds, (index) => {
+    if (index === lastAboveTheFoldIndex) {
+      document.dispatchEvent(new CustomEvent("sections:first-ready"));
     }
-  }
+  });
 
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       document.dispatchEvent(
-        new CustomEvent("sections:loaded", { detail: { data } }),
+        new CustomEvent("sections:loaded", { detail: { data: sharedData } }),
       );
     });
   });

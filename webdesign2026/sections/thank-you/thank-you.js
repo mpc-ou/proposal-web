@@ -46,7 +46,7 @@ function renderInfoList(root, items) {
         .join("");
 }
 
-export default async function initThankYou(root) {
+export async function loadDynamic(root) {
     let data;
     try {
         data = await fetchThankYou();

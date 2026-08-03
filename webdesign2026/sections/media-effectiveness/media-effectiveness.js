@@ -133,7 +133,7 @@ function renderPage(item, isFirstPage, data) {
     `;
 }
 
-export default async function initMediaEffectiveness(root) {
+export async function loadDynamic(root) {
     const container = root.querySelector("#media-effectiveness");
     if (!container) return;
 

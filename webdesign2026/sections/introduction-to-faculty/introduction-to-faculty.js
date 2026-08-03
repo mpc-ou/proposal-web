@@ -56,7 +56,7 @@ function renderContact(root, contact) {
         .join("");
 }
 
-export default async function initIntroductionToFaculty(root) {
+export async function loadDynamic(root) {
     let faculty;
     try {
         faculty = await fetchFaculty();

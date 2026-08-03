@@ -23,6 +23,7 @@ const CONFIG = {
     },
     scrollRestore: {
         storageKey: "webdesign2026:scrollY",
+        enabled: false,
     },
     pageIndicator: {
         elId: "pageIndicator",
@@ -143,13 +144,6 @@ function setupZoomControl() {
     content.parentNode.insertBefore(viewport, content);
     viewport.appendChild(content);
 
-    /*
-      "level" la ty le TUONG DOI so voi "vua khop chieu rong man hinh"
-      (unit), KHONG phai % tuyet doi cua khung thiet ke 1920px. Nho vay
-      100% luon co nghia la trang rong dung bang man hinh - dung tren
-      dien thoai man hinh hep cung khong bao gio bi tran ngang, khong con
-      phai zoom am xuong duoi muc min moi vua het chieu rong nhu truoc.
-    */
     const getUnit = () => window.innerWidth / content.offsetWidth;
 
     const stored = loadStoredZoom();
@@ -189,7 +183,7 @@ function setupZoomControl() {
     let lastWidth = window.innerWidth;
     let resizeTimer = null;
     window.addEventListener("resize", () => {
-        if (window.innerWidth === lastWidth) return; // bo qua resize do thanh dia chi mobile an/hien (chi doi cao, khong doi rong)
+        if (window.innerWidth === lastWidth) return; 
         lastWidth = window.innerWidth;
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(apply, 100);
@@ -377,19 +371,48 @@ function setupTableOfContents() {
   #content se lam noi dung bi thu nho/lech vi tri so voi kich thuoc that
   ma @media print da tinh (chu bi "lech xuong duoi").
 */
+function waitForAllImagesToLoad(root) {
+    const images = Array.from(root.querySelectorAll("img"));
+    images.forEach((img) => {
+        img.loading = "eager";
+    });
+
+    const pending = images.filter((img) => !img.complete);
+    if (!pending.length) return Promise.resolve();
+
+    return Promise.all(
+        pending.map(
+            (img) =>
+                new Promise((resolve) => {
+                    img.addEventListener("load", resolve, { once: true });
+                    img.addEventListener("error", resolve, { once: true });
+                })
+        )
+    );
+}
+
 function setupPrintButton() {
     const btn = document.getElementById(CONFIG.print.buttonId);
-    if (btn) {
-        btn.addEventListener("click", () => window.print());
-    }
-
     const contentEl = document.getElementById(CONFIG.zoom.contentId);
     const viewportEl = contentEl ? contentEl.closest("#zoomViewport") : null;
+
+    if (btn && contentEl) {
+        btn.addEventListener("click", async () => {
+            btn.disabled = true;
+            await waitForAllImagesToLoad(contentEl);
+            btn.disabled = false;
+            window.print();
+        });
+    }
+
     let previousTransform = "";
     let previousViewportHeight = "";
 
     window.addEventListener("beforeprint", () => {
         if (!contentEl) return;
+
+        waitForAllImagesToLoad(contentEl);
+
         previousTransform = contentEl.style.transform;
         contentEl.style.transform = "none";
         if (viewportEl) {
@@ -427,37 +450,28 @@ function saveScrollY(y) {
     }
 }
 
+function isScrollRestoreEnabled() {
+    const override = new URLSearchParams(window.location.search).get("scrollRestore");
+    if (override !== null) return override !== "0";
+    return CONFIG.scrollRestore.enabled;
+}
+
 function setupScrollRestore() {
+    if (!isScrollRestoreEnabled()) return;
+
     let restoring = true;
 
     const restoreOnce = () => {
         const y = readStoredScrollY();
-        if (y === null) {
-            restoring = false;
-            return;
-        }
+        if (y === null) return;
         window.scrollTo(0, y);
     };
 
     document.addEventListener("sections:loaded", () => {
         restoreOnce();
-
-        const images = Array.from(document.querySelectorAll("#content img"));
-        let pending = images.filter((img) => !img.complete).length;
-        if (!pending) {
+        requestAnimationFrame(() => {
+            restoreOnce();
             restoring = false;
-            return;
-        }
-
-        images.forEach((img) => {
-            if (img.complete) return;
-            const onDone = () => {
-                pending -= 1;
-                if (restoring) restoreOnce();
-                if (pending <= 0) restoring = false;
-            };
-            img.addEventListener("load", onDone, { once: true });
-            img.addEventListener("error", onDone, { once: true });
         });
     });
 

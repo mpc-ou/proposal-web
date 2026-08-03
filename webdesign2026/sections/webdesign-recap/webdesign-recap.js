@@ -45,7 +45,7 @@ function renderPage(pageEl, page) {
     }
 }
 
-export default async function initWebdesignRecap(root) {
+export async function loadDynamic(root) {
     let data;
     try {
         data = await fetchRecap();

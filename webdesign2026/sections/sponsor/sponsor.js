@@ -175,7 +175,7 @@ function chunkBenefitRows(rows, maxRowsPerPage = 4) {
     return pages;
 }
 
-export default async function initSponsor(root) {
+export async function loadDynamic(root) {
     const container = root.querySelector("#sponsor");
     if (!container) return;
 

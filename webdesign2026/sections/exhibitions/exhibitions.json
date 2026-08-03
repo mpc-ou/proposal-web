@@ -8,7 +8,7 @@
         "teamName": "TEAM TOBG",
         "projectName": "Circle Of Life",
         "imgs": [
-          "./sections/exhibitions/img/wd22-TOBG.png"
+          "./sections/exhibitions/img/wd22-TOBG.webp"
         ],
         "github": null,
         "website": null
@@ -17,7 +17,7 @@
         "teamName": "TEAM BEAST",
         "projectName": "Beta Projects",
         "imgs": [
-          "./sections/exhibitions/img/wd22-BEAST.png"
+          "./sections/exhibitions/img/wd22-BEAST.webp"
         ],
         "github": null,
         "website": null
@@ -26,7 +26,7 @@
         "teamName": "TEAM7",
         "projectName": "Traveling",
         "imgs": [
-          "./sections/exhibitions/img/wd22-TEAM7.png"
+          "./sections/exhibitions/img/wd22-TEAM7.webp"
         ],
         "github": null,
         "website": null
@@ -35,7 +35,7 @@
         "teamName": "TEAM4",
         "projectName": "Your Work",
         "imgs": [
-          "./sections/exhibitions/img/wd22-TEAM4.png"
+          "./sections/exhibitions/img/wd22-TEAM4.webp"
         ],
         "github": null,
         "website": null
@@ -44,7 +44,7 @@
         "teamName": "TEAM XTCP",
         "projectName": "Spiderman Cinema",
         "imgs": [
-          "./sections/exhibitions/img/wd22-XTCP.png"
+          "./sections/exhibitions/img/wd22-XTCP.webp"
         ],
         "github": null,
         "website": null
@@ -53,7 +53,7 @@
         "teamName": "TEAM KHDCPP",
         "projectName": "THANHTIEN MOVIE",
         "imgs": [
-          "./sections/exhibitions/img/wd22-KHDCPP.png"
+          "./sections/exhibitions/img/wd22-KHDCPP.webp"
         ],
         "github": null,
         "website": null
@@ -69,9 +69,9 @@
         "teamName": "TEAM NENE",
         "projectName": "Eng Quiz",
         "imgs": [
-          "./sections/exhibitions/img/wd23-NENE001.png",
-          "./sections/exhibitions/img/wd23-NENE002.png",
-          "./sections/exhibitions/img/wd23-NENE003.png"
+          "./sections/exhibitions/img/wd23-NENE001.webp",
+          "./sections/exhibitions/img/wd23-NENE002.webp",
+          "./sections/exhibitions/img/wd23-NENE003.webp"
         ],
         "github": null,
         "website": null
@@ -80,9 +80,9 @@
         "teamName": "TEAM BRATO",
         "projectName": "Edu Web",
         "imgs": [
-          "./sections/exhibitions/img/wd23-BRATO001.png",
-          "./sections/exhibitions/img/wd23-BRATO002.png",
-          "./sections/exhibitions/img/wd23-BRATO003.png"
+          "./sections/exhibitions/img/wd23-BRATO001.webp",
+          "./sections/exhibitions/img/wd23-BRATO002.webp",
+          "./sections/exhibitions/img/wd23-BRATO003.webp"
         ],
         "github": null,
         "website": null
@@ -99,10 +99,10 @@
         "teamName": "TEAM NTK",
         "projectName": "Giới thiệu khoa Công nghệ thông tin",
         "imgs": [
-          "./sections/exhibitions/img/wd25-NTK001.png",
-          "./sections/exhibitions/img/wd25-NTK002.png",
-          "./sections/exhibitions/img/wd25-NTK003.png",
-          "./sections/exhibitions/img/wd25-NTK004.png"
+          "./sections/exhibitions/img/wd25-NTK001.webp",
+          "./sections/exhibitions/img/wd25-NTK002.webp",
+          "./sections/exhibitions/img/wd25-NTK003.webp",
+          "./sections/exhibitions/img/wd25-NTK004.webp"
         ],
         "github": "https://github.com/Le-Minh-Nhut/NTK",
         "website": "https://ntk-frontend.onrender.com"
@@ -111,9 +111,9 @@
         "teamName": "TEAM THETHREE",
         "projectName": "Giới thiệu về Trường Đại học Mở TP.HCM",
         "imgs": [
-          "./sections/exhibitions/img/wd25-THETHREE001.png",
-          "./sections/exhibitions/img/wd25-THETHREE002.png",
-          "./sections/exhibitions/img/wd25-THETHREE003.png"
+          "./sections/exhibitions/img/wd25-THETHREE001.webp",
+          "./sections/exhibitions/img/wd25-THETHREE002.webp",
+          "./sections/exhibitions/img/wd25-THETHREE003.webp"
         ],
         "github": "https://github.com/Teaching2504/WEBDESIGN_THETHREE",
         "website": "https://webdesignthethree.netlify.app"
@@ -122,10 +122,10 @@
         "teamName": "TEAM STACK LIFO",
         "projectName": "Giới thiệu về Trường Đại học Mở TP.HCM",
         "imgs": [
-          "./sections/exhibitions/img/wd25-STACKLIFO001.png",
-          "./sections/exhibitions/img/wd25-STACKLIFO002.png",
-          "./sections/exhibitions/img/wd25-STACKLIFO003.png",
-          "./sections/exhibitions/img/wd25-STACKLIFO004.png"
+          "./sections/exhibitions/img/wd25-STACKLIFO001.webp",
+          "./sections/exhibitions/img/wd25-STACKLIFO002.webp",
+          "./sections/exhibitions/img/wd25-STACKLIFO003.webp",
+          "./sections/exhibitions/img/wd25-STACKLIFO004.webp"
         ],
         "github": "https://github.com/Theanh130124/WEB_DESIGN",
         "website": "https://web-desgin-stacklifo.vercel.app"
@@ -134,9 +134,9 @@
         "teamName": "TEAM FUTURE",
         "projectName": "Cổng thông tin sinh viên",
         "imgs": [
-          "./sections/exhibitions/img/wd25-FUTURE001.png",
-          "./sections/exhibitions/img/wd25-FUTURE002.png",
-          "./sections/exhibitions/img/wd25-FUTURE003.png"
+          "./sections/exhibitions/img/wd25-FUTURE001.webp",
+          "./sections/exhibitions/img/wd25-FUTURE002.webp",
+          "./sections/exhibitions/img/wd25-FUTURE003.webp"
         ],
         "website": "wd2025-future.vercel.app"
       }

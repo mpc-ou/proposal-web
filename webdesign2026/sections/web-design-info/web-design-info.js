@@ -92,7 +92,7 @@ async function renderMarkdownInto(root, selector, url) {
     }
 }
 
-export default async function initWebDesignInfo(root) {
+export async function loadDynamic(root) {
     let data;
     try {
         data = await fetchWebDesignInfo();
